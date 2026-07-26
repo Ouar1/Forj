@@ -5,7 +5,7 @@ import io
 import base64
 from config import settings
 
-logger = logging.getLogger("vulnify.totp")
+logger = logging.getLogger("xlink.totp")
 
 
 def generate_totp_secret() -> str:
@@ -13,7 +13,7 @@ def generate_totp_secret() -> str:
 
 
 def get_totp_uri(secret: str, email: str) -> str:
-    return pyotp.totp.TOTP(secret).provisioning_uri(name=email, issuer_name="Vulnify")
+    return pyotp.totp.TOTP(secret).provisioning_uri(name=email, issuer_name="XLink")
 
 
 def generate_qr_b64(secret: str, email: str) -> str:

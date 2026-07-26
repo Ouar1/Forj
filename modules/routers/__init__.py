@@ -6,3 +6,6 @@ from modules.routers.orders import router as orders_router
 from modules.routers.user_orders import router as user_orders_router
 from modules.routers.products import router as products_router
 from modules.routers.app import router as app_router
+from modules.routers.prices import router as prices_router
+from modules.routers.tickets import router as tickets_router
+from modules.routers.gallery import router as gallery_router

@@ -287,7 +287,7 @@ export function BlogDetailPage() {
   const readTime = useMemo(() => post ? estimateReadTime(post.content) : '', [post])
 
   const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
-  const shareText = post ? `${post.title} — Vulnify Blog` : ''
+  const shareText = post ? `${post.title} — Forj Blog` : ''
 
   const copyLink = async () => {
     try {
@@ -321,7 +321,7 @@ export function BlogDetailPage() {
       <SEO
         title={t('blog.detail_title', { title: post.title })}
         description={t('blog.detail_description', { title: post.title, description: post.excerpt })}
-        image={`https://vulnify.es/og-blog.png`}
+        image={`https://forj.es/og-blog.png`}
       />
       <JsonLd post={post} />
       <ReadingProgress />
@@ -398,7 +398,7 @@ export function BlogDetailPage() {
                 <div>
                   <p className="text-xs tracking-[0.15em] uppercase text-zinc-500 mb-1">{t('blog.author_label')}</p>
                   <p className="text-sm font-medium text-white mb-1">{post.author}</p>
-                  <p className="text-sm text-zinc-400">Vulnify — Desarrollo Web & IA</p>
+                  <p className="text-sm text-zinc-400">Forj — Infraestructura TI Profesional</p>
                 </div>
               </div>
 

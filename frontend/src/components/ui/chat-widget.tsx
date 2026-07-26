@@ -11,15 +11,15 @@ interface ChatMessage {
 
 const quickReplies = [
   '¿Qué servicios ofrecéis?',
-  '¿Cuánto cuesta una web?',
-  '¿Qué es una integración IA?',
-  '¿Cuánto tardáis en hacer una web?',
+  '¿Cuánto cuesta una red WiFi corporativa?',
+  '¿Hacéis cableado estructurado?',
+  '¿Ofrecéis soporte técnico?',
 ]
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de Vulnify. ¿En qué puedo ayudarte? 😊' },
+    { role: 'assistant', content: '¡Hola! Soy el asistente virtual de Forj. ¿En qué puedo ayudarte? 😊' },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -54,7 +54,7 @@ export function ChatWidget() {
       const data = await res.json()
       setMessages((prev) => [...prev, { role: 'assistant', content: data.reply }])
     } catch {
-      setMessages((prev) => [...prev, { role: 'assistant', content: 'Lo siento, ahora mismo no puedo responder. Escríbenos a hola@vulnify.es y te ayudaremos.' }])
+      setMessages((prev) => [...prev, { role: 'assistant', content: 'Lo siento, ahora mismo no puedo responder. Escríbenos a contacto@forj.es y te ayudaremos.' }])
     } finally {
       setLoading(false)
     }
@@ -90,7 +90,7 @@ export function ChatWidget() {
                   <Bot className="size-4 text-black" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-white">Vulnify Chat</p>
+                  <p className="text-sm font-medium text-white">Forj Chat</p>
                   <p className="text-[10px] text-zinc-600">Asistente virtual</p>
                 </div>
               </div>

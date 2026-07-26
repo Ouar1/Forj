@@ -7,7 +7,7 @@ interface SEOProps {
   image?: string
 }
 
-const SITE = "https://vulnify.es"
+const SITE = "https://forj.es"
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -15,28 +15,28 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${SITE}/#organization`,
-      name: "Vulnify",
+      name: "Forj",
       url: SITE,
       logo: `${SITE}/logo.png`,
-      description: "Agencia de desarrollo web e inteligencia artificial",
-      email: "hola@vulnify.es",
+      description: "Infraestructura TI Profesional",
+      email: "contacto@forj.es",
       foundingDate: "2024",
     },
     {
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       url: SITE,
-      name: "Vulnify · Desarrollo Web & IA",
+      name: "Forj · Infraestructura TI Profesional",
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "es",
     },
     {
       "@type": "LocalBusiness",
       "@id": `${SITE}/#localbusiness`,
-      name: "Vulnify",
-      description: "Agencia de desarrollo web e inteligencia artificial",
+      name: "Forj",
+      description: "Infraestructura TI Profesional",
       url: SITE,
-      email: "hola@vulnify.es",
+      email: "contacto@forj.es",
       areaServed: "ES",
       priceRange: "€€",
     },
@@ -47,7 +47,7 @@ export function SEO({ title, description, image }: SEOProps) {
   const { t } = useTranslation()
   const defaultTitle = t('seo.default_title')
   const defaultDescription = t('seo.default_description')
-  const fullTitle = title ? `${title} · Vulnify` : defaultTitle
+  const fullTitle = title ? `${title} · Forj` : defaultTitle
   const desc = description || defaultDescription
 
   return (
@@ -59,7 +59,7 @@ export function SEO({ title, description, image }: SEOProps) {
       <meta property="og:url" content={SITE} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="es_ES" />
-      <meta property="og:site_name" content="Vulnify" />
+      <meta property="og:site_name" content="Forj" />
       <meta name="twitter:card" content="summary_large_image" />
       {image && <meta property="og:image" content={image} />}
       {image && <meta name="twitter:image" content={image} />}

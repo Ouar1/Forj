@@ -20,7 +20,7 @@ from modules.activity_logger import log_activity, get_client_ip
 from modules.totp import generate_totp_secret, generate_qr_b64, verify_totp
 
 router = APIRouter(prefix="/api/auth")
-logger = logging.getLogger("vulnify.api.auth")
+logger = logging.getLogger("xlink.api.auth")
 
 
 class RefreshBody(BaseModel):

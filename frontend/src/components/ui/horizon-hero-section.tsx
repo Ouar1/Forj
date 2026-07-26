@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { GLSLHills } from '@/components/ui/glsl-hills';
 import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
-import { Calendar, FileText, Code, Cpu, Rocket, Mail, Globe, Bot, ShieldCheck, TrendingUp, Menu, X } from 'lucide-react';
+import { Calendar, FileText, Code, Cpu, Rocket, Mail, Globe, Bot, ShieldCheck, TrendingUp, Wifi, Server, HardDrive, HeadphonesIcon, Settings, Menu, X } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import Footer_03 from '@/components/ui/ruixen-footer03';
 
@@ -11,6 +11,10 @@ const services = [
   { icon: Bot, title: 'Integraciones IA', desc: 'Chatbots inteligentes, automatización de procesos y análisis predictivo para tu negocio.' },
   { icon: ShieldCheck, title: 'APIs & Backend', desc: 'Arquitectura escalable, APIs robustas y paneles de administración diseñados para crecer.' },
   { icon: TrendingUp, title: 'Consultoría Digital', desc: 'Estrategia tecnológica personalizada: desde la idea hasta la implementación.' },
+  { icon: Wifi, title: 'Redes Profesionales', desc: 'Diseño e instalación de redes WiFi, cableado estructurado, racks, switches, VLANs y VPN corporativas.' },
+  { icon: Server, title: 'Servidores & NAS', desc: 'Montaje, configuración y mantenimiento de servidores, NAS, backups y recuperación de datos para empresas.' },
+  { icon: HardDrive, title: 'Mantenimiento Informático', desc: 'Soporte técnico preventivo y correctivo. Monitorización, actualizaciones y resolución de incidencias.' },
+  { icon: HeadphonesIcon, title: 'Soporte Técnico 24/7', desc: 'Asistencia remota y presencial. Resolvemos tus problemas técnicos de forma rápida y profesional.' },
 ];
 
 const navLinks = [
@@ -111,7 +115,7 @@ export const Component = () => {
           boxShadow: navSolid > 0.1 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none',
         }}
       >
-        <span className="text-base font-bold tracking-[0.35em] text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">VULNIFY</span>
+        <span className="text-base font-bold tracking-[0.35em] text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">FORJ</span>
         <div className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => (
             <a
@@ -141,7 +145,7 @@ export const Component = () => {
       {menuOpen && (
         <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl flex flex-col">
           <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.04]">
-            <span className="text-sm font-bold tracking-[0.25em] text-white/90">VULNIFY</span>
+            <span className="text-sm font-bold tracking-[0.25em] text-white/90">FORJ</span>
             <button onClick={() => setMenuOpen(false)} className="text-white/60 hover:text-white p-2 transition-colors" aria-label="Cerrar menú">
               <X className="size-5" />
             </button>
@@ -168,7 +172,7 @@ export const Component = () => {
       )}
 
       <div className="hero-content" id="inicio">
-        <h1 className="hero-title">{splitTitle('VULNIFY')}</h1>
+        <h1 className="hero-title">{splitTitle('FORJ')}</h1>
         <p className="text-zinc-400 text-lg md:text-xl max-w-2xl text-center leading-relaxed tracking-wide">
           Creamos tu web con tecnología moderna y diseño que convierte.
         </p>

@@ -5,7 +5,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from config import settings
 
-logger = logging.getLogger("vulnify.api.property_extract")
+logger = logging.getLogger("xlink.api.property_extract")
 
 router = APIRouter(prefix="/api/extract-property")
 

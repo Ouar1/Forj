@@ -1,28 +1,33 @@
 const services = [
   {
-    title: "Desarrollo Web",
-    desc: "Creamos páginas web corporativas, tiendas online y aplicaciones web con tecnologías modernas.",
+    title: "Redes Profesionales",
+    desc: "Instalación de redes WiFi, cableado estructurado, racks, switches, VLANs y VPN para empresas.",
     icon: "01",
   },
   {
-    title: "Integraciones IA",
-    desc: "Conectamos tu negocio con inteligencia artificial: chatbots, automatizaciones y análisis predictivo.",
+    title: "Servidores & NAS",
+    desc: "Montaje y configuración de servidores, NAS, backups y recuperación de datos.",
     icon: "02",
   },
   {
-    title: "APIs & Backend",
-    desc: "Diseñamos APIs robustas, paneles de administración y sistemas backend escalables.",
+    title: "Mantenimiento Informático",
+    desc: "Soporte preventivo y correctivo. Monitorización, actualizaciones y resolución de incidencias.",
     icon: "03",
   },
   {
-    title: "Consultoría",
-    desc: "Te asesoramos en la estrategia digital de tu empresa, desde la tecnología hasta la implementación.",
+    title: "Soporte Técnico",
+    desc: "Asistencia remota y presencial. Resolvemos tus problemas técnicos rápidamente.",
     icon: "04",
   },
   {
-    title: "Automatización Inmobiliaria",
-    desc: "Extraemos datos de fichas de propiedades, DNI, nóminas y contratos con IA. Tu equipo deja de picar datos y se dedica a vender.",
+    title: "Desarrollo Web",
+    desc: "Creamos páginas web corporativas, tiendas online y aplicaciones con tecnologías modernas.",
     icon: "05",
+  },
+  {
+    title: "Integraciones IA",
+    desc: "Chatbots, automatizaciones y análisis predictivo con inteligencia artificial para tu negocio.",
+    icon: "06",
   },
 ]
 

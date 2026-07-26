@@ -27,7 +27,7 @@ def backup_sqlite(output_dir: str) -> str:
         print(f"ERROR: Base de datos no encontrada: {db_path}")
         sys.exit(1)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    backup_name = f"vulnify_backup_{timestamp}.db"
+    backup_name = f"xlink_backup_{timestamp}.db"
     backup_path = os.path.join(output_dir, backup_name)
     shutil.copy2(db_path, backup_path)
     print(f"Backup creado: {backup_path} ({os.path.getsize(backup_path)} bytes)")
@@ -48,7 +48,7 @@ def backup_postgres(output_dir: str) -> str:
         print("ERROR: No se pudo parsear DATABASE_URL")
         sys.exit(1)
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    backup_name = f"vulnify_backup_{timestamp}.sql"
+    backup_name = f"xlink_backup_{timestamp}.sql"
     backup_path = os.path.join(output_dir, backup_name)
     env = os.environ.copy()
     if password:
@@ -63,7 +63,7 @@ def backup_postgres(output_dir: str) -> str:
 
 
 def clean_old_backups(output_dir: str, retention: int):
-    backups = sorted(glob.glob(os.path.join(output_dir, "vulnify_backup_*")))
+    backups = sorted(glob.glob(os.path.join(output_dir, "xlink_backup_*")))
     while len(backups) > retention:
         old = backups.pop(0)
         os.remove(old)
@@ -71,7 +71,7 @@ def clean_old_backups(output_dir: str, retention: int):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Backup de BD de Vulnify")
+    parser = argparse.ArgumentParser(description="Backup de BD de XLink")
     parser.add_argument("--output", default="backups", help="Directorio de salida")
     parser.add_argument("--retention", type=int, default=DEFAULT_RETENTION, help="Nº de backups a conservar")
     args = parser.parse_args()

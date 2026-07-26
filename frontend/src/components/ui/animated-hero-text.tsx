@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const words = ['CREAR', 'OPTIMIZAR', 'ESCALAR']
+const words = ['CONECTAR', 'PROTEGER', 'ESCALAR']
 
 export function AnimatedHeroText() {
   return (
@@ -11,7 +11,7 @@ export function AnimatedHeroText() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.1, 1] }}
         className="text-[clamp(3.5rem,12vw,14rem)] font-bold uppercase tracking-tight text-white"
       >
-        VULNIFY
+        FORJ
       </motion.span>
       <div className="flex flex-wrap gap-x-[4vw]">
         {words.map((word, i) => (

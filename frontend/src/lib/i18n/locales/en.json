@@ -1,6 +1,6 @@
 {
   "common": {
-    "brand": "VULNIFY",
+    "brand": "FORJ",
     "loading": "Loading...",
     "save": "Save",
     "saving": "Saving...",
@@ -19,6 +19,7 @@
   },
   "nav": {
     "servicios": "Services",
+    "precios": "Pricing",
     "trabajo": "Work",
     "proceso": "Process",
     "contacto": "Contact",
@@ -41,17 +42,17 @@
     "contact_aria": "Contact"
   },
   "footer": {
-    "description": "Digital products, web development and artificial intelligence to grow your business.",
-    "copyright": "© {year} Vulnify. All rights reserved.",
-    "email": "hola@vulnify.es",
+    "description": "Professional IT infrastructure — networks, servers, cabling and automation for businesses.",
+    "copyright": "© {year} Forj. All rights reserved.",
+    "email": "hello@forj.es",
     "column_services": "Services",
     "column_company": "Company",
     "column_legal": "Legal",
-    "service_web": "Web Development",
-    "service_ia": "AI Integrations",
-    "service_products": "Digital Products",
-    "service_apis": "APIs & Backend",
-    "service_consulting": "Consulting",
+    "service_web": "Professional WiFi Networks",
+    "service_ia": "Structured Cabling & Racks",
+    "service_products": "Switches & VLANs",
+    "service_apis": "Servers & NAS",
+    "service_consulting": "IT Consulting",
     "company_about": "About us",
     "company_blog": "Blog",
     "company_cases": "Case studies",
@@ -68,9 +69,13 @@
     "reject": "Reject"
   },
   "hero": {
-    "label": "01 — Digital Ecosystem with AI",
-    "words": ["CREATE", "OPTIMIZE", "SCALE"],
-    "subtitle": "We don't build websites. We create AI-powered digital tools: chatbots, document generators, automations, and digital products that transform your business.",
+    "label": "01 — Professional IT Infrastructure",
+    "words": [
+      "CONNECT",
+      "PROTECT",
+      "SCALE"
+    ],
+    "subtitle": "We don't build websites. We design, install and maintain IT infrastructure: WiFi networks, structured cabling, servers, NAS and automation for businesses that need technology that works.",
     "cta_audit": "Request a free audit",
     "cta_whatsapp": "Chat on WhatsApp",
     "cta_presupuesto": "Request a quote",
@@ -84,41 +89,93 @@
   },
   "problem": {
     "label": "The Problem",
-    "heading": "Your digital tools aren't working for you.",
-    "description": "Most businesses use static websites, manual processes, and generic tools that don't fit their needs. They don't generate leads, don't automate tasks, don't scale.",
+    "heading": "Your IT infrastructure isn't working for you.",
+    "description": "Most businesses have slow networks, outdated cabling, servers without maintenance, and backups that don't work. They lose productivity, security, and money.",
     "signals_label": "Warning signs",
     "signals_items": [
-      "Still creating invoices and contracts manually",
-      "Your website doesn't generate leads or automate anything",
-      "Wasting hours on tasks AI could handle",
-      "Using generic tools that don't adapt to you"
+      "WiFi doesn't reach all office areas",
+      "Servers go down and you lose data",
+      "No automated backups or disaster recovery",
+      "Network cabling is a mess and limits growth"
     ],
     "solution_label": "Our solution",
     "solution_items": [
-      { "title": "Ready-to-use AI Products", "desc": "Chatbots, document generator, automated analysis. Activate them in minutes." },
-      { "title": "Custom Development", "desc": "Websites, APIs and automations designed specifically for your business." },
-      { "title": "Smart Automation", "desc": "Processes that run themselves: reporting, data extraction, customer support." }
+      {
+        "title": "Corporate WiFi Networks",
+        "desc": "Full coverage, no drops. We design and install professional WiFi networks with access control and QoS."
+      },
+      {
+        "title": "Server Infrastructure",
+        "desc": "Physical and virtual servers, NAS storage, automated backups and disaster recovery."
+      },
+      {
+        "title": "Smart Automation",
+        "desc": "AI integration for business processes, network monitoring, alerts and centralized management."
+      }
     ]
   },
   "services": {
     "label": "Services",
-    "heading": "Everything you need to dominate the digital space.",
+    "heading": "Everything you need in IT infrastructure.",
     "items": [
-      { "name": "Web Development", "desc": "Corporate websites, online stores and web applications with React, Next.js and responsive design." },
-      { "name": "AI Integrations", "desc": "Smart chatbots, process automation and predictive analytics for your business." },
-      { "name": "Digital Products", "desc": "Document generator, white-label chatbot, templates and AI tools ready to download and use." },
-      { "name": "APIs & Backend", "desc": "Scalable architecture, robust APIs and admin panels designed to grow." },
-      { "name": "Digital Consulting", "desc": "Tailored technology strategy: from idea to implementation." }
+      {
+        "name": "Professional WiFi Networks",
+        "desc": "Design and installation of corporate WiFi networks with full coverage, access control and QoS for businesses."
+      },
+      {
+        "name": "Structured Cabling & Racks",
+        "desc": "Cat6/Cat6A structured cabling, communication racks, patch panels and professional IT room organization."
+      },
+      {
+        "name": "Switches, VLANs & VPN",
+        "desc": "Managed switch configuration, network segmentation with VLANs, and secure VPN tunnels for remote work."
+      },
+      {
+        "name": "Servers & NAS",
+        "desc": "Physical and virtual server installation, RAID NAS storage, and automated backup systems."
+      },
+      {
+        "name": "Backups & Recovery",
+        "desc": "Automated backups, retention policies, disaster recovery and offsite data replication."
+      },
+      {
+        "name": "24/7 Technical Support",
+        "desc": "Remote and on-site technical assistance. Issue resolution in under 4 hours, continuous monitoring and preventive maintenance."
+      },
+      {
+        "name": "IT & Cloud Consulting",
+        "desc": "IT infrastructure consulting, cloud migration, server virtualization and technology cost optimization."
+      },
+      {
+        "name": "Perimeter Security",
+        "desc": "Firewalls, intrusion detection systems, data encryption, security policies and vulnerability audits."
+      },
+      {
+        "name": "CCTV & Access Control",
+        "desc": "IP video surveillance systems, card/fingerprint access control, technical alarms and monitoring station integration."
+      }
     ]
   },
   "process": {
     "label": "Process",
-    "heading": "From idea to impact.",
+    "heading": "From audit to deployment.",
     "steps": [
-      { "title": "Audit", "desc": "We analyze your business, competition and goals. We define success metrics." },
-      { "title": "Strategy", "desc": "We design the digital architecture: UX, AI, tech stack and roadmap." },
-      { "title": "Build", "desc": "We develop with iterative design. You see progress in real time." },
-      { "title": "Launch", "desc": "Deployment, testing and go-live. We don't stop until it works." }
+      {
+        "title": "Audit",
+        "desc": "We analyze your current infrastructure, identify bottlenecks and define goals."
+      },
+      {
+        "title": "Design",
+        "desc": "We design the network architecture, cabling, servers and backup systems tailored to you."
+      },
+      {
+        "title": "Installation",
+        "desc": "We deploy and install all hardware and software with minimal disruption."
+      },
+      {
+        "title": "Support",
+        "desc": "Continuous monitoring, preventive maintenance and remote and on-site technical support."
+      }
     ]
   },
   "testimonials": {
@@ -132,13 +189,13 @@
     "description": "Every project is unique. We'll send you a transparent, detailed quote with no obligation.",
     "cta": "Request a quote",
     "features": [
-      "Custom website with the stack of your choice",
-      "AI integration, chatbots and automation",
-      "UI/UX design optimized for conversion",
-      "Scalable backend, APIs and admin panel",
-      "Technical SEO and performance included",
-      "Ongoing support and maintenance",
-      "Access to digital products and AI tools"
+      "Free IT infrastructure audit",
+      "Professional network and cabling design",
+      "Server installation and configuration",
+      "Automated backups and recovery",
+      "Remote and on-site technical support",
+      "24/7 continuous monitoring",
+      "Preventive and corrective maintenance"
     ],
     "question": "Shall we talk?",
     "response_time": "Response within 24h"
@@ -150,7 +207,7 @@
     "badge": "SINGLE PLAN",
     "plan_name": "Tailor-made",
     "plan_desc": "Custom price based on your project",
-    "features_label": "Everything you need for your digital project:"
+    "features_label": "Everything you need for your IT infrastructure:"
   },
   "faq": {
     "label": "FAQ",
@@ -184,24 +241,36 @@
   },
   "final_cta": {
     "label": "Start today",
-    "heading": "Ready to dominate the digital space?",
-    "description": "Request a free audit of your digital presence and discover how we can help you grow with AI tools and digital products.",
+    "heading": "Ready for reliable IT infrastructure?",
+    "description": "Request a free audit of your infrastructure and discover how we can help you improve your network performance, security and reliability.",
     "scarcity": "Only 3 projects this month — free audit"
   },
   "about_modal": {
     "badge": "About us",
-    "heading": "We build the digital future of your business.",
-    "body": "At Vulnify we create digital tools that work for you. We don't build pretty pages: we design AI-powered digital ecosystems, ready-to-use products and automations that transform your business. We combine web development, artificial intelligence and digital products to turn your online presence into a growth machine.",
+    "heading": "We build your company's IT infrastructure.",
+    "body": "At Forj we design, install and maintain professional IT infrastructure for businesses. WiFi networks, structured cabling, servers, NAS, backups and automation. We don't sell technology for the sake of it: we build solutions that work, grow with you, and don't cause problems.",
     "principles_heading": "Our principles",
     "principles": [
-      { "title": "Technology with purpose", "desc": "We don't use technology for the sake of trends. Every technical decision responds to a real business goal." },
-      { "title": "Human-centered design", "desc": "Behind every interface there's a human being. We build experiences that matter." },
-      { "title": "Measurable results", "desc": "If it can't be measured, it can't be improved. Every project has clear KPIs from day one." },
-      { "title": "Continuous improvement", "desc": "Launch is just the beginning. We iterate, optimize and evolve with you." }
+      {
+        "title": "Technology that works",
+        "desc": "We don't install technology for trends. Every solution responds to a real business need."
+      },
+      {
+        "title": "Design with vision",
+        "desc": "We think about future growth. Your IT infrastructure scales with you."
+      },
+      {
+        "title": "Real support",
+        "desc": "We don't disappear after installation. We're here to keep everything running."
+      },
+      {
+        "title": "Total transparency",
+        "desc": "Clear quotes, no fine print. You know exactly what you're paying for and why."
+      }
     ],
     "founder_name": "Dani Ramirez",
-    "founder_role": "CTO & Founder of Vulnify",
-    "founder_bio": "+6 years building digital products. Ex-CTO of startups. Convinced that well-applied technology transforms businesses."
+    "founder_role": "CEO & Founder of Forj",
+    "founder_bio": "+10 years in IT infrastructure and networks. Has designed networks for over 50 companies. Convinced that good infrastructure is the foundation of digital success."
   },
   "auth": {
     "heading_login": "Log in",
@@ -218,8 +287,8 @@
     "forgot_password": "Forgot your password?",
     "show_password": "Show",
     "hide_password": "Hide",
-    "sidebar_quote": "\"We protect your digital reputation with artificial intelligence.\"",
-    "sidebar_attribution": "~ Vulnify Team"
+    "sidebar_quote": "\"We protect your IT infrastructure with the highest standards.\"",
+    "sidebar_attribution": "~ Forj Team"
   },
   "forgot_password": {
     "heading": "Reset password",
@@ -296,7 +365,7 @@
       "heading": "My orders",
       "new_order": "New order",
       "modal_title": "Request new order",
-      "service_placeholder": "Service (e.g. Web Design, SEO...)",
+      "service_placeholder": "Service (e.g. Networks, Servers...)",
       "message_placeholder": "Describe what you need",
       "budget_placeholder": "Estimated budget (€)",
       "submit": "Send request",
@@ -347,7 +416,15 @@
     "users": {
       "search": "Search by name or email...",
       "search_button": "Search",
-      "columns": ["ID", "Name", "Email", "Role", "Verified", "Created", "Actions"],
+      "columns": [
+        "ID",
+        "Name",
+        "Email",
+        "Role",
+        "Verified",
+        "Created",
+        "Actions"
+      ],
       "make_admin": "Make admin",
       "remove_admin": "Remove admin"
     },
@@ -366,12 +443,26 @@
       "new_title": "New order",
       "customer_name": "Customer name",
       "customer_email": "Customer email",
-      "service": "Service (e.g. Web Scan, Pentest...)",
+      "service": "Service (e.g. WiFi Networks, Servers...)",
       "description": "Description",
       "amount": "Amount (€)",
       "status": "Status",
-      "status_options": ["Pending", "In progress", "Completed", "Canceled"],
-      "columns": ["ID", "Customer", "Email", "Service", "Amount", "Status", "Date", "Actions"],
+      "status_options": [
+        "Pending",
+        "In progress",
+        "Completed",
+        "Canceled"
+      ],
+      "columns": [
+        "ID",
+        "Customer",
+        "Email",
+        "Service",
+        "Amount",
+        "Status",
+        "Date",
+        "Actions"
+      ],
       "history": "History",
       "pdf": "PDF",
       "photos": "Photos",
@@ -390,7 +481,14 @@
       "excerpt": "Excerpt (brief summary)",
       "content": "Content (markdown)",
       "published": "Published",
-      "columns": ["ID", "Title", "Tag", "Status", "Date", "Actions"],
+      "columns": [
+        "ID",
+        "Title",
+        "Tag",
+        "Status",
+        "Date",
+        "Actions"
+      ],
       "status_published": "Published",
       "status_draft": "Draft",
       "archive": "Archive",
@@ -409,7 +507,14 @@
       "content": "Testimonial content",
       "rating": "Rating (1-5)",
       "featured": "Featured",
-      "columns": ["ID", "Name", "Company", "Rating", "Featured", "Actions"]
+      "columns": [
+        "ID",
+        "Name",
+        "Company",
+        "Rating",
+        "Featured",
+        "Actions"
+      ]
     },
     "faq": {
       "count": "{count} FAQs",
@@ -420,13 +525,26 @@
       "answer": "Answer",
       "category": "Category",
       "published": "Published",
-      "columns": ["Order", "Question", "Category", "Published", "Actions"],
+      "columns": [
+        "Order",
+        "Question",
+        "Category",
+        "Published",
+        "Actions"
+      ],
       "move_up": "Move up",
       "move_down": "Move down"
     },
     "activity": {
       "count": "{count} records",
-      "columns": ["ID", "User", "Action", "IP", "Details", "Date"]
+      "columns": [
+        "ID",
+        "User",
+        "Action",
+        "IP",
+        "Details",
+        "Date"
+      ]
     },
     "products": {
       "count": "{count} products",
@@ -456,8 +574,8 @@
   },
   "products": {
     "badge": "Products",
-    "heading": "Digital products.",
-    "subtitle": "Ready-to-download solutions. One-time payment or monthly subscription.",
+    "heading": "Products and services.",
+    "subtitle": "IT solutions ready to order. One-time payment or monthly subscription.",
     "view": "View product",
     "one_time": "one-time",
     "back": "← Back to products",
@@ -556,11 +674,11 @@
   },
   "blog": {
     "page_title": "Blog",
-    "page_description": "Resources, guides and articles on web development, AI, SEO and digital marketing.",
+    "page_description": "Resources, guides and articles on IT infrastructure, networks, servers and business technology.",
     "back": "← Back to home",
     "badge": "Blog",
     "heading": "Resources to grow.",
-    "detail_title": "{title} — Blog Vulnify",
+    "detail_title": "{title} — Blog Forj",
     "detail_description": "{title} — {description}",
     "back_to_blog": "← Back to blog",
     "author_by": "By {author}",
@@ -584,54 +702,127 @@
   },
   "privacidad": {
     "page_title": "Privacy Policy",
-    "page_description": "Vulnify's Privacy Policy. Learn how we handle your personal data.",
+    "page_description": "Forj's Privacy Policy. Learn how we handle your personal data.",
     "title": "Privacy Policy",
     "date": "June 1, 2026",
     "sections": [
-      { "title": "1. Data Controller", "body": "Vulnify (hereinafter \"the company\"), with registered address in Spain, is the data controller for the personal data provided by users through this website." },
-      { "title": "2. Data Collected", "body": "We collect information you provide directly by filling out the contact form: name, email address and phone number. We also collect browsing data through technical and analytical cookies." },
-      { "title": "3. Purpose of Processing", "body": "Your data will be used to: (a) respond to your request for information or quote, (b) send you commercial communications if you have given your consent, and (c) improve our services through browsing analysis." },
-      { "title": "4. Legal Basis", "body": "Processing is based on your explicit consent when submitting the form and, where applicable, on the company's legitimate interest in improving its services." },
-      { "title": "5. Retention", "body": "We will retain your data for as long as necessary to fulfill the purpose for which it was collected, and for the legally established periods." },
-      { "title": "6. Rights", "body": "You have the right to access, rectify, delete, restrict processing, object to processing and request data portability. You can exercise these rights by writing to hola@vulnify.es." }
+      {
+        "title": "1. Data Controller",
+        "body": "Forj (hereinafter \"the company\"), with registered address in Spain, is the data controller for the personal data provided by users through this website."
+      },
+      {
+        "title": "2. Data Collected",
+        "body": "We collect information you provide directly by filling out the contact form: name, email address and phone number. We also collect browsing data through technical and analytical cookies."
+      },
+      {
+        "title": "3. Purpose of Processing",
+        "body": "Your data will be used to: (a) respond to your request for information or quote, (b) send you commercial communications if you have given your consent, and (c) improve our services through browsing analysis."
+      },
+      {
+        "title": "4. Legal Basis",
+        "body": "Processing is based on your explicit consent when submitting the form and, where applicable, on the company's legitimate interest in improving its services."
+      },
+      {
+        "title": "5. Retention",
+        "body": "We will retain your data for as long as necessary to fulfill the purpose for which it was collected, and for the legally established periods."
+      },
+      {
+        "title": "6. Rights",
+        "body": "You have the right to access, rectify, delete, restrict processing, object to processing and request data portability. You can exercise these rights by writing to hello@forj.es."
+      }
     ]
   },
   "terminos": {
     "page_title": "Terms & Conditions",
-    "page_description": "Terms and conditions of use of the Vulnify website.",
+    "page_description": "Terms and conditions of use of the Forj website.",
     "title": "Terms & Conditions",
     "date": "June 1, 2026",
     "sections": [
-      { "title": "1. Acceptance of Terms", "body": "By accessing and using this website, you accept these terms and conditions. If you do not agree with any of them, we recommend you do not use the site." },
-      { "title": "2. Services", "body": "Vulnify offers web development, artificial intelligence integration, API development and digital consulting services. The specific scope of each service will be defined in the corresponding quote." },
-      { "title": "3. Intellectual Property", "body": "All content on this website (texts, images, logos, code) is owned by Vulnify or used under license. Its reproduction without express authorization is prohibited." },
-      { "title": "4. Limitation of Liability", "body": "Vulnify shall not be liable for damages arising from improper use of the website or interruption of service due to causes beyond its control." },
-      { "title": "5. Modifications", "body": "We reserve the right to modify these terms at any time. Changes will be published on this page." }
+      {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing and using this website, you accept these terms and conditions. If you do not agree with any of them, we recommend you do not use the site."
+      },
+      {
+        "title": "2. Services",
+        "body": "Forj offers IT infrastructure, WiFi networks, structured cabling, servers, NAS, backups, automation and AI integration services. The specific scope of each service will be defined in the corresponding quote."
+      },
+      {
+        "title": "3. Intellectual Property",
+        "body": "All content on this website (texts, images, logos, code) is owned by Forj or used under license. Its reproduction without express authorization is prohibited."
+      },
+      {
+        "title": "4. Limitation of Liability",
+        "body": "Forj shall not be liable for damages arising from improper use of the website or interruption of service due to causes beyond its control."
+      },
+      {
+        "title": "5. Modifications",
+        "body": "We reserve the right to modify these terms at any time. Changes will be published on this page."
+      }
     ]
   },
   "cookies": {
     "page_title": "Cookie Policy",
-    "page_description": "Vulnify's Cookie Policy. Learn how we use cookies.",
+    "page_description": "Forj's Cookie Policy. Learn how we use cookies.",
     "title": "Cookie Policy",
     "date": "June 1, 2026",
     "sections": [
-      { "title": "1. What are cookies?", "body": "Cookies are small text files that are stored in your browser when you visit a website. They allow us to remember your preferences and improve your browsing experience." },
-      { "title": "2. Types of cookies we use", "items": ["Technical cookies: necessary for the website to function. They do not require consent.", "Analytical cookies: help us understand how users interact with the site, so we can improve it.", "Preference cookies: remember your settings (such as dark mode) to provide you with a personalized experience."] },
-      { "title": "3. Managing cookies", "body": "You can manage cookies from your browser settings. Please note that blocking technical cookies may affect website functionality." },
-      { "title": "4. Third-party cookies", "body": "This website does not use third-party cookies for advertising or external tracking." },
-      { "title": "5. More information", "body": "If you have any questions about our cookie policy, write to us at hola@vulnify.es." }
+      {
+        "title": "1. What are cookies?",
+        "body": "Cookies are small text files that are stored in your browser when you visit a website. They allow us to remember your preferences and improve your browsing experience."
+      },
+      {
+        "title": "2. Types of cookies we use",
+        "items": [
+          "Technical cookies: necessary for the website to function. They do not require consent.",
+          "Analytical cookies: help us understand how users interact with the site, so we can improve it.",
+          "Preference cookies: remember your settings (such as dark mode) to provide you with a personalized experience."
+        ]
+      },
+      {
+        "title": "3. Managing cookies",
+        "body": "You can manage cookies from your browser settings. Please note that blocking technical cookies may affect website functionality."
+      },
+      {
+        "title": "4. Third-party cookies",
+        "body": "This website does not use third-party cookies for advertising or external tracking."
+      },
+      {
+        "title": "5. More information",
+        "body": "If you have any questions about our cookie policy, write to us at hello@forj.es."
+      }
     ]
   },
   "casos_exito": {
     "page_title": "Case Studies",
-    "page_description": "Real results from our clients. Discover how Vulnify transforms businesses with technology.",
+    "page_description": "Real results from our clients. Discover how Forj transforms companies' IT infrastructure.",
     "back": "← Back to home",
     "badge": "Case studies",
     "heading": "Results that speak.",
     "cases": [
-      { "metric": "+300%", "label": "organic leads", "company": "TechFlow", "sector": "SaaS", "desc": "We redesigned their website with conversational AI. They went from 10 to 40 leads/month without spending on ads.", "result": "Organic traffic increased by 180% thanks to technical and content SEO optimization." },
-      { "metric": "20h", "label": "saved per week", "company": "InnovaCorp", "sector": "Consulting", "desc": "We automated their reporting process with a predictive dashboard. Their team reclaimed strategic time.", "result": "85% reduction in time spent on manual reports. The team went from 24h to 4h per week." },
-      { "metric": "2.5x", "label": "conversion", "company": "DataSmart", "sector": "E-commerce", "desc": "We integrated smart recommendations and chatbots. Their average ticket grew 150% in 90 days.", "result": "Conversion rate from 2.1% to 5.3%. The chatbot resolved 40% of queries without human intervention." }
+      {
+        "metric": "+300%",
+        "label": "network speed",
+        "company": "TechFlow",
+        "sector": "SaaS",
+        "desc": "We redesigned their entire network infrastructure with Cat6A cabling, managed switches and enterprise WiFi. They went from 10 to 40 devices without performance loss.",
+        "result": "300% increase in transfer speed and elimination of network drops."
+      },
+      {
+        "metric": "20h",
+        "label": "saved per week",
+        "company": "InnovaCorp",
+        "sector": "Consulting",
+        "desc": "We automated their backups with RAID NAS and disaster recovery. Their team recovered time previously lost in manual tasks.",
+        "result": "85% reduction in time spent on backups and data recovery."
+      },
+      {
+        "metric": "100%",
+        "label": "uptime",
+        "company": "DataSmart",
+        "sector": "E-commerce",
+        "desc": "We implemented servers with load balancing, redundancy and 24/7 monitoring. Their online store has never gone down again.",
+        "result": "99.99% availability since implementation. Zero critical incidents in 12 months."
+      }
     ]
   },
   "servicios_page": {
@@ -641,48 +832,283 @@
     "features_heading": "What's included",
     "items": {
       "desarrollo_web": {
-        "title": "Web Development",
-        "desc": "We create corporate websites, online stores and web applications with React, Next.js and responsive design. Every project is optimized for speed, SEO and conversion.",
-        "features": ["Landing pages and corporate websites", "Online stores (e-commerce)", "Progressive web applications (PWA)", "Core Web Vitals optimization", "Responsive and accessible design", "CMS integration"]
+        "title": "Professional WiFi Networks",
+        "desc": "We design and install corporate WiFi networks with full coverage, access control, QoS and centralized management for businesses of any size.",
+        "features": [
+          "Coverage design and site survey",
+          "Ubiquiti, MikroTik, Cisco access points",
+          "User/role based access control",
+          "Quality of Service (QoS)",
+          "Guest networks and VLANs",
+          "Centralized monitoring and management"
+        ]
       },
       "integraciones_ia": {
-        "title": "AI Integrations",
-        "desc": "Smart chatbots, process automation and predictive analytics for your business. Bring artificial intelligence to every corner of your digital operation.",
-        "features": ["Conversational AI chatbots", "Process automation", "Predictive analytics", "Natural language processing", "Smart recommendations", "Virtual assistants"]
+        "title": "Structured Cabling & Racks",
+        "desc": "Professional Cat6/Cat6A structured cabling, communication rack organization and link certification to guarantee maximum performance.",
+        "features": [
+          "Certified Cat6 and Cat6A cabling",
+          "Communication racks and patch panels",
+          "Cable trays and cable management",
+          "Link certification (Fluke)",
+          "Documentation and labeling",
+          "Expansions and maintenance"
+        ]
       },
       "apis_backend": {
-        "title": "APIs & Backend",
-        "desc": "Scalable architecture, robust APIs and admin panels designed to grow. We build the technical backbone of your digital business.",
-        "features": ["RESTful and GraphQL APIs", "Scalable microservices", "SQL and NoSQL databases", "Authentication and authorization", "Automatic documentation", "Monitoring and logging"]
+        "title": "Switches, VLANs & VPN",
+        "desc": "Managed switch configuration, network segmentation with VLANs and secure VPN tunnels for remote work and branch offices.",
+        "features": [
+          "Managed switches (Cisco, MikroTik, Ubiquiti)",
+          "VLAN segmentation by department",
+          "Site-to-site and remote access VPN",
+          "Routing and perimeter firewall",
+          "Load balancing",
+          "Traffic monitoring"
+        ]
       },
       "consultoria": {
-        "title": "Digital Consulting",
-        "desc": "Tailored technology strategy: from idea to implementation. We help you make the right decisions for your business.",
-        "features": ["Technology audit", "Product roadmap", "Tech stack selection", "Software architecture", "Growth strategy", "Training and mentoring"]
+        "title": "Servers & NAS",
+        "desc": "Installation, configuration and maintenance of physical and virtualized servers, NAS storage and automated backups.",
+        "features": [
+          "Dell, HP, Supermicro servers",
+          "Virtualization with Proxmox, VMware, Hyper-V",
+          "Synology, QNAP NAS with RAID",
+          "Automated backups (3-2-1)",
+          "Disaster recovery",
+          "Monitoring and alerts"
+        ]
       },
       "productos_digitales": {
-        "title": "Digital Products",
-        "desc": "Ready-to-use AI tools: document generator, white-label chatbot, templates and more. Download and use instantly.",
-        "features": ["AI document generator", "White-label chatbot", "Contract and GDPR templates", "AI courses for business", "Monthly subscription with support", "API tokens for integrations"]
+        "title": "Automation & AI Integration",
+        "desc": "Business process automation, AI integration for IT support, intelligent monitoring and predictive infrastructure management.",
+        "features": [
+          "AI chatbot for IT support",
+          "Predictive network monitoring",
+          "Backup automation",
+          "Integration with existing tools",
+          "Control panels and reports",
+          "Smart alerts"
+        ]
+      },
+      "soporte_tecnico": {
+        "title": "24/7 Technical Support",
+        "desc": "Remote and on-site technical support with guaranteed SLA. Continuous monitoring, preventive maintenance and issue resolution.",
+        "features": [
+          "Immediate remote support",
+          "On-site technical visits",
+          "24/7 infrastructure monitoring",
+          "Monthly preventive maintenance",
+          "Quarterly status reports",
+          "4h SLA for critical incidents"
+        ]
+      },
+      "consultoria_cloud": {
+        "title": "IT & Cloud Consulting",
+        "desc": "Strategic IT infrastructure consulting, cloud migration, virtualization and technology cost optimization.",
+        "features": [
+          "Current infrastructure audit",
+          "Cloud migration plan",
+          "Server virtualization",
+          "IT cost optimization",
+          "Business continuity plan",
+          "12-month technology roadmap"
+        ]
+      },
+      "seguridad": {
+        "title": "Perimeter Security",
+        "desc": "Advanced corporate network protection with firewalls, detection systems and customized security policies.",
+        "features": [
+          "Corporate firewall (Fortinet/Palo Alto)",
+          "Intrusion detection system IDS/IPS",
+          "Site-to-site and remote access VPN",
+          "Network segregation with VLANs",
+          "Vulnerability assessment",
+          "Security policies and hardening"
+        ]
+      },
+      "videovigilancia": {
+        "title": "CCTV & Access Control",
+        "desc": "IP video surveillance and access control systems to protect your facilities.",
+        "features": [
+          "4K IP cameras with night vision",
+          "NVR with centralized storage",
+          "RFID/fingerprint access control",
+          "Remote access via mobile app",
+          "Integration with technical alarms",
+          "Continuous and motion-based recording"
+        ]
       }
     }
   },
   "features": {
-    "customizable": "Customizable",
-    "customizable_desc": "Every project adapts to your needs. No templates, no limits.",
+    "customizable": "Tailor-made",
+    "customizable_desc": "Every project adapts to your needs. No generic solutions.",
     "secure": "Secure by default",
-    "secure_desc": "We protect your website with SSL, encryption and best practices from day one.",
-    "speed": "Extreme speed",
-    "speed_desc": "We optimize every byte so your website loads in under a second.",
-    "modern": "Modern technology",
-    "modern_desc": "React, Node.js, APIs, databases. Modern stack for businesses that look to the future.",
+    "secure_desc": "We protect your network with encryption, firewalls and best practices from day one.",
+    "speed": "Guaranteed speed",
+    "speed_desc": "We design networks with the bandwidth and coverage your business needs.",
+    "modern": "Professional technology",
+    "modern_desc": "Professional brand hardware: Cisco, Ubiquiti, MikroTik, Synology, Dell.",
     "support": "Ongoing support",
-    "support_desc": "We accompany you at every stage: from design to launch and beyond.",
+    "support_desc": "We accompany you at every stage: from design to ongoing maintenance.",
     "client_label": "Client",
-    "vulnify_label": "Vulnify"
+    "forj_label": "Forj"
   },
   "seo": {
-    "default_title": "Vulnify · Digital Products, Web Development & AI",
-    "default_description": "We create AI-powered digital tools: chatbots, document generator, automations, web development and digital products for your business."
+    "default_title": "Forj · Professional IT Infrastructure",
+    "default_description": "WiFi networks, structured cabling, servers, NAS, backups and automation for businesses. Design, installation and maintenance of professional IT infrastructure."
+  },
+  "prices": {
+    "badge": "Pricing",
+    "heading": "Transparent investment.",
+    "subtitle": "Estimated prices for our most common services. Each project is unique and quoted to measure.",
+    "cta": "Request a custom quote",
+    "from": "From",
+    "up_to": "Up to",
+    "calculator_heading": "Calculate your project",
+    "calculator_desc": "Select the services you need and get an instant estimate.",
+    "select_service": "Select a service",
+    "calculate": "Calculate estimate",
+    "estimated": "Estimated budget:",
+    "note": "* Estimated budget. Final price may vary depending on project complexity."
+  },
+  "pkg": {
+    "startup": "Startup",
+    "startup_desc": "For small businesses starting their digital infrastructure. Corporate WiFi, basic cabling, NAS and essential maintenance.",
+    "professional": "Professional",
+    "professional_desc": "For growing businesses. High-performance network, Cat6A cabling, advanced NAS, firewall, backup and priority support.",
+    "enterprise": "Enterprise",
+    "enterprise_desc": "Complete infrastructure for large organizations. All included: servers, CCTV, access control, cloud and 24/7 support."
+  },
+  "calc": {
+    "area": "Area",
+    "users": "Users",
+    "users_placeholder": "Users",
+    "aps": "Access Points",
+    "aps_placeholder": "APs",
+    "workstations": "Workstations",
+    "workstations_placeholder": "Workstations",
+    "cable_category": "Cable category",
+    "nas_bays": "NAS bays",
+    "storage_tb": "Storage",
+    "form_factor": "Form factor",
+    "ram": "RAM",
+    "data_tb": "Data to backup",
+    "retention": "Retention",
+    "employees": "Employees",
+    "employees_placeholder": "Employees",
+    "scope": "Scope",
+    "scope_network": "Network only",
+    "scope_full": "Full infrastructure",
+    "scope_security": "Security",
+    "devices": "Devices",
+    "devices_placeholder": "Devices",
+    "sla": "SLA",
+    "users_supported": "Users",
+    "users_supported_placeholder": "Users",
+    "users_cloud": "Users",
+    "users_cloud_placeholder": "Users",
+    "migration": "Migration",
+    "migration_audit": "Audit only",
+    "migration_hybrid": "Hybrid (on-premise + cloud)",
+    "migration_full": "Full cloud",
+    "users_fw": "Users",
+    "users_fw_placeholder": "Users",
+    "features": "Features",
+    "cameras": "Cameras",
+    "cameras_placeholder": "Cameras",
+    "resolution": "Resolution",
+    "storage_days": "Recording storage",
+    "doors": "Doors",
+    "doors_placeholder": "Doors",
+    "auth_type": "Auth type",
+    "select": "Select...",
+    "estimated_price": "Estimated price:",
+    "estimated_total": "Estimated total budget:",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "phone_placeholder": "Your phone",
+    "company_placeholder": "Company",
+    "message_placeholder": "Additional notes...",
+    "review_quote": "Review quote",
+    "quote_ready": "Quote ready to send",
+    "total": "Total",
+    "contact": "Contact",
+    "send_whatsapp": "Send via WhatsApp",
+    "contact_form": "Contact form",
+    "step_package": "Package",
+    "step_configure": "Services",
+    "step_review": "Review",
+    "choose_package": "Choose a plan",
+    "choose_package_desc": "Select a predefined package or configure your own budget from scratch.",
+    "custom": "Custom",
+    "custom_desc": "Select and configure each service individually.",
+    "continue_review": "Review quote",
+    "configure_services": "Configure your services",
+    "configure_services_desc": "Select services and adjust parameters according to your needs.",
+    "no_services": "You haven't selected any services yet.",
+    "start_adding": "Start configuring",
+    "back_packages": "Back to packages",
+    "compare_plans": "Plan comparison",
+    "compare_plans_desc": "Discover what each package includes and choose the best fit for your business.",
+    "service": "Service",
+    "discount": "Disc.",
+    "includes_discount": "Includes",
+    "save_budget": "Save",
+    "saved_success": "Budget saved successfully",
+    "saved_budgets": "My budgets",
+    "no_saved": "No saved budgets",
+    "print": "Print PDF",
+    "quote_title": "ESTIMATED QUOTE"
+  },
+  "tickets": {
+    "badge": "Support",
+    "heading": "Open a support ticket.",
+    "subtitle": "Describe your technical issue and we'll respond within 24h.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "description": "Describe your issue...",
+      "priority": "Priority",
+      "priority_low": "Low",
+      "priority_normal": "Normal",
+      "priority_high": "High",
+      "priority_urgent": "Urgent",
+      "submit": "Open ticket",
+      "success": "Ticket created. We'll get back to you soon."
+    },
+    "my_tickets": "My tickets",
+    "no_tickets": "You have no open tickets.",
+    "status_open": "Open",
+    "status_progress": "In progress",
+    "status_resolved": "Resolved",
+    "status_closed": "Closed",
+    "detail_title": "Ticket #{id}",
+    "add_message": "Write a message...",
+    "send": "Send"
+  },
+  "gallery": {
+    "badge": "Projects",
+    "heading": "Our work.",
+    "subtitle": "Real photos of installations we've done for our clients.",
+    "all": "All",
+    "featured": "Featured",
+    "categories": {
+      "redes": "WiFi Networks",
+      "cableado": "Structured Cabling",
+      "servidores": "Servers & NAS",
+      "general": "General"
+    },
+    "no_images": "We'll add project photos soon."
+  },
+  "kpis": {
+    "title": "KPIs",
+    "active_projects": "Active projects",
+    "pending_tickets": "Open tickets",
+    "monthly_revenue": "Monthly revenue",
+    "avg_response": "Avg response",
+    "sla_compliance": "SLA compliance"
   }
 }

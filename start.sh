@@ -1,2 +1,4 @@
-#!/bin/sh
-python -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+#!/bin/bash
+cd /home/ouar/Descargas/XLink
+source venv/bin/activate
+exec uvicorn main:app --host 0.0.0.0 --port 8000

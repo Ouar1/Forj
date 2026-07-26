@@ -1,6 +1,6 @@
-# Vulnify
+# XLink
 
-Desarrollo Web & Inteligencia Artificial — Transformamos negocios con sitios web modernos e integraciones de IA.
+Infraestructura TI Profesional — Diseño, instalación y mantenimiento de redes, servidores y automatización para empresas.
 
 ## Stack
 
@@ -14,16 +14,20 @@ Desarrollo Web & Inteligencia Artificial — Transformamos negocios con sitios w
 
 ## Servicios
 
-- Desarrollo web (React, Next.js, Astro)
-- Integraciones IA (chatbots, automatización, análisis predictivo)
-- Extracción de datos con IA (propiedades, DNI, nóminas, contratos)
-- APIs y consultoría digital
+- Redes WiFi Profesionales
+- Cableado Estructurado & Racks
+- Switches, VLANs & VPN
+- Servidores & NAS
+- Backups & Recuperación de Datos
+- Automatización & Integración de IA
+- Soporte Técnico Remoto & Presencial
+- Mantenimiento Informático Preventivo y Correctivo
 
 ## Desarrollo local
 
 ```bash
-git clone https://github.com/OUAR77/Vulnify.git
-cd Vulnify
+git clone https://github.com/OUAR77/XLink.git
+cd XLink
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

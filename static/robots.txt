@@ -6,4 +6,4 @@ Disallow: /company
 Disallow: /api
 Disallow: /uploads
 
-Sitemap: https://vulnify.es/sitemap.xml
+Sitemap: https://xlink.es/sitemap.xml

@@ -129,7 +129,7 @@ export function Features() {
                       <div className="ring-black size-8 ring-4">
                         <img className="size-full rounded-full" src="https://avatars.githubusercontent.com/u/47919550?v=4" alt="" />
                       </div>
-                      <span className="block h-fit rounded border border-white/[0.06] px-3 py-1 text-xs text-zinc-600">{t('features.vulnify_label')}</span>
+                      <span className="block h-fit rounded border border-white/[0.06] px-3 py-1 text-xs text-zinc-600">{t('features.forj_label')}</span>
                     </div>
                     <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                       <span className="block h-fit rounded border border-white/[0.06] px-2 py-1 text-xs text-zinc-600">{t('features.client_label')}</span>

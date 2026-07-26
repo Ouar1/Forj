@@ -228,6 +228,7 @@ export function SiteLayout() {
 
   const navItems = [
     { label: t('nav.servicios'), section: 'servicios' },
+    { label: t('nav.precios'), section: 'precios', route: '/precios' },
     { label: t('nav.trabajo'), section: 'insight' },
     { label: t('nav.proceso'), section: 'proceso' },
     { label: t('nav.contacto'), section: 'contacto' },
@@ -247,14 +248,21 @@ export function SiteLayout() {
         <Link to="/" className="text-base font-bold tracking-[0.3em] text-white/90 no-underline">{t('common.brand')}</Link>
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <button
-              key={item.label}
-              onClick={() => handleNavClick(item.section)}
-              className="text-sm text-zinc-500 hover:text-white transition-colors relative group bg-transparent border-none cursor-pointer"
-            >
-              {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-white/40 group-hover:w-full transition-all duration-300" />
-            </button>
+            item.route ? (
+              <Link key={item.label} to={item.route} className="text-sm text-zinc-500 hover:text-white transition-colors no-underline relative group">
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white/40 group-hover:w-full transition-all duration-300" />
+              </Link>
+            ) : (
+              <button
+                key={item.label}
+                onClick={() => handleNavClick(item.section)}
+                className="text-sm text-zinc-500 hover:text-white transition-colors relative group bg-transparent border-none cursor-pointer"
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white/40 group-hover:w-full transition-all duration-300" />
+              </button>
+            )
           ))}
           <Link to="/productos" className="text-sm text-zinc-500 hover:text-white transition-colors no-underline relative group">
             {t('nav.productos')}
@@ -289,16 +297,29 @@ export function SiteLayout() {
             </div>
             <div className="flex-1 flex flex-col items-center justify-center gap-10">
               {navItems.map((item, i) => (
-                <motion.button
-                  key={item.label}
-                  onClick={() => handleNavClick(item.section)}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                  className="text-4xl md:text-5xl tracking-tight text-zinc-500 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
-                >
-                  {item.label}
-                </motion.button>
+                item.route ? (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.08 }}
+                  >
+                    <Link to={item.route} onClick={() => setMenuOpen(false)} className="text-4xl md:text-5xl tracking-tight text-zinc-500 hover:text-white transition-colors no-underline">
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ) : (
+                  <motion.button
+                    key={item.label}
+                    onClick={() => handleNavClick(item.section)}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.08 }}
+                    className="text-4xl md:text-5xl tracking-tight text-zinc-500 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
+                  >
+                    {item.label}
+                  </motion.button>
+                )
               ))}
               <HoverBorderGradient as="button" onClick={() => window.dispatchEvent(new CustomEvent('open-contact'))} className="flex items-center gap-2 px-8 py-4 text-base font-medium">
                 {t('nav.solicitar_presupuesto')} <ArrowUpRight className="size-4" />

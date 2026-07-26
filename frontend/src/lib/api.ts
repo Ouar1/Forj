@@ -31,24 +31,24 @@ export interface TotpRequiredResponse {
 }
 
 function getToken(): string | null {
-  return localStorage.getItem('vulnify_token')
+  return localStorage.getItem('forj_token')
 }
 
 export function setToken(token: string) {
-  localStorage.setItem('vulnify_token', token)
+  localStorage.setItem('forj_token', token)
 }
 
 export function setRefreshToken(token: string) {
-  localStorage.setItem('vulnify_refresh', token)
+  localStorage.setItem('forj_refresh', token)
 }
 
 export function setUser(user: User) {
-  localStorage.setItem('vulnify_user', JSON.stringify(user))
+  localStorage.setItem('forj_user', JSON.stringify(user))
 }
 
 export function getStoredUser(): User | null {
   try {
-    const u = localStorage.getItem('vulnify_user')
+    const u = localStorage.getItem('forj_user')
     return u ? JSON.parse(u) : null
   } catch {
     return null
@@ -56,9 +56,9 @@ export function getStoredUser(): User | null {
 }
 
 export function clearAuth() {
-  localStorage.removeItem('vulnify_token')
-  localStorage.removeItem('vulnify_refresh')
-  localStorage.removeItem('vulnify_user')
+  localStorage.removeItem('forj_token')
+  localStorage.removeItem('forj_refresh')
+  localStorage.removeItem('forj_user')
 }
 
 export async function apiDelete<T>(path: string): Promise<T> {
@@ -666,4 +666,106 @@ export async function adminCreatePurchase(data: { product_id: number; buyer_emai
 
 export async function adminRegenerateToken(purchaseId: number): Promise<{ ok: boolean; token: string }> {
   return apiPost(`/api/admin/purchases/${purchaseId}/regenerate-token`, {})
+}
+
+// Price Ranges
+export interface PriceRange {
+  id: number; service: string; min_price: number; max_price: number
+  unit: string; description: string; active: boolean
+}
+
+export async function getPriceRanges(): Promise<PriceRange[]> {
+  const res = await fetch(`${BASE}/api/prices`)
+  if (!res.ok) throw new Error('Error al cargar precios')
+  return res.json()
+}
+
+export async function adminGetPriceRanges(): Promise<PriceRange[]> {
+  return apiGet<PriceRange[]>('/api/admin/prices')
+}
+
+export async function adminCreatePriceRange(data: Partial<PriceRange>): Promise<PriceRange> {
+  return apiPost<PriceRange>('/api/admin/prices', data)
+}
+
+export async function adminUpdatePriceRange(id: number, data: Partial<PriceRange>): Promise<PriceRange> {
+  return apiPut<PriceRange>(`/api/admin/prices/${id}`, data)
+}
+
+export async function adminDeletePriceRange(id: number): Promise<{ ok: boolean }> {
+  return apiDelete<{ ok: boolean }>(`/api/admin/prices/${id}`)
+}
+
+// Tickets
+export interface Ticket {
+  id: number; user_id?: number; client_name: string; client_email: string
+  subject: string; description: string; priority: string; status: string
+  created_at: string; updated_at: string
+}
+
+export interface TicketMessage {
+  id: number; ticket_id: number; sender: string; agent_name: string
+  message: string; created_at: string
+}
+
+export async function createTicket(data: { client_name: string; client_email: string; subject: string; description?: string; priority?: string }): Promise<Ticket> {
+  return apiPost<Ticket>('/api/tickets', data)
+}
+
+export async function getMyTickets(): Promise<Ticket[]> {
+  return apiGet<Ticket[]>('/api/tickets')
+}
+
+export async function getTicketDetail(id: number): Promise<{ ticket: Ticket; messages: TicketMessage[] }> {
+  return apiGet<{ ticket: Ticket; messages: TicketMessage[] }>(`/api/tickets/${id}`)
+}
+
+export async function addTicketMessage(ticketId: number, message: string): Promise<TicketMessage> {
+  return apiPost<TicketMessage>(`/api/tickets/${ticketId}/messages`, { message })
+}
+
+export async function adminGetTickets(): Promise<Ticket[]> {
+  return apiGet<Ticket[]>('/api/admin/tickets')
+}
+
+export async function adminUpdateTicket(id: number, data: Partial<{ status: string; priority: string }>): Promise<Ticket> {
+  return apiPut<Ticket>(`/api/admin/tickets/${id}`, data)
+}
+
+export async function adminReplyTicket(ticketId: number, message: string): Promise<TicketMessage> {
+  return apiPost<TicketMessage>(`/api/admin/tickets/${ticketId}/messages`, { message })
+}
+
+// Gallery
+export interface GalleryItem {
+  id: number; title: string; description: string; client_name: string
+  image_data: string; category: string; featured: boolean; created_at: string
+}
+
+export async function getGallery(): Promise<GalleryItem[]> {
+  const res = await fetch(`${BASE}/api/gallery`)
+  if (!res.ok) throw new Error('Error al cargar galería')
+  return res.json()
+}
+
+export async function adminGetGallery(): Promise<GalleryItem[]> {
+  return apiGet<GalleryItem[]>('/api/admin/gallery')
+}
+
+export async function adminCreateGalleryItem(data: { title: string; description?: string; client_name?: string; image_data: string; category?: string; featured?: boolean }): Promise<GalleryItem> {
+  return apiPost<GalleryItem>('/api/admin/gallery', data)
+}
+
+export async function adminDeleteGallery(id: number): Promise<{ ok: boolean }> {
+  return apiDelete<{ ok: boolean }>(`/api/admin/gallery/${id}`)
+}
+
+// KPIs
+export interface KPIStats {
+  active_projects: number; pending_tickets: number
+  monthly_revenue: number; avg_response: string; sla_compliance: number
+}
+
+export async function adminGetKPIs(): Promise<KPIStats> {
+  return apiGet<KPIStats>('/api/admin/kpis')
 }

@@ -16,10 +16,11 @@ import {
   getFAQs, adminCreateFAQ, adminUpdateFAQ, adminDeleteFAQ,
   adminGetProducts, adminCreateProduct, adminUpdateProduct, adminDeleteProduct,
   adminGetPurchases, adminCreatePurchase, adminRegenerateToken,
+  adminGetKPIs,
   type AdminStats, type AdminUser, type ActivityLog,
   type ContactMessage, type Order, type OrderPhoto,
   type BlogPost, type TestimonialData, type FAQData,
-  type ProductData, type PurchaseData,
+  type ProductData, type PurchaseData, type KPIStats,
 } from '@/lib/api'
 import {
   Users, ShieldAlert, Activity, Search, Trash2, ArrowLeft, LogOut,
@@ -37,6 +38,7 @@ export function AdminPage() {
   // Stats
   const [stats, setStats] = useState<AdminStats | null>(null)
   const [statsError, setStatsError] = useState('')
+  const [kpis, setKpis] = useState<KPIStats | null>(null)
 
   // Users
   const [users, setUsers] = useState<AdminUser[]>([])
@@ -167,7 +169,7 @@ export function AdminPage() {
   const loadBlogPosts = useCallback(async () => {
     try {
       setBlogError('')
-      const token = localStorage.getItem('vulnify_token') || ''
+      const token = localStorage.getItem('forj_token') || ''
       setBlogPosts(await adminGetAllPosts(token))
     } catch (e: any) { setBlogError(e.message) }
   }, [])
@@ -206,6 +208,7 @@ export function AdminPage() {
     loadStats(); loadUsers(1); loadLogs(1); loadLogActions(); loadMessages(1); loadOrders(1)
     loadBlogPosts(); loadTestimonials(); loadFAQs(); loadProducts(); loadPurchases()
     getMaintenance().then(r => setMaintenanceMode(r.maintenance_mode)).catch(() => {})
+    adminGetKPIs().then(setKpis).catch(() => {})
   }, [isAuthenticated, isAdmin])
 
   const handleDeleteUser = async (userId: number) => {
@@ -243,6 +246,7 @@ export function AdminPage() {
     loadFAQs()
     loadProducts()
     loadPurchases()
+    adminGetKPIs().then(setKpis).catch(() => {})
   }
 
   const handleMarkRead = async (msg: ContactMessage) => {
@@ -338,7 +342,7 @@ export function AdminPage() {
 
   const handleBlogSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const token = localStorage.getItem('vulnify_token') || ''
+    const token = localStorage.getItem('forj_token') || ''
     try {
       if (editingBlogPost) {
         await adminUpdatePost(token, editingBlogPost.id, blogForm)
@@ -370,7 +374,7 @@ export function AdminPage() {
   const handleDeleteBlogPost = async (id: number) => {
     if (!confirmPassword) return
     try {
-      const token = localStorage.getItem('vulnify_token') || ''
+      const token = localStorage.getItem('forj_token') || ''
       await adminDeletePost(token, id)
       loadBlogPosts()
     } catch (e: any) { setPasswordError(e.message); return }
@@ -378,7 +382,7 @@ export function AdminPage() {
   }
 
   const handleTogglePublish = async (post: BlogPost) => {
-    const token = localStorage.getItem('vulnify_token') || ''
+    const token = localStorage.getItem('forj_token') || ''
     try {
       await adminUpdatePost(token, post.id, { published: !post.published })
       loadBlogPosts()
@@ -387,7 +391,7 @@ export function AdminPage() {
 
   const handleTestSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const token = localStorage.getItem('vulnify_token') || ''
+    const token = localStorage.getItem('forj_token') || ''
     try {
       if (editingTestimonial) {
         await adminUpdateTestimonial(token, editingTestimonial.id, testForm)
@@ -418,7 +422,7 @@ export function AdminPage() {
   const handleDeleteTestimonial = async (id: number) => {
     if (!confirmPassword) return
     try {
-      const token = localStorage.getItem('vulnify_token') || ''
+      const token = localStorage.getItem('forj_token') || ''
       await adminDeleteTestimonial(token, id)
       loadTestimonials()
     } catch (e: any) { setPasswordError(e.message); return }
@@ -427,7 +431,7 @@ export function AdminPage() {
 
   const handleFaqSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const token = localStorage.getItem('vulnify_token') || ''
+    const token = localStorage.getItem('forj_token') || ''
     try {
       if (editingFaq) {
         await adminUpdateFAQ(token, editingFaq.id, faqForm)
@@ -456,7 +460,7 @@ export function AdminPage() {
   const handleDeleteFaq = async (id: number) => {
     if (!confirmPassword) return
     try {
-      const token = localStorage.getItem('vulnify_token') || ''
+      const token = localStorage.getItem('forj_token') || ''
       await adminDeleteFAQ(token, id)
       loadFAQs()
     } catch (e: any) { setPasswordError(e.message); return }
@@ -501,7 +505,7 @@ export function AdminPage() {
     if (direction === 'up' && idx <= 0) return
     if (direction === 'down' && idx >= sorted.length - 1) return
     const target = direction === 'up' ? sorted[idx - 1] : sorted[idx + 1]
-    const token = localStorage.getItem('vulnify_token') || ''
+    const token = localStorage.getItem('forj_token') || ''
     try {
       await adminUpdateFAQ(token, faq.id, { order: target.order })
       await adminUpdateFAQ(token, target.id, { order: faq.order })
@@ -590,6 +594,26 @@ export function AdminPage() {
                 </div>
               ))}
             </div>
+            {/* KPI Cards */}
+            {kpis && (
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4">
+                {[
+                  { label: t('kpis.active_projects'), value: kpis.active_projects, icon: Activity },
+                  { label: t('kpis.pending_tickets'), value: kpis.pending_tickets, icon: MessageSquare },
+                  { label: t('kpis.monthly_revenue'), value: `${kpis.monthly_revenue}€`, icon: ShoppingCart },
+                  { label: t('kpis.avg_response'), value: kpis.avg_response, icon: Users },
+                  { label: t('kpis.sla_compliance'), value: `${kpis.sla_compliance}%`, icon: ShieldAlert },
+                ].map((card) => (
+                  <div key={card.label} className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <card.icon className="size-4 text-[#d4a845]" />
+                      <span className="text-xs text-zinc-500">{card.label}</span>
+                    </div>
+                    <div className="text-xl font-bold text-[#d4a845]">{card.value}</div>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="mt-8 rounded-xl bg-white/[0.02] border border-white/[0.06] p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -616,7 +640,7 @@ export function AdminPage() {
                 </div>
                 <button onClick={async () => {
                   try {
-                    const tok = localStorage.getItem('vulnify_token') || ''
+                    const tok = localStorage.getItem('forj_token') || ''
                     const res = await fetch(`${BASE}/api/admin/seed`, {
                       method: 'POST',
                       headers: { 'Authorization': `Bearer ${tok}`, 'Content-Type': 'application/json' },

@@ -24,7 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (stored) {
         try {
           const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/auth/me`, {
-            headers: { Authorization: `Bearer ${localStorage.getItem('vulnify_token')}` },
+            headers: { Authorization: `Bearer ${localStorage.getItem('forj_token')}` },
           })
           if (res.ok) {
             const fresh = await res.json()

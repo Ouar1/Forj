@@ -8,7 +8,7 @@ from modules.auth import require_admin_totp
 from config import limiter
 
 router = APIRouter(prefix="/api/admin")
-logger = logging.getLogger("vulnify.api.messages")
+logger = logging.getLogger("xlink.api.messages")
 
 
 @router.get("/messages", description="List contact messages (admin only)")

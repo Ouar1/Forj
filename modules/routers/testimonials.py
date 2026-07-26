@@ -8,7 +8,7 @@ from modules.auth import require_admin_totp
 from config import limiter
 
 router = APIRouter(prefix="/api/testimonials", tags=["Testimonials"])
-logger = logging.getLogger("vulnify.api.testimonials")
+logger = logging.getLogger("xlink.api.testimonials")
 
 
 @router.get("/", description="List featured testimonials")

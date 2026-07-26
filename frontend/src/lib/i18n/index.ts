@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next'
 import es from './locales/es.json'
 import en from './locales/en.json'
 
-const saved = localStorage.getItem('vulnify_lang')
+const saved = localStorage.getItem('forj_lang')
 const lang = saved ? saved : (navigator.language.startsWith('en') ? 'en' : 'es')
 
 i18n.use(initReactI18next).init({
@@ -14,7 +14,7 @@ i18n.use(initReactI18next).init({
 })
 
 i18n.on('languageChanged', (lng) => {
-  localStorage.setItem('vulnify_lang', lng)
+  localStorage.setItem('forj_lang', lng)
 })
 
 export default i18n

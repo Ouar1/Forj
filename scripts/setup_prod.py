@@ -9,15 +9,15 @@ SECRET_KEY={gen()}
 ENVIRONMENT=production
 LOG_LEVEL=WARNING
 ACCESS_TOKEN_EXPIRE_DAYS=7
-SITE_URL=https://vulnify.es
-CORS_ORIGINS=["https://vulnify.es","https://www.vulnify.es"]
+SITE_URL=https://xlink.es
+CORS_ORIGINS=["https://xlink.es","https://www.xlink.es"]
 ADMIN_SEED_SECRET={gen()}
 ADMIN_PASSWORD={gen(16)}
-ADMIN_EMAIL=admin@vulnify.es
+ADMIN_EMAIL=admin@xlink.es
 PLATFORM_COMMISSION_PERCENT=10.0
 # === BASE DE DATOS (cambiar por PostgreSQL en produccion) ===
-DATABASE_URL=sqlite:///./vulnify.db
-# DATABASE_URL=postgresql://vulnify:DB_PASSWORD@db:5432/vulnify
+DATABASE_URL=sqlite:///./xlink.db
+# DATABASE_URL=postgresql://xlink:DB_PASSWORD@db:5432/xlink
 # === STRIPE (rellenar con tus claves reales) ===
 # STRIPE_SECRET_KEY=sk_live_...
 # STRIPE_WEBHOOK_SECRET=whsec_...

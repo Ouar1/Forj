@@ -9,9 +9,9 @@ load_dotenv()
 
 class Settings:
     SECRET_KEY: str = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./vulnify.db")
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./xlink.db")
     ACCESS_TOKEN_EXPIRE_DAYS: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_DAYS", "30"))
-    CORS_ORIGINS: list = json.loads(os.getenv("CORS_ORIGINS", '["http://localhost:8000"]'))
+    CORS_ORIGINS: list = json.loads(os.getenv("CORS_ORIGINS", '["http://localhost:8000", "http://localhost:8080"]'))
     MAX_UPLOAD_SIZE_MB: int = int(os.getenv("MAX_UPLOAD_SIZE_MB", "10"))
     ALLOWED_EXTENSIONS: list = os.getenv("ALLOWED_EXTENSIONS", ".png,.jpg,.jpeg,.gif,.pdf,.txt,.zip,.md").split(",")
     @property
@@ -26,7 +26,7 @@ class Settings:
     STRIPE_PRICE_PROFESIONAL_MONTHLY: str = os.getenv("STRIPE_PRICE_PROFESIONAL_MONTHLY", "")
     STRIPE_PRICE_PROFESIONAL_YEARLY: str = os.getenv("STRIPE_PRICE_PROFESIONAL_YEARLY", "")
     SENDGRID_API_KEY: str = os.getenv("SENDGRID_API_KEY", "")
-    SITE_URL: str = os.getenv("SITE_URL", "https://vulnify.es")
+    SITE_URL: str = os.getenv("SITE_URL", "https://xlink.es")
     SENTRY_DSN: str = os.getenv("SENTRY_DSN", "")
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")

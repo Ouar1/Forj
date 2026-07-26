@@ -95,10 +95,10 @@ export function BentoPricing() {
                 </div>
               </div>
               <a
-                href="mailto:hola@vulnify.es"
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors underline underline-offset-4"
+                href="mailto:contacto@forj.es"
+                className="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-4"
               >
-                hola@vulnify.es
+                contacto@forj.es
               </a>
             </motion.div>
           </div>

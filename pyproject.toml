@@ -1,7 +1,7 @@
 [project]
-name = "vulnify"
+name = "xlink"
 version = "3.1.0"
-description = "Monitorización de reputación digital y detección de brechas de datos"
+description = "Infraestructura TI Profesional — Redes, servidores y automatización para empresas"
 requires-python = ">=3.11"
 
 [tool.ruff]

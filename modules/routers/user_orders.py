@@ -10,7 +10,7 @@ from models.user import User
 from modules.auth import get_current_user
 from config import settings
 
-logger = logging.getLogger("vulnify.orders")
+logger = logging.getLogger("xlink.orders")
 router = APIRouter(tags=["orders"])
 
 
@@ -117,7 +117,7 @@ def get_order_invoice(
   <tr><td>""" + order.service + """</td><td>""" + (order.description or '—') + """</td><td style="text-align:right">""" + f"{order.amount:.2f}" + """€</td></tr>
   <tr class="total"><td colspan="2">Total</td><td style="text-align:right">""" + f"{order.amount:.2f}" + """€</td></tr>
   </table>
-  <div class="footer">Vulnify &mdash; Ecosistemas Digitales con IA<br>""" + settings.SITE_URL + """</div>
+  <div class="footer">XLink &mdash; Infraestructura TI Profesional<br>""" + settings.SITE_URL + """</div>
 </body></html>"""
     try:
         from weasyprint import HTML

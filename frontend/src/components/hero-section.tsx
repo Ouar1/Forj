@@ -11,17 +11,17 @@ export function HeroSection() {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6">
-          Desarrollo Web & Inteligencia Artificial
+          Infraestructura TI & Desarrollo Web
         </p>
         <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 leading-[1.1] max-w-4xl">
-          Creamos tu web<br />
+          Creamos tu infraestructura<br />
           <span className="bg-gradient-to-r from-neutral-100 via-white to-neutral-300 bg-clip-text text-transparent">
             con inteligencia artificial
           </span>
         </h1>
         <p className="mt-6 text-neutral-400 max-w-xl text-lg leading-relaxed">
-          Transformamos tu negocio con sitios web modernos e integraciones de IA
-          que automatizan procesos, mejoran la experiencia de usuario y aumentan tus ventas.
+          Redes, servidores, montaje, soporte técnico y transformación digital para tu empresa
+          Automatizamos procesos, aseguramos tus sistemas y potenciamos tu negocio.
         </p>
         <div className="flex gap-4 mt-10">
           <button onClick={() => window.dispatchEvent(new CustomEvent('open-contact'))} className="inline-flex h-12 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-black transition-all hover:bg-neutral-200 hover:scale-105 cursor-pointer">

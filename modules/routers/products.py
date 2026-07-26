@@ -13,7 +13,7 @@ from modules.auth import get_current_user, require_admin
 from config import settings
 
 router = APIRouter()
-logger = logging.getLogger("vulnify.api.products")
+logger = logging.getLogger("xlink.api.products")
 
 
 # --- PUBLIC ---

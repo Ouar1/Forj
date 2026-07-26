@@ -1,6 +1,6 @@
 {
   "common": {
-    "brand": "VULNIFY",
+    "brand": "FORJ",
     "loading": "Cargando...",
     "save": "Guardar",
     "saving": "Guardando...",
@@ -19,6 +19,7 @@
   },
   "nav": {
     "servicios": "Servicios",
+    "precios": "Precios",
     "trabajo": "Trabajo",
     "proceso": "Proceso",
     "contacto": "Contacto",
@@ -41,17 +42,17 @@
     "contact_aria": "Contacto"
   },
   "footer": {
-    "description": "Productos digitales, desarrollo web e inteligencia artificial para impulsar tu negocio.",
-    "copyright": "© {year} Vulnify. Todos los derechos reservados.",
-    "email": "hola@vulnify.es",
+    "description": "Infraestructura TI profesional — redes, servidores, cableado y automatización para empresas.",
+    "copyright": "© {year} Forj. Todos los derechos reservados.",
+    "email": "contacto@forj.es",
     "column_services": "Servicios",
     "column_company": "Compañía",
     "column_legal": "Legal",
-    "service_web": "Desarrollo Web",
-    "service_ia": "Integraciones IA",
-    "service_products": "Productos Digitales",
-    "service_apis": "APIs & Backend",
-    "service_consulting": "Consultoría",
+    "service_web": "Redes WiFi Profesionales",
+    "service_ia": "Cableado Estructurado & Racks",
+    "service_products": "Switches & VLANs",
+    "service_apis": "Servidores & NAS",
+    "service_consulting": "Consultoría TI",
     "company_about": "Sobre nosotros",
     "company_blog": "Blog",
     "company_cases": "Casos de éxito",
@@ -68,9 +69,13 @@
     "reject": "Rechazar"
   },
   "hero": {
-    "label": "01 — Ecosistema Digital con IA",
-    "words": ["CREAR", "OPTIMIZAR", "ESCALAR"],
-    "subtitle": "No hacemos páginas web. Creamos herramientas digitales con inteligencia artificial: chatbots, generadores de documentos, automatizaciones y productos digitales que transforman tu negocio.",
+    "label": "01 — Infraestructura TI Profesional",
+    "words": [
+      "CONECTAR",
+      "PROTEGER",
+      "ESCALAR"
+    ],
+    "subtitle": "No hacemos páginas web. Diseñamos, instalamos y mantenemos infraestructura TI: redes WiFi, cableado estructurado, servidores, NAS y automatización para empresas que necesitan tecnología que funcione.",
     "cta_audit": "Solicitar auditoría gratis",
     "cta_whatsapp": "Escribir por WhatsApp",
     "cta_presupuesto": "Solicitar presupuesto",
@@ -84,41 +89,93 @@
   },
   "problem": {
     "label": "El Problema",
-    "heading": "Tus herramientas digitales no están trabajando para ti.",
-    "description": "La mayoría de los negocios usan webs estáticas, procesos manuales y herramientas genéricas que no se adaptan a sus necesidades. No generan leads, no automatizan tareas, no escalan.",
+    "heading": "Tu infraestructura TI no está trabajando para ti.",
+    "description": "La mayoría de las empresas tienen redes lentas, cableado obsoleto, servidores sin mantenimiento y backups que no funcionan. Pierden productividad, seguridad y dinero.",
     "signals_label": "Señales de alerta",
     "signals_items": [
-      "Sigues haciendo facturas y contratos manualmente",
-      "Tu web no genera leads ni automatiza nada",
-      "Pierdes horas en tareas que podría hacer una IA",
-      "Usas herramientas genéricas que no se adaptan a ti"
+      "El WiFi no llega a todas las áreas de la oficina",
+      "Los servidores se caen y pierdes datos",
+      "No tienes backups automatizados ni recuperación ante desastres",
+      "El cableado de red es un caos y limita el crecimiento"
     ],
     "solution_label": "Nuestra solución",
     "solution_items": [
-      { "title": "Productos IA listos para usar", "desc": "Chatbots, generador de documentos, análisis automatizado. Actívalos en minutos." },
-      { "title": "Desarrollo a medida", "desc": "Webs, APIs y automatizaciones diseñadas específicamente para tu negocio." },
-      { "title": "Automatización inteligente", "desc": "Procesos que funcionan solos: reporting, extracción de datos, atención al cliente." }
+      {
+        "title": "Redes WiFi corporativas",
+        "desc": "Cobertura total, sin cortes. Diseñamos e instalamos redes WiFi profesionales con control de acceso y calidad de servicio."
+      },
+      {
+        "title": "Infraestructura de servidores",
+        "desc": "Servidores físicos y NAS, virtualización, backups automatizados y recuperación ante desastres."
+      },
+      {
+        "title": "Automatización inteligente",
+        "desc": "Integración de IA en procesos empresariales, monitoreo de red, alertas y gestión centralizada."
+      }
     ]
   },
   "services": {
     "label": "Servicios",
-    "heading": "Todo lo que necesitas para dominar el espacio digital.",
+    "heading": "Todo lo que necesitas en infraestructura TI.",
     "items": [
-      { "name": "Desarrollo Web", "desc": "Páginas corporativas, tiendas online y aplicaciones web con React, Next.js y diseño responsive." },
-      { "name": "Integraciones IA", "desc": "Chatbots inteligentes, automatización de procesos y análisis predictivo para tu negocio." },
-      { "name": "Productos Digitales", "desc": "Generador de documentos, chatbot white-label, plantillas y herramientas IA listas para descargar." },
-      { "name": "APIs & Backend", "desc": "Arquitectura escalable, APIs robustas y paneles de administración diseñados para crecer." },
-      { "name": "Consultoría Digital", "desc": "Estrategia tecnológica personalizada: desde la idea hasta la implementación." }
+      {
+        "name": "Redes WiFi Profesionales",
+        "desc": "Diseño e instalación de redes WiFi corporativas con cobertura total, control de acceso y calidad de servicio para empresas."
+      },
+      {
+        "name": "Cableado Estructurado & Racks",
+        "desc": "Cableado estructurado Cat6/Cat6A, racks de comunicaciones, paneles de parcheo y organización profesional del cuarto de TI."
+      },
+      {
+        "name": "Switches, VLANs & VPN",
+        "desc": "Configuración de switches gestionados, segmentación de red con VLANs, y túneles VPN seguros para teletrabajo."
+      },
+      {
+        "name": "Servidores & NAS",
+        "desc": "Instalación y configuración de servidores físicos y virtuales, almacenamiento NAS en RAID, y copias de seguridad automatizadas."
+      },
+      {
+        "name": "Backups & Recuperación",
+        "desc": "Backups automatizados, políticas de retención, recuperación ante desastres y replicación de datos offsite."
+      },
+      {
+        "name": "Soporte Técnico 24/7",
+        "desc": "Asistencia técnica remota y presencial. Resolución de incidencias en menos de 4h, monitorización continua y mantenimiento preventivo."
+      },
+      {
+        "name": "Consultoría TI & Cloud",
+        "desc": "Asesoramiento en infraestructura TI, migración a la nube, virtualización de servidores y optimización de costes tecnológicos."
+      },
+      {
+        "name": "Seguridad Perimetral",
+        "desc": "Firewalls, sistemas de detección de intrusiones, cifrado de datos, políticas de seguridad y auditorías de vulnerabilidades."
+      },
+      {
+        "name": "Cámaras & Control de Acceso",
+        "desc": "Sistemas de videovigilancia IP, control de acceso con tarjeta/huella, alarmas técnicas e integración con central receptora."
+      }
     ]
   },
   "process": {
     "label": "Proceso",
-    "heading": "De la idea al impacto.",
+    "heading": "De la auditoría al despliegue.",
     "steps": [
-      { "title": "Auditoría", "desc": "Analizamos tu negocio, competencia y objetivos. Definimos métricas de éxito." },
-      { "title": "Estrategia", "desc": "Diseñamos la arquitectura digital: UX, IA, stack tecnológico y roadmap." },
-      { "title": "Construcción", "desc": "Desarrollamos con diseño iterativo. Ves el progreso en tiempo real." },
-      { "title": "Lanzamiento", "desc": "Despliegue, testing y puesta en marcha. No paramos hasta que funcione." }
+      {
+        "title": "Auditoría",
+        "desc": "Analizamos tu infraestructura actual, detectamos cuellos de botella y definimos objetivos."
+      },
+      {
+        "title": "Diseño",
+        "desc": "Diseñamos la arquitectura de red, cableado, servidores y sistemas de backup a medida."
+      },
+      {
+        "title": "Instalación",
+        "desc": "Desplegamos e instalamos todo el hardware y software con mínima interrupción."
+      },
+      {
+        "title": "Soporte",
+        "desc": "Monitorización continua, mantenimiento preventivo y soporte técnico remoto y presencial."
+      }
     ]
   },
   "testimonials": {
@@ -128,17 +185,17 @@
   "pricing": {
     "badge_included": "TODO INCLUIDO",
     "badge_no_surprises": "Sin sorpresas",
-    "heading": "Precio a medida",
+    "heading": "Presupuesto a medida",
     "description": "Cada proyecto es único. Te enviamos un presupuesto transparente y detallado sin compromiso.",
     "cta": "Solicitar presupuesto",
     "features": [
-      "Web a medida con el stack que prefieras",
-      "Integración de IA, chatbots y automatización",
-      "Diseño UI/UX optimizado para conversión",
-      "Backend escalable, APIs y panel admin",
-      "SEO técnico y rendimiento incluidos",
-      "Soporte continuo y mantenimiento",
-      "Acceso a productos digitales y herramientas IA"
+      "Auditoría de infraestructura TI sin coste",
+      "Diseño de red y cableado profesional",
+      "Instalación y configuración de servidores",
+      "Backups automatizados y recuperación",
+      "Soporte técnico remoto y presencial",
+      "Monitorización continua 24/7",
+      "Mantenimiento preventivo y correctivo"
     ],
     "question": "¿Hablamos?",
     "response_time": "Respuesta en menos de 24h"
@@ -150,7 +207,7 @@
     "badge": "PLAN ÚNICO",
     "plan_name": "A medida",
     "plan_desc": "Precio personalizado según tu proyecto",
-    "features_label": "Todo lo que necesitas para tu proyecto digital:"
+    "features_label": "Todo lo que necesitas para tu infraestructura TI:"
   },
   "faq": {
     "label": "FAQ",
@@ -184,24 +241,36 @@
   },
   "final_cta": {
     "label": "Empieza hoy",
-    "heading": "¿Listo para dominar el espacio digital?",
-    "description": "Solicita una auditoría gratuita de tu presencia digital y descubre cómo podemos ayudarte a crecer con herramientas IA y productos digitales.",
+    "heading": "¿Listo para una infraestructura TI fiable?",
+    "description": "Solicita una auditoría gratuita de tu infraestructura y descubre cómo podemos ayudarte a mejorar el rendimiento, la seguridad y la fiabilidad de tu red.",
     "scarcity": "Solo 3 proyectos este mes — auditoría gratuita"
   },
   "about_modal": {
     "badge": "Sobre nosotros",
-    "heading": "Construimos el futuro digital de tu negocio.",
-    "body": "En Vulnify creamos herramientas digitales que funcionan para ti. No hacemos páginas bonitas: diseñamos ecosistemas digitales con inteligencia artificial, productos listos para usar y automatizaciones que transforman tu negocio. Combinamos desarrollo web, inteligencia artificial y productos digitales para convertir tu presencia online en una máquina de crecimiento.",
+    "heading": "Construimos la infraestructura TI de tu empresa.",
+    "body": "En Forj diseñamos, instalamos y mantenemos infraestructura TI profesional para empresas. Redes WiFi, cableado estructurado, servidores, NAS, backups y automatización. No vendemos tecnología por venderla: construimos soluciones que funcionan, crecen contigo y no dan problemas.",
     "principles_heading": "Nuestros principios",
     "principles": [
-      { "title": "Tecnología con propósito", "desc": "No usamos tecnología por moda. Cada decisión técnica responde a un objetivo de negocio real." },
-      { "title": "Diseño centrado en personas", "desc": "Detrás de cada interfaz hay un ser humano. Construimos experiencias que importan." },
-      { "title": "Resultados medibles", "desc": "Si no se puede medir, no se puede mejorar. Cada proyecto tiene KPIs claros desde el día uno." },
-      { "title": "Mejora continua", "desc": "El lanzamiento es solo el principio. Iteramos, optimizamos y evolucionamos contigo." }
+      {
+        "title": "Tecnología que funciona",
+        "desc": "No instalamos tecnología por moda. Cada solución responde a una necesidad real de tu negocio."
+      },
+      {
+        "title": "Diseño con visión",
+        "desc": "Pensamos en el crecimiento futuro. Tu infraestructura TI escala contigo."
+      },
+      {
+        "title": "Soporte real",
+        "desc": "No desaparecemos después de la instalación. Estamos contigo para mantenerlo todo funcionando."
+      },
+      {
+        "title": "Transparencia total",
+        "desc": "Presupuestos claros, sin letra pequeña. Sabes exactamente lo que pagas y por qué."
+      }
     ],
     "founder_name": "Dani Ramirez",
-    "founder_role": "CTO & Fundador de Vulnify",
-    "founder_bio": "+6 años construyendo productos digitales. Ex-CTO de startups. Convencido de que la tecnología bien aplicada transforma negocios."
+    "founder_role": "CEO & Fundador de Forj",
+    "founder_bio": "+10 años en infraestructura TI y redes. Ha diseñado redes para más de 50 empresas. Convencido de que una buena infraestructura es la base del éxito digital."
   },
   "auth": {
     "heading_login": "Iniciar sesión",
@@ -218,8 +287,8 @@
     "forgot_password": "¿Olvidaste tu contraseña?",
     "show_password": "Mostrar",
     "hide_password": "Ocultar",
-    "sidebar_quote": "“Protegemos tu reputación digital con inteligencia artificial.”",
-    "sidebar_attribution": "~ Vulnify Team"
+    "sidebar_quote": "“Protegemos tu infraestructura TI con los más altos estándares.”",
+    "sidebar_attribution": "~ Forj Team"
   },
   "forgot_password": {
     "heading": "Restablecer contraseña",
@@ -296,7 +365,7 @@
       "heading": "Mis pedidos",
       "new_order": "Nuevo pedido",
       "modal_title": "Solicitar nuevo pedido",
-      "service_placeholder": "Servicio (ej: Diseño Web, SEO...)",
+      "service_placeholder": "Servicio (ej: Redes, Servidores...)",
       "message_placeholder": "Describe lo que necesitas",
       "budget_placeholder": "Presupuesto estimado (€)",
       "submit": "Enviar solicitud",
@@ -347,7 +416,15 @@
     "users": {
       "search": "Buscar por nombre o email...",
       "search_button": "Buscar",
-      "columns": ["ID", "Nombre", "Email", "Rol", "Verificado", "Creado", "Acciones"],
+      "columns": [
+        "ID",
+        "Nombre",
+        "Email",
+        "Rol",
+        "Verificado",
+        "Creado",
+        "Acciones"
+      ],
       "make_admin": "Hacer admin",
       "remove_admin": "Quitar admin"
     },
@@ -366,12 +443,26 @@
       "new_title": "Nuevo pedido",
       "customer_name": "Nombre del cliente",
       "customer_email": "Email del cliente",
-      "service": "Servicio (ej: Escaneo Web, Pentest...)",
+      "service": "Servicio (ej: Redes WiFi, Servidores...)",
       "description": "Descripción",
       "amount": "Monto (€)",
       "status": "Estado",
-      "status_options": ["Pendiente", "En progreso", "Completado", "Cancelado"],
-      "columns": ["ID", "Cliente", "Email", "Servicio", "Monto", "Estado", "Fecha", "Acciones"],
+      "status_options": [
+        "Pendiente",
+        "En progreso",
+        "Completado",
+        "Cancelado"
+      ],
+      "columns": [
+        "ID",
+        "Cliente",
+        "Email",
+        "Servicio",
+        "Monto",
+        "Estado",
+        "Fecha",
+        "Acciones"
+      ],
       "history": "Historial",
       "pdf": "PDF",
       "photos": "Fotos",
@@ -390,7 +481,14 @@
       "excerpt": "Extracto (resumen breve)",
       "content": "Contenido (markdown)",
       "published": "Publicado",
-      "columns": ["ID", "Título", "Tag", "Estado", "Fecha", "Acciones"],
+      "columns": [
+        "ID",
+        "Título",
+        "Tag",
+        "Estado",
+        "Fecha",
+        "Acciones"
+      ],
       "status_published": "Publicado",
       "status_draft": "Borrador",
       "archive": "Archivar",
@@ -409,7 +507,14 @@
       "content": "Contenido del testimonio",
       "rating": "Valoración (1-5)",
       "featured": "Destacado",
-      "columns": ["ID", "Nombre", "Empresa", "Valoración", "Destacado", "Acciones"]
+      "columns": [
+        "ID",
+        "Nombre",
+        "Empresa",
+        "Valoración",
+        "Destacado",
+        "Acciones"
+      ]
     },
     "faq": {
       "count": "{count} FAQs",
@@ -420,13 +525,26 @@
       "answer": "Respuesta",
       "category": "Categoría",
       "published": "Publicado",
-      "columns": ["Orden", "Pregunta", "Categoría", "Publicado", "Acciones"],
+      "columns": [
+        "Orden",
+        "Pregunta",
+        "Categoría",
+        "Publicado",
+        "Acciones"
+      ],
       "move_up": "Subir",
       "move_down": "Bajar"
     },
     "activity": {
       "count": "{count} registros",
-      "columns": ["ID", "Usuario", "Acción", "IP", "Detalles", "Fecha"]
+      "columns": [
+        "ID",
+        "Usuario",
+        "Acción",
+        "IP",
+        "Detalles",
+        "Fecha"
+      ]
     },
     "products": {
       "count": "{count} productos",
@@ -456,8 +574,8 @@
   },
   "products": {
     "badge": "Productos",
-    "heading": "Productos digitales.",
-    "subtitle": "Soluciones listas para descargar e implementar. Pago único o suscripción mensual.",
+    "heading": "Productos y servicios.",
+    "subtitle": "Soluciones TI listas para contratar. Pago único o suscripción mensual.",
     "view": "Ver producto",
     "one_time": "único",
     "back": "← Volver a productos",
@@ -556,11 +674,11 @@
   },
   "blog": {
     "page_title": "Blog",
-    "page_description": "Recursos, guías y artículos sobre desarrollo web, IA, SEO y marketing digital.",
+    "page_description": "Recursos, guías y artículos sobre infraestructura TI, redes, servidores y tecnología empresarial.",
     "back": "← Volver al inicio",
     "badge": "Blog",
     "heading": "Recursos para crecer.",
-    "detail_title": "{title} — Blog Vulnify",
+    "detail_title": "{title} — Blog Forj",
     "detail_description": "{title} — {description}",
     "back_to_blog": "← Volver al blog",
     "author_by": "Por {author}",
@@ -584,54 +702,127 @@
   },
   "privacidad": {
     "page_title": "Política de Privacidad",
-    "page_description": "Política de privacidad de Vulnify. Conoce cómo tratamos tus datos personales.",
+    "page_description": "Política de privacidad de Forj. Conoce cómo tratamos tus datos personales.",
     "title": "Política de Privacidad",
     "date": "1 de junio de 2026",
     "sections": [
-      { "title": "1. Responsable del tratamiento", "body": "Vulnify (en adelante, \"la empresa\"), con domicilio en España, es la responsable del tratamiento de los datos personales facilitados por los usuarios a través de este sitio web." },
-      { "title": "2. Datos recopilados", "body": "Recopilamos información que nos proporcionas directamente al rellenar el formulario de contacto: nombre, dirección de email, y teléfono. También recopilamos datos de navegación mediante cookies técnicas y analíticas." },
-      { "title": "3. Finalidad del tratamiento", "body": "Tus datos serán utilizados para: (a) atender tu solicitud de información o presupuesto, (b) enviarte comunicaciones comerciales si has dado tu consentimiento, y (c) mejorar nuestros servicios mediante análisis de navegación." },
-      { "title": "4. Base legal", "body": "El tratamiento se basa en tu consentimiento explícito al enviar el formulario y, en su caso, en el interés legítimo de la empresa para mejorar sus servicios." },
-      { "title": "5. Conservación", "body": "Conservaremos tus datos mientras sea necesario para cumplir con la finalidad para la que fueron recogidos, y durante los plazos legales establecidos." },
-      { "title": "6. Derechos", "body": "Tienes derecho a acceder, rectificar, suprimir, limitar el tratamiento, oponerte al tratamiento y solicitar la portabilidad de tus datos. Puedes ejercer estos derechos escribiendo a hola@vulnify.es." }
+      {
+        "title": "1. Responsable del tratamiento",
+        "body": "Forj (en adelante, \"la empresa\"), con domicilio en España, es la responsable del tratamiento de los datos personales facilitados por los usuarios a través de este sitio web."
+      },
+      {
+        "title": "2. Datos recopilados",
+        "body": "Recopilamos información que nos proporcionas directamente al rellenar el formulario de contacto: nombre, dirección de email, y teléfono. También recopilamos datos de navegación mediante cookies técnicas y analíticas."
+      },
+      {
+        "title": "3. Finalidad del tratamiento",
+        "body": "Tus datos serán utilizados para: (a) atender tu solicitud de información o presupuesto, (b) enviarte comunicaciones comerciales si has dado tu consentimiento, y (c) mejorar nuestros servicios mediante análisis de navegación."
+      },
+      {
+        "title": "4. Base legal",
+        "body": "El tratamiento se basa en tu consentimiento explícito al enviar el formulario y, en su caso, en el interés legítimo de la empresa para mejorar sus servicios."
+      },
+      {
+        "title": "5. Conservación",
+        "body": "Conservaremos tus datos mientras sea necesario para cumplir con la finalidad para la que fueron recogidos, y durante los plazos legales establecidos."
+      },
+      {
+        "title": "6. Derechos",
+        "body": "Tienes derecho a acceder, rectificar, suprimir, limitar el tratamiento, oponerte al tratamiento y solicitar la portabilidad de tus datos. Puedes ejercer estos derechos escribiendo a contacto@forj.es."
+      }
     ]
   },
   "terminos": {
     "page_title": "Términos y Condiciones",
-    "page_description": "Términos y condiciones de uso del sitio web de Vulnify.",
+    "page_description": "Términos y condiciones de uso del sitio web de Forj.",
     "title": "Términos y Condiciones",
     "date": "1 de junio de 2026",
     "sections": [
-      { "title": "1. Aceptación de los términos", "body": "Al acceder y utilizar este sitio web, aceptas los presentes términos y condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no utilizar el sitio." },
-      { "title": "2. Servicios", "body": "Vulnify ofrece servicios de desarrollo web, integración de inteligencia artificial, desarrollo de APIs y consultoría digital. El alcance específico de cada servicio se definirá en el presupuesto correspondiente." },
-      { "title": "3. Propiedad intelectual", "body": "Todo el contenido del sitio web (textos, imágenes, logotipos, código) es propiedad de Vulnify o se utiliza con licencia. Queda prohibida su reproducción sin autorización expresa." },
-      { "title": "4. Limitación de responsabilidad", "body": "Vulnify no se hace responsable de los daños que pudieran derivarse del uso inadecuado del sitio web o de la interrupción del servicio por causas ajenas a su control." },
-      { "title": "5. Modificaciones", "body": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán publicados en esta página." }
+      {
+        "title": "1. Aceptación de los términos",
+        "body": "Al acceder y utilizar este sitio web, aceptas los presentes términos y condiciones. Si no estás de acuerdo con alguno de ellos, te recomendamos no utilizar el sitio."
+      },
+      {
+        "title": "2. Servicios",
+        "body": "Forj ofrece servicios de infraestructura TI, redes WiFi, cableado estructurado, servidores, NAS, backups, automatización e integración de IA. El alcance específico de cada servicio se definirá en el presupuesto correspondiente."
+      },
+      {
+        "title": "3. Propiedad intelectual",
+        "body": "Todo el contenido del sitio web (textos, imágenes, logotipos, código) es propiedad de Forj o se utiliza con licencia. Queda prohibida su reproducción sin autorización expresa."
+      },
+      {
+        "title": "4. Limitación de responsabilidad",
+        "body": "Forj no se hace responsable de los daños que pudieran derivarse del uso inadecuado del sitio web o de la interrupción del servicio por causas ajenas a su control."
+      },
+      {
+        "title": "5. Modificaciones",
+        "body": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán publicados en esta página."
+      }
     ]
   },
   "cookies": {
     "page_title": "Política de Cookies",
-    "page_description": "Política de cookies de Vulnify. Infórmate sobre cómo usamos las cookies.",
+    "page_description": "Política de cookies de Forj. Infórmate sobre cómo usamos las cookies.",
     "title": "Política de Cookies",
     "date": "1 de junio de 2026",
     "sections": [
-      { "title": "1. ¿Qué son las cookies?", "body": "Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas un sitio web. Nos permiten recordar tus preferencias y mejorar tu experiencia de navegación." },
-      { "title": "2. Tipos de cookies que utilizamos", "items": ["Cookies técnicas: necesarias para el funcionamiento del sitio web. No requieren consentimiento.", "Cookies analíticas: nos ayudan a entender cómo los usuarios interactúan con el sitio, para mejorarlo.", "Cookies de preferencias: recuerdan tus ajustes (como el tema oscuro) para ofrecerte una experiencia personalizada."] },
-      { "title": "3. Gestión de cookies", "body": "Puedes gestionar las cookies desde la configuración de tu navegador. Ten en cuenta que bloquear las cookies técnicas puede afectar al funcionamiento del sitio." },
-      { "title": "4. Cookies de terceros", "body": "Este sitio web no utiliza cookies de terceros para publicidad ni seguimiento externo." },
-      { "title": "5. Más información", "body": "Para cualquier duda sobre nuestra política de cookies, escríbenos a hola@vulnify.es." }
+      {
+        "title": "1. ¿Qué son las cookies?",
+        "body": "Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas un sitio web. Nos permiten recordar tus preferencias y mejorar tu experiencia de navegación."
+      },
+      {
+        "title": "2. Tipos de cookies que utilizamos",
+        "items": [
+          "Cookies técnicas: necesarias para el funcionamiento del sitio web. No requieren consentimiento.",
+          "Cookies analíticas: nos ayudan a entender cómo los usuarios interactúan con el sitio, para mejorarlo.",
+          "Cookies de preferencias: recuerdan tus ajustes (como el tema oscuro) para ofrecerte una experiencia personalizada."
+        ]
+      },
+      {
+        "title": "3. Gestión de cookies",
+        "body": "Puedes gestionar las cookies desde la configuración de tu navegador. Ten en cuenta que bloquear las cookies técnicas puede afectar al funcionamiento del sitio."
+      },
+      {
+        "title": "4. Cookies de terceros",
+        "body": "Este sitio web no utiliza cookies de terceros para publicidad ni seguimiento externo."
+      },
+      {
+        "title": "5. Más información",
+        "body": "Para cualquier duda sobre nuestra política de cookies, escríbenos a contacto@forj.es."
+      }
     ]
   },
   "casos_exito": {
     "page_title": "Casos de Éxito",
-    "page_description": "Resultados reales de nuestros clientes. Descubre cómo Vulnify transforma negocios con tecnología.",
+    "page_description": "Resultados reales de nuestros clientes. Descubre cómo Forj transforma la infraestructura TI de las empresas.",
     "back": "← Volver al inicio",
     "badge": "Casos de éxito",
     "heading": "Resultados que hablan.",
     "cases": [
-      { "metric": "+300%", "label": "leads orgánicos", "company": "TechFlow", "sector": "SaaS", "desc": "Rediseñamos su web con IA conversacional. Pasaron de 10 a 40 leads/mes sin invertir en anuncios.", "result": "Aumento del tráfico orgánico en un 180% gracias a la optimización SEO técnica y de contenido." },
-      { "metric": "20h", "label": "semanales ahorradas", "company": "InnovaCorp", "sector": "Consultoría", "desc": "Automatizamos su proceso de reporting con un dashboard predictivo. Su equipo recuperó tiempo estratégico.", "result": "Reducción del 85% en el tiempo dedicado a reportes manuales. El equipo pasó de 24h a 4h semanales." },
-      { "metric": "2.5x", "label": "conversión", "company": "DataSmart", "sector": "E-commerce", "desc": "Integramos recomendaciones inteligentes y chatbots. Su ticket medio creció un 150% en 90 días.", "result": "Tasa de conversión del 2.1% al 5.3%. El chatbot resolvió el 40% de las consultas sin intervención humana." }
+      {
+        "metric": "+300%",
+        "label": "velocidad de red",
+        "company": "TechFlow",
+        "sector": "SaaS",
+        "desc": "Rediseñamos toda su infraestructura de red con cableado Cat6A, switches gestionados y WiFi empresarial. Pasaron de 10 a 40 dispositivos sin pérdida de rendimiento.",
+        "result": "Aumento del 300% en velocidad de transferencia y eliminación de caídas de red."
+      },
+      {
+        "metric": "20h",
+        "label": "semanales ahorradas",
+        "company": "InnovaCorp",
+        "sector": "Consultoría",
+        "desc": "Automatizamos sus backups con NAS en RAID y recuperación ante desastres. Su equipo recuperó tiempo que antes perdían en tareas manuales.",
+        "result": "Reducción del 85% en el tiempo dedicado a backups y recuperación de datos."
+      },
+      {
+        "metric": "100%",
+        "label": "uptime",
+        "company": "DataSmart",
+        "sector": "E-commerce",
+        "desc": "Implementamos servidores con balanceo de carga, redundancia y monitorización 24/7. Su tienda online nunca ha vuelto a caerse.",
+        "result": "Disponibilidad del 99.99% desde la implementación. Cero incidencias críticas en 12 meses."
+      }
     ]
   },
   "servicios_page": {
@@ -641,48 +832,283 @@
     "features_heading": "Qué incluye",
     "items": {
       "desarrollo_web": {
-        "title": "Desarrollo Web",
-        "desc": "Creamos páginas corporativas, tiendas online y aplicaciones web con React, Next.js y diseño responsive. Cada proyecto está optimizado para velocidad, SEO y conversión.",
-        "features": ["Landing pages y webs corporativas", "Tiendas online (e-commerce)", "Aplicaciones web progresivas (PWA)", "Optimización Core Web Vitals", "Diseño responsive y accesible", "Integración con CMS"]
+        "title": "Redes WiFi Profesionales",
+        "desc": "Diseñamos e instalamos redes WiFi corporativas con cobertura total, control de acceso, calidad de servicio y gestión centralizada para empresas de cualquier tamaño.",
+        "features": [
+          "Diseño de cobertura y site survey",
+          "Access points Ubiquiti, MikroTik, Cisco",
+          "Control de acceso por usuario/rol",
+          "Calidad de servicio (QoS)",
+          "Redes de invitados y VLANs",
+          "Monitorización y gestión centralizada"
+        ]
       },
       "integraciones_ia": {
-        "title": "Integraciones IA",
-        "desc": "Chatbots inteligentes, automatización de procesos y análisis predictivo para tu negocio. Lleva la inteligencia artificial a cada rincón de tu operación digital.",
-        "features": ["Chatbots con IA conversacional", "Automatización de procesos", "Análisis predictivo", "Procesamiento de lenguaje natural", "Recomendaciones inteligentes", "Asistentes virtuales"]
+        "title": "Cableado Estructurado & Racks",
+        "desc": "Cableado estructurado profesional Cat6/Cat6A, organización de racks de comunicaciones y certificación de enlaces para garantizar el máximo rendimiento.",
+        "features": [
+          "Cableado Cat6 y Cat6A certificado",
+          "Racks de comunicaciones y paneles de parcheo",
+          "Canaletas y gestión de cables",
+          "Certificación de enlaces (Fluke)",
+          "Documentación y etiquetado",
+          "Ampliaciones y mantenimiento"
+        ]
       },
       "apis_backend": {
-        "title": "APIs & Backend",
-        "desc": "Arquitectura escalable, APIs robustas y paneles de administración diseñados para crecer. Construimos la columna vertebral técnica de tu negocio digital.",
-        "features": ["APIs RESTful y GraphQL", "Microservicios escalables", "Bases de datos SQL y NoSQL", "Autenticación y autorización", "Documentación automática", "Monitorización y logging"]
+        "title": "Switches, VLANs & VPN",
+        "desc": "Configuración de switches gestionados, segmentación de red con VLANs y túneles VPN seguros para teletrabajo y sucursales.",
+        "features": [
+          "Switches gestionados (Cisco, MikroTik, Ubiquiti)",
+          "Segmentación VLAN por departamentos",
+          "VPN site-to-site y remote access",
+          "Routing y firewall perimetral",
+          "Balanceo de carga",
+          "Monitorización de tráfico"
+        ]
       },
       "consultoria": {
-        "title": "Consultoría Digital",
-        "desc": "Estrategia tecnológica personalizada: desde la idea hasta la implementación. Te ayudamos a tomar las decisiones correctas para tu negocio.",
-        "features": ["Auditoría tecnológica", "Roadmap de producto", "Selección de stack técnico", "Arquitectura de software", "Estrategia de crecimiento", "Formación y mentoring"]
+        "title": "Servidores & NAS",
+        "desc": "Instalación, configuración y mantenimiento de servidores físicos y virtualizados, almacenamiento NAS y copias de seguridad automatizadas.",
+        "features": [
+          "Servidores Dell, HP, Supermicro",
+          "Virtualización con Proxmox, VMware, Hyper-V",
+          "NAS Synology, QNAP con RAID",
+          "Backups automatizados (3-2-1)",
+          "Recuperación ante desastres",
+          "Monitorización y alertas"
+        ]
       },
       "productos_digitales": {
-        "title": "Productos Digitales",
-        "desc": "Herramientas IA listas para usar: generador de documentos, chatbot white-label, plantillas y mucho más. Descárgalos y úsalos al instante.",
-        "features": ["Generador de documentos con IA", "Chatbot IA white-label", "Plantillas de contratos y RGPD", "Cursos de IA para empresas", "Suscripción mensual con soporte", "Tokens API para integraciones"]
+        "title": "Automatización & Integración IA",
+        "desc": "Automatización de procesos empresariales, integración de IA para soporte técnico, monitorización inteligente y gestión predictiva de infraestructura.",
+        "features": [
+          "Chatbot IA para soporte TI",
+          "Monitorización predictiva de red",
+          "Automatización de backups",
+          "Integración con herramientas existentes",
+          "Paneles de control y reportes",
+          "Alertas inteligentes"
+        ]
+      },
+      "soporte_tecnico": {
+        "title": "Soporte Técnico 24/7",
+        "desc": "Asistencia técnica remota y presencial con SLA garantizado. Monitorización continua, mantenimiento preventivo y resolución de incidencias.",
+        "features": [
+          "Soporte remoto inmediato",
+          "Visitas técnicas presenciales",
+          "Monitorización 24/7 de infraestructura",
+          "Mantenimiento preventivo mensual",
+          "Informes de estado trimestrales",
+          "SLA de 4h para incidencias críticas"
+        ]
+      },
+      "consultoria_cloud": {
+        "title": "Consultoría TI & Cloud",
+        "desc": "Asesoramiento estratégico en infraestructura TI, migración a la nube, virtualización y optimización de costes tecnológicos.",
+        "features": [
+          "Auditoría de infraestructura actual",
+          "Plan de migración a la nube",
+          "Virtualización de servidores",
+          "Optimización de costes TI",
+          "Plan de continuidad de negocio",
+          "Roadmap tecnológico a 12 meses"
+        ]
+      },
+      "seguridad": {
+        "title": "Seguridad Perimetral",
+        "desc": "Protección avanzada de tu red corporativa con firewalls, sistemas de detección y políticas de seguridad personalizadas.",
+        "features": [
+          "Firewall corporativo (Fortinet/Palo Alto)",
+          "Sistema de detección de intrusiones IDS/IPS",
+          "VPN site-to-site y remote access",
+          "Segregación de red con VLANs",
+          "Análisis de vulnerabilidades",
+          "Políticas de seguridad y hardening"
+        ]
+      },
+      "videovigilancia": {
+        "title": "CCTV & Control de Acceso",
+        "desc": "Sistemas de videovigilancia IP y control de acceso para proteger tus instalaciones.",
+        "features": [
+          "Cámaras IP 4K con visión nocturna",
+          "NVR con almacenamiento centralizado",
+          "Control de acceso RFID/huella",
+          "Acceso remoto desde app móvil",
+          "Integración con alarmas técnicas",
+          "Grabación continua y por detección"
+        ]
       }
     }
   },
   "features": {
-    "customizable": "Personalizable",
-    "customizable_desc": "Cada proyecto se adapta a tus necesidades. Sin plantillas, sin límites.",
+    "customizable": "A medida",
+    "customizable_desc": "Cada proyecto se adapta a tus necesidades. Sin soluciones genéricas.",
     "secure": "Seguro por defecto",
-    "secure_desc": "Protegemos tu web con SSL, cifrado y buenas prácticas desde el primer día.",
-    "speed": "Velocidad extrema",
-    "speed_desc": "Optimizamos cada byte para que tu web cargue en menos de un segundo.",
-    "modern": "Tecnología moderna",
-    "modern_desc": "React, Node.js, APIs, bases de datos. Stack actual para negocios que miran al futuro.",
+    "secure_desc": "Protegemos tu red con cifrado, firewalls y buenas prácticas desde el primer día.",
+    "speed": "Velocidad garantizada",
+    "speed_desc": "Diseñamos redes con el ancho de banda y la cobertura que tu empresa necesita.",
+    "modern": "Tecnología profesional",
+    "modern_desc": "Hardware de marca profesional: Cisco, Ubiquiti, MikroTik, Synology, Dell.",
     "support": "Soporte continuo",
-    "support_desc": "Te acompañamos en cada etapa: desde el diseño hasta el lanzamiento y más allá.",
+    "support_desc": "Te acompañamos en cada etapa: desde el diseño hasta el mantenimiento continuo.",
     "client_label": "Cliente",
-    "vulnify_label": "Vulnify"
+    "forj_label": "Forj"
   },
   "seo": {
-    "default_title": "Vulnify · Productos Digitales, Desarrollo Web e IA",
-    "default_description": "Creamos herramientas digitales con inteligencia artificial: chatbots, generador de documentos, automatizaciones, desarrollo web y productos digitales para tu negocio."
+    "default_title": "Forj · Infraestructura TI Profesional",
+    "default_description": "Redes WiFi, cableado estructurado, servidores, NAS, backups y automatización para empresas. Diseño, instalación y mantenimiento de infraestructura TI profesional."
+  },
+  "prices": {
+    "badge": "Precios",
+    "heading": "Inversión transparente.",
+    "subtitle": "Precios orientativos para los servicios más comunes. Cada proyecto es único y se presupuesta a medida.",
+    "cta": "Solicitar presupuesto a medida",
+    "from": "Desde",
+    "up_to": "Hasta",
+    "calculator_heading": "Calcula tu proyecto",
+    "calculator_desc": "Selecciona los servicios que necesitas y obtén un presupuesto estimado al instante.",
+    "select_service": "Selecciona un servicio",
+    "calculate": "Calcular estimación",
+    "estimated": "Presupuesto estimado:",
+    "note": "* Presupuesto orientativo. El precio final puede variar según la complejidad del proyecto."
+  },
+  "pkg": {
+    "startup": "Startup",
+    "startup_desc": "Para pequeñas empresas que inician su infraestructura digital. WiFi corporativo, cableado básico, NAS y mantenimiento esencial.",
+    "professional": "Professional",
+    "professional_desc": "Para empresas en crecimiento. Red de alto rendimiento, cableado Cat6A, NAS avanzado, firewall, backup y soporte prioritario.",
+    "enterprise": "Enterprise",
+    "enterprise_desc": "Infraestructura completa para grandes organizaciones. Todo incluido: servidores, CCTV, control de acceso, cloud y soporte 24/7."
+  },
+  "calc": {
+    "area": "Superficie",
+    "users": "Usuarios",
+    "users_placeholder": "Nº usuarios",
+    "aps": "Puntos de acceso",
+    "aps_placeholder": "Nº APs",
+    "workstations": "Puestos de trabajo",
+    "workstations_placeholder": "Nº puestos",
+    "cable_category": "Categoría cableado",
+    "nas_bays": "Bahías NAS",
+    "storage_tb": "Almacenamiento",
+    "form_factor": "Factor de forma",
+    "ram": "Memoria RAM",
+    "data_tb": "Datos a respaldar",
+    "retention": "Retención",
+    "employees": "Empleados",
+    "employees_placeholder": "Nº empleados",
+    "scope": "Alcance",
+    "scope_network": "Solo red",
+    "scope_full": "Infraestructura completa",
+    "scope_security": "Seguridad",
+    "devices": "Dispositivos",
+    "devices_placeholder": "Nº dispositivos",
+    "sla": "SLA",
+    "users_supported": "Usuarios",
+    "users_supported_placeholder": "Nº usuarios",
+    "users_cloud": "Usuarios",
+    "users_cloud_placeholder": "Nº usuarios",
+    "migration": "Migración",
+    "migration_audit": "Solo auditoría",
+    "migration_hybrid": "Híbrida (on-premise + cloud)",
+    "migration_full": "Cloud completo",
+    "users_fw": "Usuarios",
+    "users_fw_placeholder": "Nº usuarios",
+    "features": "Características",
+    "cameras": "Cámaras",
+    "cameras_placeholder": "Nº cámaras",
+    "resolution": "Resolución",
+    "storage_days": "Almacenaje grabaciones",
+    "doors": "Puertas",
+    "doors_placeholder": "Nº puertas",
+    "auth_type": "Tipo autenticación",
+    "select": "Seleccionar...",
+    "estimated_price": "Precio estimado:",
+    "estimated_total": "Presupuesto total estimado:",
+    "name_placeholder": "Tu nombre",
+    "email_placeholder": "Tu email",
+    "phone_placeholder": "Tu teléfono",
+    "company_placeholder": "Empresa",
+    "message_placeholder": "Notas adicionales...",
+    "review_quote": "Revisar presupuesto",
+    "quote_ready": "Presupuesto listo para enviar",
+    "total": "Total",
+    "contact": "Contacto",
+    "send_whatsapp": "Enviar por WhatsApp",
+    "contact_form": "Formulario de contacto",
+    "step_package": "Paquete",
+    "step_configure": "Servicios",
+    "step_review": "Resumen",
+    "choose_package": "Elige un plan",
+    "choose_package_desc": "Selecciona un paquete predefinido o configura tu propio presupuesto desde cero.",
+    "custom": "A medida",
+    "custom_desc": "Selecciona y configura los servicios que necesites uno a uno.",
+    "continue_review": "Revisar presupuesto",
+    "configure_services": "Configura tus servicios",
+    "configure_services_desc": "Selecciona los servicios y ajusta los parámetros según tus necesidades.",
+    "no_services": "Aún no has seleccionado ningún servicio.",
+    "start_adding": "Empezar a configurar",
+    "back_packages": "Volver a paquetes",
+    "compare_plans": "Comparativa de planes",
+    "compare_plans_desc": "Descubre qué incluye cada paquete y elige el que mejor se adapte a tu negocio.",
+    "service": "Servicio",
+    "discount": "Dto.",
+    "includes_discount": "Incluye descuento del",
+    "save_budget": "Guardar",
+    "saved_success": "Presupuesto guardado correctamente",
+    "saved_budgets": "Mis presupuestos",
+    "no_saved": "No tienes presupuestos guardados",
+    "print": "Imprimir PDF",
+    "quote_title": "PRESUPUESTO ESTIMADO"
+  },
+  "tickets": {
+    "badge": "Soporte",
+    "heading": "Abre un ticket de soporte.",
+    "subtitle": "Describe tu incidencia técnica y te responderemos en menos de 24h.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "subject": "Asunto",
+      "description": "Describe tu incidencia...",
+      "priority": "Prioridad",
+      "priority_low": "Baja",
+      "priority_normal": "Normal",
+      "priority_high": "Alta",
+      "priority_urgent": "Urgente",
+      "submit": "Abrir ticket",
+      "success": "Ticket creado. Te responderemos pronto."
+    },
+    "my_tickets": "Mis tickets",
+    "no_tickets": "No tienes tickets abiertos.",
+    "status_open": "Abierto",
+    "status_progress": "En progreso",
+    "status_resolved": "Resuelto",
+    "status_closed": "Cerrado",
+    "detail_title": "Ticket #{id}",
+    "add_message": "Escribir mensaje...",
+    "send": "Enviar"
+  },
+  "gallery": {
+    "badge": "Proyectos",
+    "heading": "Nuestros trabajos.",
+    "subtitle": "Fotos reales de instalaciones que hemos realizado para nuestros clientes.",
+    "all": "Todos",
+    "featured": "Destacados",
+    "categories": {
+      "redes": "Redes WiFi",
+      "cableado": "Cableado Estructurado",
+      "servidores": "Servidores & NAS",
+      "general": "General"
+    },
+    "no_images": "Próximamente añadiremos fotos de nuestros proyectos."
+  },
+  "kpis": {
+    "title": "KPIs",
+    "active_projects": "Proyectos activos",
+    "pending_tickets": "Tickets abiertos",
+    "monthly_revenue": "Ingresos del mes",
+    "avg_response": "Respuesta media",
+    "sla_compliance": "Cumplimiento SLA"
   }
 }

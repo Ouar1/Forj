@@ -3,7 +3,7 @@ import os
 os.environ["ADMIN_SEED_SECRET"] = "test-seed-secret-123"
 os.environ["DISABLE_RATE_LIMITS"] = "true"
 os.environ["ENVIRONMENT"] = "testing"
-os.environ["DATABASE_URL"] = "sqlite:///./tests/test_vulnify.db"
+os.environ["DATABASE_URL"] = "sqlite:///./tests/test_xlink.db"
 os.environ["HIBP_API_KEY"] = "test-hibp-key"
 
 import pytest

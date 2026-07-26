@@ -100,11 +100,11 @@ export const ScrambledTitle: React.FC = () => {
   useEffect(() => {
     if (mounted && scramblerRef.current) {
       const phrases = [
-        'Arquitectura',
-        'Digital',
-        'Inteligente',
-        'Web + IA',
-        'Innovación',
+        'Infraestructura',
+        'Redes',
+        'Servidores',
+        'Cableado',
+        'Seguridad',
         'Sin Límites'
       ]
       

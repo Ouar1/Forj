@@ -15,7 +15,7 @@ from models.purchase import Purchase
 from models.product import Product
 from config import settings
 
-logger = logging.getLogger("vulnify.api.app")
+logger = logging.getLogger("xlink.api.app")
 router = APIRouter(prefix="/api/app")
 security = HTTPBearer(auto_error=False)
 

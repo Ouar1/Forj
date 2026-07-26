@@ -63,8 +63,8 @@ export default function PricingSection4() {
                 <p className="text-xs text-zinc-500">Respuesta en menos de 24h</p>
               </div>
             </div>
-            <a href="mailto:hola@vulnify.es" className="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-4">
-              hola@vulnify.es
+            <a href="mailto:contacto@forj.es" className="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-4">
+              contacto@forj.es
             </a>
           </div>
         </div>

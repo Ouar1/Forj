@@ -6,34 +6,34 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 
 const projects = [
   {
-    title: 'Vulnify',
-    subtitle: 'Web corporativa + SaaS',
-    desc: 'Plataforma de monitorización de reputación digital con autenticación, dashboard, pagos Stripe y panel admin.',
-    tags: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Stripe'],
+    title: 'Oficina TechFlow',
+    subtitle: 'Red WiFi corporativa + cableado estructurado',
+    desc: 'Diseñamos e instalamos red WiFi con 8 AP Ubiquiti, cableado Cat6A para 40 puestos, rack de comunicaciones y VLANs por departamento.',
+    tags: ['Ubiquiti', 'Cat6A', 'VLANs', 'Rack 42U', 'QoS'],
     icon: Globe,
     color: 'from-zinc-700 to-zinc-900',
   },
   {
-    title: 'E-commerce IA',
-    subtitle: 'Tienda online con recomendaciones IA',
-    desc: 'Tienda online con sistema de recomendaciones basado en IA, carrito, pasarela de pago y panel de gestión.',
-    tags: ['Next.js', 'Python', 'OpenAI', 'Stripe', 'Tailwind'],
+    title: 'NAS InnovaCorp',
+    subtitle: 'Servidor NAS + backups automatizados',
+    desc: 'Instalamos NAS Synology en RAID 6 con 48 TB, backups automáticos 3-2-1 y recuperación ante desastres con replicación offsite.',
+    tags: ['Synology', 'RAID 6', '3-2-1 Backup', 'Hyper Backup', 'Offsite'],
     icon: Smartphone,
     color: 'from-zinc-800 to-zinc-950',
   },
   {
-    title: 'Dashboard Analytics',
-    subtitle: 'Panel de control empresarial',
-    desc: 'Dashboard interactivo con gráficas en tiempo real, exportación de datos y roles de usuario.',
-    tags: ['React', 'D3.js', 'FastAPI', 'WebSockets', 'Redis'],
+    title: 'Servidores DataSmart',
+    subtitle: 'Virtualización Proxmox + alta disponibilidad',
+    desc: 'Implementamos cluster Proxmox con 3 nodos, almacenamiento Ceph, balanceo de carga y monitorización 24/7 con alertas predictivas.',
+    tags: ['Proxmox', 'Ceph', 'HA Cluster', 'Zabbix', 'Alerting'],
     icon: Code,
     color: 'from-zinc-700 to-zinc-900',
   },
   {
-    title: 'Chatbot IA',
-    subtitle: 'Asistente virtual personalizado',
-    desc: 'Chatbot con IA integrado en web corporativa, capaz de responder preguntas y derivar consultas complejas.',
-    tags: ['OpenAI', 'React', 'Python', 'WebSockets'],
+    title: 'Chatbot IA Forj',
+    subtitle: 'Asistente virtual para soporte TI',
+    desc: 'Chatbot con IA integrado en web corporativa, capaz de diagnosticar incidencias de red, crear tickets y escalar a técnicos automáticamente.',
+    tags: ['OpenAI', 'React', 'Python', 'WebSockets', 'RAG'],
     icon: Zap,
     color: 'from-zinc-800 to-zinc-950',
   },
@@ -44,7 +44,7 @@ export function PortfolioPage() {
 
   return (
     <>
-      <SEO title={t('portfolio.page_title', 'Portfolio')} description={t('portfolio.page_description', 'Proyectos de desarrollo web e IA realizados por Vulnify')} />
+      <SEO title={t('portfolio.page_title', 'Portfolio')} description={t('portfolio.page_description', 'Proyectos de infraestructura TI realizados por Forj')} />
       <div className="min-h-screen pt-28 md:pt-36">
         <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-20 py-16 md:py-24">
           <Link to="/" className="text-xs text-zinc-600 hover:text-white transition-colors inline-flex items-center gap-1 mb-6 no-underline">

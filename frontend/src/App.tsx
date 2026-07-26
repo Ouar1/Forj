@@ -23,6 +23,7 @@ const NotFound = lazy(() => import('@/components/ui/not-found-2').then(m => ({ d
 const BlogDetailPage = lazy(() => import('@/components/ui/blog-detail').then(m => ({ default: m.BlogDetailPage })))
 const DemoExtractProperty = lazy(() => import('@/components/ui/demo-extract-property').then(m => ({ default: m.DemoExtractProperty })))
 const ProductsPage = lazy(() => import('@/components/ui/products-page').then(m => ({ default: m.ProductsPage })))
+const PreciosPage = lazy(() => import('@/pages/precios').then(m => ({ default: m.PreciosPage })))
 const ProductDetailPage = lazy(() => import('@/components/ui/product-detail-page').then(m => ({ default: m.ProductDetailPage })))
 const ProductAccessPage = lazy(() => import('@/components/ui/product-access-page').then(m => ({ default: m.ProductAccessPage })))
 const CheckoutSuccessPage = lazy(() => import('@/components/ui/checkout-success-page').then(m => ({ default: m.CheckoutSuccessPage })))
@@ -71,6 +72,7 @@ function App() {
               <Route path="/servicios/:slug" element={<ServicioPage />} />
                <Route path="/sobre-nosotros" element={<HomePage />} />
                <Route path="/portfolio" element={<SuspenseWrapper><PortfolioPage /></SuspenseWrapper>} />
+               <Route path="/precios" element={<SuspenseWrapper><PreciosPage /></SuspenseWrapper>} />
                <Route path="/productos" element={<SuspenseWrapper><ProductsPage /></SuspenseWrapper>} />
                <Route path="/productos/:slug" element={<SuspenseWrapper><ProductDetailPage /></SuspenseWrapper>} />
                <Route path="/demo/extraer-propiedad" element={<SuspenseWrapper><DemoExtractProperty /></SuspenseWrapper>} />

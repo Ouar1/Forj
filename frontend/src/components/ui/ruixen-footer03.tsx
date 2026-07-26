@@ -35,7 +35,7 @@ export default function Footer_03() {
             <Zap className="size-6 text-white/70" />
           </div>
           <p className="text-zinc-500 text-sm text-center max-w-xs">
-            Desarrollo web e inteligencia artificial para impulsar tu negocio.
+            Infraestructura TI profesional para empresas.
           </p>
         </Container>
 
@@ -43,20 +43,20 @@ export default function Footer_03() {
           <Container delay={0.1} className="flex flex-col items-center text-center">
             <h3 className="text-sm font-semibold text-zinc-300 tracking-widest uppercase">Servicios</h3>
             <ul className="mt-5 text-sm text-zinc-600 space-y-3">
-              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Desarrollo Web</a></li>
-              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Integraciones IA</a></li>
-              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">APIs & Backend</a></li>
-              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Consultoría</a></li>
+              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Redes WiFi</a></li>
+              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Cableado Estructurado</a></li>
+              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Servidores & NAS</a></li>
+              <li><a href="#servicios" className="hover:text-zinc-300 transition-all duration-300">Consultoría TI</a></li>
             </ul>
           </Container>
 
           <Container delay={0.2} className="flex flex-col items-center text-center">
             <h3 className="text-sm font-semibold text-zinc-300 tracking-widest uppercase">Proceso</h3>
             <ul className="mt-5 text-sm text-zinc-600 space-y-3">
-              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Planificación</a></li>
-              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Diseño UI/UX</a></li>
-              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Desarrollo</a></li>
-              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Lanzamiento</a></li>
+              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Auditoría</a></li>
+              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Diseño</a></li>
+              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Instalación</a></li>
+              <li><a href="#proceso" className="hover:text-zinc-300 transition-all duration-300">Soporte</a></li>
             </ul>
           </Container>
 
@@ -72,7 +72,7 @@ export default function Footer_03() {
           <Container delay={0.4} className="flex flex-col items-center text-center">
             <h3 className="text-sm font-semibold text-zinc-300 tracking-widest uppercase">Contacto</h3>
             <ul className="mt-5 text-sm text-zinc-600 space-y-3">
-              <li><a href="mailto:hola@vulnify.es" className="hover:text-zinc-300 transition-all duration-300">Email</a></li>
+              <li><a href="mailto:contacto@forj.es" className="hover:text-zinc-300 transition-all duration-300">Email</a></li>
               <li><a href="#" className="hover:text-zinc-300 transition-all duration-300">Twitter / X</a></li>
               <li><a href="#" className="hover:text-zinc-300 transition-all duration-300">LinkedIn</a></li>
             </ul>
@@ -81,7 +81,7 @@ export default function Footer_03() {
 
         <Container delay={0.5} className="w-full mt-12 lg:mt-20">
           <div className="flex items-center justify-center w-full pt-8 border-t border-white/[0.04]">
-            <p className="text-sm text-zinc-600">&copy; {new Date().getFullYear()} Vulnify.</p>
+            <p className="text-sm text-zinc-600">&copy; {new Date().getFullYear()} Forj.</p>
           </div>
         </Container>
       </div>

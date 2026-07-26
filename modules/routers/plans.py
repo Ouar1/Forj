@@ -11,7 +11,7 @@ from config import settings
 from modules.activity_logger import log_activity
 
 router = APIRouter(prefix="/api")
-logger = logging.getLogger("vulnify.api.plans")
+logger = logging.getLogger("xlink.api.plans")
 
 
 @router.get("/plans", description="List active plans")

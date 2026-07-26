@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://vulnify.es/sitemap.xml
+Sitemap: https://xlink.es/sitemap.xml

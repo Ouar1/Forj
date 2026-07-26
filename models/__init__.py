@@ -10,3 +10,6 @@ from models.testimonial import Testimonial
 from models.faq import FAQ
 from models.product import Product
 from models.purchase import Purchase
+from models.price_range import PriceRange
+from models.ticket import Ticket, TicketMessage
+from models.project_gallery import ProjectGallery

@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight, Globe, Bot, Code, Cpu, Zap, ChevronRight, Plus, MessageCircle } from 'lucide-react'
+import { ArrowUpRight, Globe, Bot, Code, Cpu, Zap, Wifi, Server, HardDrive, HeadphonesIcon, Cloud, Shield, Camera, ChevronRight, Plus, MessageCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { ArtificialHero } from '@/components/ui/artificial-hero'
 import { BorderBeam } from '@/components/ui/border-beam'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
-import { BentoPricing } from '@/components/ui/bento-pricing'
 import { MeshGradient } from '@paper-design/shaders-react'
 import FlowArt, { FlowSection } from './story-scroll'
 import Testimonials from './twitter-testimonial-cards'
 import { AnimatedHeroText } from './animated-hero-text'
 import { getFAQs, getTestimonials, type FAQData, type TestimonialData } from '@/lib/api'
+import { GallerySection } from '@/components/ui/gallery-section'
+import { TicketSection } from '@/components/ui/tickets-section'
 
 export function FloatingPathsEffect() {
   return (
@@ -123,7 +124,7 @@ export function HomeContent() {
     { number: '24h', label: t('stats.response') },
   ]
 
-  const serviceIcons = [Globe, Bot, Code, Cpu, Zap]
+  const serviceIcons = [Globe, Bot, Code, Cpu, Zap, Wifi, Server, HardDrive, HeadphonesIcon, Cloud, Shield, Camera]
   const services = t('services.items', { returnObjects: true }) as { name: string; desc: string }[]
 
   const steps = t('process.steps', { returnObjects: true }) as { title: string; desc: string }[]
@@ -299,11 +300,9 @@ export function HomeContent() {
         </div>
       </div>
 
-      {/* Pricing */}
+      {/* Gallery */}
       <div className="w-full border-b border-white/[0.04]">
-        <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-20 py-28 md:py-36">
-          <BentoPricing />
-        </div>
+        <GallerySection />
       </div>
 
       {/* FAQ */}
@@ -317,15 +316,20 @@ export function HomeContent() {
           </div>
           <div className="space-y-3">
             {(faqs.length > 0 ? faqs : [
-              { id: 0, question: '¿Cuánto cuesta un proyecto con IA?', answer: 'Depende del alcance. Un chatbot puede estar operativo desde 149€. Un proyecto completo de desarrollo web con IA desde 2.500€. También vendemos productos digitales listos para usar desde 19€.', category: 'General', order: 0, published: true },
-              { id: 1, question: '¿Qué productos digitales ofrecéis?', answer: 'Generador de documentos con IA, chatbot white-label, pack de contratos, kit RGPD, SEO analyzer, cursos de IA y más. Todos listos para descargar y usar al instante.', category: 'General', order: 0, published: true },
-              { id: 2, question: '¿Ofrecéis suscripciones mensuales?', answer: 'Sí. Tenemos planes de suscripción para el generador de documentos, chatbot IA, tokens API y soporte técnico recurrente. Todos con acceso inmediato.', category: 'General', order: 0, published: true },
-              { id: 3, question: '¿Cómo integráis la inteligencia artificial?', answer: 'Desde chatbots personalizados hasta generación de documentos, automatización de procesos y análisis predictivo. Evaluamos tu caso y proponemos la solución óptima.', category: 'General', order: 0, published: true },
+              { id: 0, question: '¿Cuánto cuesta instalar una red WiFi corporativa?', answer: 'Depende del tamaño y la complejidad. Una red WiFi para oficina pequeña desde 800€. Un proyecto completo de infraestructura TI con cableado, servidores y redes desde 3.500€.', category: 'General', order: 0, published: true },
+              { id: 1, question: '¿Qué servicios de infraestructura ofrecéis?', answer: 'Redes WiFi profesionales, cableado estructurado Cat6/Cat6A, switches gestionados, VLANs, VPN, servidores físicos y virtuales, NAS, backups automatizados, recuperación ante desastres y soporte técnico.', category: 'General', order: 0, published: true },
+              { id: 2, question: '¿Ofrecéis mantenimiento y soporte continuo?', answer: 'Sí. Tenemos planes de mantenimiento preventivo y correctivo, soporte remoto y presencial, monitorización 24/7 y atención de incidencias en menos de 4h.', category: 'General', order: 0, published: true },
+              { id: 3, question: '¿Hacéis cableado estructurado?', answer: 'Sí. Instalamos cableado Cat6 y Cat6A certificado, racks de comunicaciones, paneles de parcheo y organización profesional. Certificamos cada enlace con equipo Fluke.', category: 'General', order: 0, published: true },
             ]).map((item) => (
               <FAQItem key={item.id} question={item.question} answer={item.answer} />
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Tickets */}
+      <div className="w-full border-b border-white/[0.04]">
+        <TicketSection />
       </div>
 
       {/* Contact + CTA */}

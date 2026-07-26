@@ -19,8 +19,14 @@ from modules.routers.blog import router as blog_router
 from modules.routers.testimonials import router as testimonials_router
 from modules.routers.faqs import router as faqs_router
 from modules.routers.property_extract import router as property_extract_router
+from modules.routers.prices import router as prices_router
+from modules.routers.tickets import router as tickets_router
+from modules.routers.gallery import router as gallery_router
 from models.user import User
 from models.message import Message
+from models.price_range import PriceRange
+from models.ticket import Ticket, TicketMessage
+from models.project_gallery import ProjectGallery
 
 os.makedirs("uploads", exist_ok=True)
 
@@ -28,7 +34,7 @@ logging.basicConfig(
     level=getattr(logging, settings.LOG_LEVEL.upper(), logging.INFO),
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
-logger = logging.getLogger("vulnify")
+logger = logging.getLogger("xlink")
 
 if settings.SENTRY_DSN and settings.ENVIRONMENT == "production":
     try:
@@ -88,16 +94,20 @@ async def lifespan(app: FastAPI):
             db.commit()
         if not db.query(User).filter(User.role == "admin").first():
             admin_pw = os.getenv("ADMIN_PASSWORD", "admin123456")
-            admin = User(name="Admin Vulnify", email=os.getenv("ADMIN_EMAIL", "admin@vulnify.com"), password=hash_password(admin_pw), role="admin", company="", is_verified=1)
+            admin = User(name="Admin XLink", email=os.getenv("ADMIN_EMAIL", "admin@xlink.es"), password=hash_password(admin_pw), role="admin", company="", is_verified=1)
             db.add(admin)
             db.commit()
             logger.info("Admin user created")
         for table_sql in [
             "CREATE TABLE IF NOT EXISTS order_photos (id SERIAL PRIMARY KEY, order_id INTEGER REFERENCES orders(id), image_data TEXT NOT NULL, caption VARCHAR DEFAULT '', created_at TIMESTAMP DEFAULT NOW())",
-            "CREATE TABLE IF NOT EXISTS blog_posts (id SERIAL PRIMARY KEY, title VARCHAR NOT NULL, slug VARCHAR UNIQUE NOT NULL, tag VARCHAR DEFAULT 'General', excerpt TEXT DEFAULT '', content TEXT DEFAULT '', author VARCHAR DEFAULT 'Vulnify', read_time VARCHAR DEFAULT '5 min', published BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW())",
+            "CREATE TABLE IF NOT EXISTS blog_posts (id SERIAL PRIMARY KEY, title VARCHAR NOT NULL, slug VARCHAR UNIQUE NOT NULL, tag VARCHAR DEFAULT 'General', excerpt TEXT DEFAULT '', content TEXT DEFAULT '', author VARCHAR DEFAULT 'XLink', read_time VARCHAR DEFAULT '5 min', published BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS testimonials (id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, role VARCHAR DEFAULT '', company VARCHAR DEFAULT '', content TEXT NOT NULL, avatar_url VARCHAR DEFAULT '', rating INTEGER DEFAULT 5, featured BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS faqs (id SERIAL PRIMARY KEY, question VARCHAR NOT NULL, answer TEXT NOT NULL, category VARCHAR DEFAULT 'General', \"order\" INTEGER DEFAULT 0, published BOOLEAN DEFAULT true, created_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS order_logs (id SERIAL PRIMARY KEY, order_id INTEGER REFERENCES orders(id), field VARCHAR NOT NULL, old_value TEXT DEFAULT '', new_value TEXT DEFAULT '', changed_by VARCHAR DEFAULT '', created_at TIMESTAMP DEFAULT NOW())",
+            "CREATE TABLE IF NOT EXISTS price_ranges (id SERIAL PRIMARY KEY, service VARCHAR NOT NULL, min_price FLOAT DEFAULT 0, max_price FLOAT DEFAULT 0, unit VARCHAR DEFAULT '€', description VARCHAR DEFAULT '', active BOOLEAN DEFAULT true)",
+            "CREATE TABLE IF NOT EXISTS tickets (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users(id), client_name VARCHAR NOT NULL, client_email VARCHAR NOT NULL, subject VARCHAR NOT NULL, description TEXT DEFAULT '', priority VARCHAR DEFAULT 'normal', status VARCHAR DEFAULT 'abierto', created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW())",
+            "CREATE TABLE IF NOT EXISTS ticket_messages (id SERIAL PRIMARY KEY, ticket_id INTEGER REFERENCES tickets(id), sender VARCHAR NOT NULL, agent_name VARCHAR DEFAULT '', message TEXT NOT NULL, created_at TIMESTAMP DEFAULT NOW())",
+            "CREATE TABLE IF NOT EXISTS project_gallery (id SERIAL PRIMARY KEY, title VARCHAR NOT NULL, description TEXT DEFAULT '', client_name VARCHAR DEFAULT '', image_data TEXT NOT NULL, category VARCHAR DEFAULT 'general', featured BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW())",
         ]:
             try:
                 db.execute(text(table_sql))
@@ -107,9 +117,9 @@ async def lifespan(app: FastAPI):
         db.close()
     except Exception as e:
         logger.warning("Could not seed data: %s", e)
-    logger.info("Vulnify started (environment=%s)", settings.ENVIRONMENT)
+    logger.info("XLink started (environment=%s)", settings.ENVIRONMENT)
     yield
-    logger.info("Vulnify shutting down")
+    logger.info("XLink shutting down")
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
@@ -130,8 +140,8 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
 
 app = FastAPI(
-    title="Vulnify API",
-    description="Vulnify · Desarrollo Web & IA — APIs para la web corporativa",
+    title="XLink API",
+    description="XLink · Infraestructura TI Profesional — APIs para la web corporativa",
     version="3.1.0",
     lifespan=lifespan,
 )
@@ -167,6 +177,9 @@ app.include_router(chat_router)
 app.include_router(property_extract_router)
 app.include_router(products_router)
 app.include_router(app_router)
+app.include_router(prices_router)
+app.include_router(tickets_router)
+app.include_router(gallery_router)
 
 @app.exception_handler(404)
 async def not_found(request: Request, exc):
@@ -195,7 +208,7 @@ async def index():
     if os.path.isfile(index_path):
         with open(index_path, encoding="utf-8") as f:
             return HTMLResponse(f.read())
-    return HTMLResponse("<h1>Vulnify</h1><p>Desarrollo Web & IA</p>")
+    return HTMLResponse("<h1>XLink</h1><p>Infraestructura TI Profesional</p>")
 
 
 @app.post("/api/contact")
@@ -246,7 +259,7 @@ async def spa_fallback(request: Request, path: str):
     if os.path.isfile(index_path):
         with open(index_path, encoding="utf-8") as f:
             return HTMLResponse(f.read())
-    return HTMLResponse("<h1>Vulnify</h1><p>Desarrollo Web & IA</p>")
+    return HTMLResponse("<h1>XLink</h1><p>Infraestructura TI Profesional</p>")
 
 
 @app.websocket("/ws/notifications")

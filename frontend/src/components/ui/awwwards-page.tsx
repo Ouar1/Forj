@@ -206,7 +206,7 @@ const Nav = ({ menuOpen, setMenuOpen, isDark, onToggle }: any) => {
         }`}
         style={{ borderBottom: scrolled ? '1px solid rgba(255,255,255,0.04)' : '1px solid transparent' }}
       >
-        <span className="text-base font-bold tracking-[0.3em] text-white/90">VULNIFY</span>
+        <span className="text-base font-bold tracking-[0.3em] text-white/90">FORJ</span>
         <div className="hidden md:flex items-center gap-8">
           {['Servicios', 'Trabajo', 'Proceso', 'Contacto'].map((l) => (
             <a key={l} href={`#${l.toLowerCase()}`} className="text-sm text-zinc-500 hover:text-white transition-colors relative group">
@@ -234,7 +234,7 @@ const Nav = ({ menuOpen, setMenuOpen, isDark, onToggle }: any) => {
             className="fixed inset-0 z-50 bg-[#050505]/98 backdrop-blur-2xl flex flex-col"
           >
             <div className="flex items-center justify-between px-6 py-5 border-b border-white/[0.04]">
-              <span className="text-base font-bold tracking-[0.3em] text-white/90">VULNIFY</span>
+              <span className="text-base font-bold tracking-[0.3em] text-white/90">FORJ</span>
               <button onClick={() => setMenuOpen(false)} className="text-white/60 p-2">
                 <MenuToggleIcon open={true} className="size-5" duration={500} />
               </button>
@@ -703,12 +703,12 @@ export const Component = () => {
                     <HoverBorderGradient
                       as="button"
                       onClick={() => {
-                        const content = `GUÍA: EL STACK TECNOLÓGICO IDEAL PARA TU NEGOCIO\n\nEscrito por Dani Ramirez — Vulnify\n\n---\n\n1. ELEGIR EL FRAMEWORK ADECUADO\n- React: ideal para aplicaciones interactivas y dashboards\n- Next.js: perfecto para SEO y páginas que necesitan rendimiento\n- Astro: óptimo para landing pages y sitios de contenido\n\n2. IA SIN COMPLICACIONES\n- ChatGPT API: chatbots personalizados en días\n- Automatización: reduce tareas repetitivas con IA\n- Análisis predictivo: anticipa tendencias de tus clientes\n\n3. ERRORES QUE CUESTAN DINERO\n- Ignorar el rendimiento mobile\n- Stack sobreingenierizado para proyectos pequeños\n- No planificar escalabilidad desde el inicio\n\n---\n\nDescarga completa disponible en vulnify.es/guia`;
+                        const content = `GUÍA: INFRAESTRUCTURA TI IDEAL PARA TU NEGOCIO\n\nEscrito por Dani Ramirez — Forj\n\n---\n\n1. ELEGIR LA INFRAESTRUCTURA ADECUADA\n- Redes WiFi: ideal para cobertura corporativa total\n- Cableado estructurado: perfecto para rendimiento y escalabilidad\n- Servidores NAS: óptimo para almacenamiento y backups\n\n2. SEGURIDAD SIN COMPLICACIONES\n- VLANs: segmentación de red para departamentos\n- VPN: acceso remoto seguro para empleados\n- Firewalls: protección perimetral avanzada\n\n3. ERRORES QUE CUESTAN DINERO\n- Ignorar la calidad del cableado de red\n- Servidores sin mantenimiento ni backups\n- No planificar escalabilidad desde el inicio\n\n---\n\nDescarga completa disponible en forj.es/guia`;
                         const blob = new Blob([content], { type: 'text/plain' });
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
-                        a.download = 'guia-stack-tecnologico-vulnify.txt';
+                        a.download = 'guia-infraestructura-ti-forj.txt';
                         a.click();
                         URL.revokeObjectURL(url);
                       }}
@@ -734,7 +734,7 @@ export const Component = () => {
                     </div>
                     <div>
                       <div className="text-xs font-medium text-zinc-400">Dani Ramirez</div>
-                      <div className="text-[11px] text-zinc-700">CTO & Fundador de Vulnify</div>
+                      <div className="text-[11px] text-zinc-700">CEO & Fundador de Forj</div>
                     </div>
                   </div>
                 </FadeIn>
@@ -767,7 +767,7 @@ export const Component = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="absolute top-2 right-3 text-[9px] text-zinc-700 font-mono tracking-wider">VULNIFY</div>
+                      <div className="absolute top-2 right-3 text-[9px] text-zinc-700 font-mono tracking-wider">FORJ</div>
                     </div>
                     <div className="absolute -inset-1 rounded-[inherit] bg-gradient-to-br from-zinc-600/10 via-transparent to-zinc-400/5 blur-sm" />
                   </div>
@@ -949,8 +949,8 @@ export const Component = () => {
         <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-20 py-16 md:py-20">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div>
-              <span className="text-base font-bold tracking-[0.3em] text-white/80">VULNIFY</span>
-              <p className="text-sm text-zinc-600 mt-4 max-w-[200px] leading-relaxed">Desarrollo web e inteligencia artificial para impulsar tu negocio.</p>
+              <span className="text-base font-bold tracking-[0.3em] text-white/80">FORJ</span>
+              <p className="text-sm text-zinc-600 mt-4 max-w-[200px] leading-relaxed">Infraestructura TI profesional para empresas.</p>
             </div>
             {[
               { title: 'Servicios', links: ['Desarrollo Web', 'Integraciones IA', 'APIs & Backend', 'Consultoría'] },
@@ -970,13 +970,13 @@ export const Component = () => {
             ))}
           </div>
           <div className="pt-8 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-zinc-700">&copy; {new Date().getFullYear()} Vulnify. Todos los derechos reservados.</p>
+            <p className="text-xs text-zinc-700">&copy; {new Date().getFullYear()} Forj. Todos los derechos reservados.</p>
             <div className="flex items-center gap-5">
-              <a href="https://twitter.com/vulnify" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">Twitter</a>
-              <a href="https://linkedin.com/company/vulnify" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">LinkedIn</a>
-              <a href="https://github.com/vulnify" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">GitHub</a>
+              <a href="https://twitter.com/xlink" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">Twitter</a>
+              <a href="https://linkedin.com/company/xlink" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://github.com/xlink" target="_blank" rel="noopener noreferrer" className="text-xs text-zinc-600 hover:text-white transition-colors">GitHub</a>
               <span className="text-zinc-700/50">|</span>
-              <a href="mailto:hola@vulnify.es" className="text-xs text-zinc-600 hover:text-white transition-colors">hola@vulnify.es</a>
+              <a href="mailto:contacto@forj.es" className="text-xs text-zinc-600 hover:text-white transition-colors">contacto@forj.es</a>
             </div>
           </div>
         </div>
