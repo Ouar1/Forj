@@ -1092,19 +1092,19 @@ Tailwind CSS v4 es un salto generacional. La desaparición del archivo de config
     # Seed price ranges
     if db.query(PriceRange).count() == 0:
         prices = [
-            PriceRange(service="Red WiFi Corporativa (hasta 100m2)", min_price=800, max_price=2500, description="Incluye 2-4 APs, switch PoE, configuración VLAN y certificación"),
-            PriceRange(service="Red WiFi Corporativa (100-500m2)", min_price=2500, max_price=6000, description="Incluye 4-8 APs, switch gestionado, controlador y site survey"),
-            PriceRange(service="Cableado Estructurado por puesto", min_price=120, max_price=250, unit="€/puesto", description="Cableado Cat6A certificado, canaletas, patch panel y keystones"),
-            PriceRange(service="Servidor NAS (4-8 bahías)", min_price=1200, max_price=3500, description="NAS Synology/QNAP, discos WD Red/Seagate, RAID configurado"),
-            PriceRange(service="Servidor en rack (Dell/HP)", min_price=3500, max_price=12000, description="Servidor Dell PowerEdge/HP ProLiant, RAM, SSD, soporte"),
-            PriceRange(service="Backup automatizado 3-2-1", min_price=600, max_price=2500, description="Software de backup, política de retención, replicación offsite"),
+            PriceRange(service="Red WiFi Corporativa (hasta 100m2)", min_price=500, max_price=1500, description="Incluye 2-4 APs, switch PoE, configuración VLAN y certificación"),
+            PriceRange(service="Red WiFi Corporativa (100-500m2)", min_price=1500, max_price=4000, description="Incluye 4-8 APs, switch gestionado, controlador y site survey"),
+            PriceRange(service="Cableado Estructurado por puesto", min_price=80, max_price=150, unit="€/puesto", description="Cableado Cat6A certificado, canaletas, patch panel y keystones"),
+            PriceRange(service="Servidor NAS (4-8 bahías)", min_price=800, max_price=2500, description="NAS Synology/QNAP, discos WD Red/Seagate, RAID configurado"),
+            PriceRange(service="Servidor en rack (Dell/HP)", min_price=2500, max_price=8000, description="Servidor Dell PowerEdge/HP ProLiant, RAM, SSD, soporte"),
+            PriceRange(service="Backup automatizado 3-2-1", min_price=400, max_price=1800, description="Software de backup, política de retención, replicación offsite"),
             PriceRange(service="Auditoría de infraestructura TI", min_price=0, max_price=0, description="Gratuita. Incluye informe completo sin compromiso"),
-            PriceRange(service="Mantenimiento mensual", min_price=150, max_price=500, description="€/mes. Monitorización 24/7, soporte remoto, visitas programadas"),
-            PriceRange(service="Soporte Técnico Premium (24/7)", min_price=300, max_price=1200, unit="€/mes", description="Soporte remoto y presencial 24/7, SLA 4h, informes mensuales"),
+            PriceRange(service="Mantenimiento mensual", min_price=100, max_price=350, description="€/mes. Monitorización 24/7, soporte remoto, visitas programadas"),
+            PriceRange(service="Soporte Técnico Premium (24/7)", min_price=200, max_price=800, unit="€/mes", description="Soporte remoto y presencial 24/7, SLA 4h, informes mensuales"),
             PriceRange(service="Consultoría TI & Cloud", min_price=600, max_price=3000, description="Análisis de infraestructura, migración cloud, virtualización y optimización"),
-            PriceRange(service="Firewall & Seguridad Perimetral", min_price=900, max_price=4000, description="Firewall corporativo, IDS/IPS, VPN site-to-site, políticas de seguridad"),
-            PriceRange(service="CCTV IP (por cámara)", min_price=250, max_price=600, unit="€/cámara", description="Cámara IP 4K, NVR, cableado, configuración y acceso remoto"),
-            PriceRange(service="Control de Acceso (por puerta)", min_price=400, max_price=1200, unit="€/puerta", description="Lector RFID/huella, cerradura eléctrica, controlador y software"),
+            PriceRange(service="Firewall & Seguridad Perimetral", min_price=600, max_price=2500, description="Firewall corporativo, IDS/IPS, VPN site-to-site, políticas de seguridad"),
+            PriceRange(service="CCTV IP (por cámara)", min_price=180, max_price=400, unit="€/cámara", description="Cámara IP 4K, NVR, cableado, configuración y acceso remoto"),
+            PriceRange(service="Control de Acceso (por puerta)", min_price=300, max_price=800, unit="€/puerta", description="Lector RFID/huella, cerradura eléctrica, controlador y software"),
         ]
         for p in prices:
             db.add(p)
