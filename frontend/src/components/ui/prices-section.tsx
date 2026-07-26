@@ -12,11 +12,12 @@ import {
   Zap, FileText, Sparkles, Rocket, Star, Download, Save,
   Trash2, ChevronLeft, Package, Percent, Printer, X, Plus
 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 interface FormField {
   key: string
   label: string
-  icon: React.ElementType
+  icon: LucideIcon
   type: 'number' | 'select'
   placeholder?: string
   options?: { label: string; multiplier: number }[]
@@ -28,7 +29,7 @@ interface FormField {
 interface ServiceConfig {
   id: number
   name: string
-  icon: React.ElementType
+  icon: LucideIcon
   fields: FormField[]
   baseMin: number
   baseMax: number
@@ -39,7 +40,7 @@ interface PackageDef {
   id: string
   name: string
   desc: string
-  icon: React.ElementType
+  icon: LucideIcon
   color: string
   services: { configId: number; values: Record<string, number | string> }[]
   discount: number
