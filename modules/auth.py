@@ -93,9 +93,6 @@ def require_staff(user: User = Depends(get_current_user)):
 
 def require_admin_totp(user: User = Depends(require_admin)):
     return user
-        return user
-    raise HTTPException(status_code=403, detail="Debes habilitar 2FA antes de acceder al panel admin. Ve a tu perfil y configura la autenticación de dos factores.")
-    return user
 
 
 # --- REFRESH TOKENS ---
