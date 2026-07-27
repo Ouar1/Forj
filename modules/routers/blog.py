@@ -8,7 +8,7 @@ from modules.auth import require_admin_totp
 from config import limiter
 
 router = APIRouter(prefix="/api/blog", tags=["Blog"])
-logger = logging.getLogger("xlink.api.blog")
+logger = logging.getLogger("forj.api.blog")
 
 
 @router.get("/", description="List published blog posts")
@@ -109,7 +109,7 @@ def admin_create_post(
         tag=body.get("tag", "General"),
         excerpt=body.get("excerpt", ""),
         content=body.get("content", ""),
-        author=body.get("author", "XLink"),
+        author=body.get("author", "Forj"),
         read_time=body.get("read_time", "5 min"),
         published=body.get("published", False),
     )

@@ -1,4 +1,4 @@
-# XLink
+# Forj
 
 Infraestructura TI Profesional — Diseño, instalación y mantenimiento de redes, servidores y automatización para empresas.
 
@@ -26,8 +26,8 @@ Infraestructura TI Profesional — Diseño, instalación y mantenimiento de rede
 ## Desarrollo local
 
 ```bash
-git clone https://github.com/OUAR77/XLink.git
-cd XLink
+git clone https://github.com/OUAR77/Forj.git
+cd Forj
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

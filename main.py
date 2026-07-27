@@ -34,7 +34,7 @@ logging.basicConfig(
     level=getattr(logging, settings.LOG_LEVEL.upper(), logging.INFO),
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
-logger = logging.getLogger("xlink")
+logger = logging.getLogger("forj")
 
 if settings.SENTRY_DSN and settings.ENVIRONMENT == "production":
     try:
@@ -101,13 +101,13 @@ async def lifespan(app: FastAPI):
             db.commit()
             logger.info("Admin user updated")
         else:
-            admin = User(name="Admin XLink", email=admin_email, password=hash_password(admin_pw), role="admin", company="", is_verified=1)
+            admin = User(name="Admin Forj", email=admin_email, password=hash_password(admin_pw), role="admin", company="", is_verified=1)
             db.add(admin)
             db.commit()
             logger.info("Admin user created")
         for table_sql in [
             "CREATE TABLE IF NOT EXISTS order_photos (id SERIAL PRIMARY KEY, order_id INTEGER REFERENCES orders(id), image_data TEXT NOT NULL, caption VARCHAR DEFAULT '', created_at TIMESTAMP DEFAULT NOW())",
-            "CREATE TABLE IF NOT EXISTS blog_posts (id SERIAL PRIMARY KEY, title VARCHAR NOT NULL, slug VARCHAR UNIQUE NOT NULL, tag VARCHAR DEFAULT 'General', excerpt TEXT DEFAULT '', content TEXT DEFAULT '', author VARCHAR DEFAULT 'XLink', read_time VARCHAR DEFAULT '5 min', published BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW())",
+            "CREATE TABLE IF NOT EXISTS blog_posts (id SERIAL PRIMARY KEY, title VARCHAR NOT NULL, slug VARCHAR UNIQUE NOT NULL, tag VARCHAR DEFAULT 'General', excerpt TEXT DEFAULT '', content TEXT DEFAULT '', author VARCHAR DEFAULT 'Forj', read_time VARCHAR DEFAULT '5 min', published BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS testimonials (id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, role VARCHAR DEFAULT '', company VARCHAR DEFAULT '', content TEXT NOT NULL, avatar_url VARCHAR DEFAULT '', rating INTEGER DEFAULT 5, featured BOOLEAN DEFAULT false, created_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS faqs (id SERIAL PRIMARY KEY, question VARCHAR NOT NULL, answer TEXT NOT NULL, category VARCHAR DEFAULT 'General', \"order\" INTEGER DEFAULT 0, published BOOLEAN DEFAULT true, created_at TIMESTAMP DEFAULT NOW())",
             "CREATE TABLE IF NOT EXISTS order_logs (id SERIAL PRIMARY KEY, order_id INTEGER REFERENCES orders(id), field VARCHAR NOT NULL, old_value TEXT DEFAULT '', new_value TEXT DEFAULT '', changed_by VARCHAR DEFAULT '', created_at TIMESTAMP DEFAULT NOW())",
@@ -124,9 +124,9 @@ async def lifespan(app: FastAPI):
         db.close()
     except Exception as e:
         logger.warning("Could not seed data: %s", e)
-    logger.info("XLink started (environment=%s)", settings.ENVIRONMENT)
+    logger.info("Forj started (environment=%s)", settings.ENVIRONMENT)
     yield
-    logger.info("XLink shutting down")
+    logger.info("Forj shutting down")
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
@@ -147,8 +147,8 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
 
 app = FastAPI(
-    title="XLink API",
-    description="XLink · Infraestructura TI Profesional — APIs para la web corporativa",
+    title="Forj API",
+    description="Forj · Infraestructura TI Profesional — APIs para la web corporativa",
     version="3.1.0",
     lifespan=lifespan,
 )
@@ -215,7 +215,7 @@ async def index():
     if os.path.isfile(index_path):
         with open(index_path, encoding="utf-8") as f:
             return HTMLResponse(f.read())
-    return HTMLResponse("<h1>XLink</h1><p>Infraestructura TI Profesional</p>")
+    return HTMLResponse("<h1>Forj</h1><p>Infraestructura TI Profesional</p>")
 
 
 @app.post("/api/contact")
@@ -266,7 +266,7 @@ async def spa_fallback(request: Request, path: str):
     if os.path.isfile(index_path):
         with open(index_path, encoding="utf-8") as f:
             return HTMLResponse(f.read())
-    return HTMLResponse("<h1>XLink</h1><p>Infraestructura TI Profesional</p>")
+    return HTMLResponse("<h1>Forj</h1><p>Infraestructura TI Profesional</p>")
 
 
 @app.websocket("/ws/notifications")

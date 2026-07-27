@@ -9,7 +9,7 @@ class BlogPost(Base):
     tag = Column(String, default="General")
     excerpt = Column(Text, default="")
     content = Column(Text, default="")
-    author = Column(String, default="XLink")
+    author = Column(String, default="Forj")
     read_time = Column(String, default="5 min")
     published = Column(Boolean, default=False)
     created_at = Column(DateTime, server_default=func.now())

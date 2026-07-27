@@ -71,7 +71,7 @@ def clean_old_backups(output_dir: str, retention: int):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Backup de BD de XLink")
+    parser = argparse.ArgumentParser(description="Backup de BD de Forj")
     parser.add_argument("--output", default="backups", help="Directorio de salida")
     parser.add_argument("--retention", type=int, default=DEFAULT_RETENTION, help="Nº de backups a conservar")
     args = parser.parse_args()

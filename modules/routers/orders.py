@@ -304,7 +304,7 @@ def admin_order_invoice(
   <tr><td>""" + order.service + """</td><td>""" + (order.description or '—') + """</td><td style="text-align:right">""" + f"{order.amount:.2f}" + """€</td></tr>
   <tr class="total"><td colspan="2">Total</td><td style="text-align:right">""" + f"{order.amount:.2f}" + """€</td></tr>
   </table>
-  <div class="footer">XLink &mdash; Infraestructura TI Profesional<br>""" + settings.SITE_URL + """</div>
+  <div class="footer">Forj &mdash; Infraestructura TI Profesional<br>""" + settings.SITE_URL + """</div>
 </body></html>"""
     try:
         from weasyprint import HTML

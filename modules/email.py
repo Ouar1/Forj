@@ -2,7 +2,7 @@ import logging
 from datetime import datetime
 from config import settings
 
-logger = logging.getLogger("xlink.email")
+logger = logging.getLogger("forj.email")
 
 try:
     import sendgrid
@@ -22,7 +22,7 @@ def _html_wrapper(body: str) -> str:
   <table role="presentation" width="100%" style="max-width:560px;background:#ffffff;border-radius:16px;border:1px solid #e0e0e0;overflow:hidden">
     <tr><td style="padding:40px 32px 32px;text-align:center;border-bottom:1px solid #eee">
       <span style="display:inline-block;width:40px;height:40px;border-radius:50%;border:2px solid #ddd;margin-bottom:12px"></span>
-      <h1 style="margin:0;font-size:20px;font-weight:600;color:#111;letter-spacing:-0.3px">XLink</h1>
+      <h1 style="margin:0;font-size:20px;font-weight:600;color:#111;letter-spacing:-0.3px">Forj</h1>
       <p style="margin:4px 0 0;font-size:13px;color:#888">Infraestructura TI Profesional</p>
     </td></tr>
     <tr><td style="padding:32px;color:#333;font-size:15px;line-height:1.6">
@@ -30,8 +30,8 @@ def _html_wrapper(body: str) -> str:
     </td></tr>
     <tr><td style="padding:24px 32px;background:#fafafa;text-align:center;border-top:1px solid #eee">
       <p style="margin:0;font-size:12px;color:#999">
-        XLink &mdash; Infraestructura TI Profesional<br>
-        <a href="{settings.SITE_URL}" style="color:#666;text-decoration:underline">xlink.es</a>
+        Forj &mdash; Infraestructura TI Profesional<br>
+        <a href="{settings.SITE_URL}" style="color:#666;text-decoration:underline">forj.es</a>
       </p>
     </td></tr>
   </table>
@@ -74,9 +74,9 @@ def send_password_reset(email: str, token: str) -> bool:
     <p style="margin:24px 0 0;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:20px">Si no solicitaste esto, ignora este mensaje.</p>
     """
     return _send(Mail(
-        from_email=Email("noreply@xlink.es"),
+        from_email=Email("noreply@forj.es"),
         to_emails=To(email),
-        subject="Restablece tu contraseña — XLink",
+        subject="Restablece tu contraseña — Forj",
         plain_text_content=f"Restablece tu contraseña:\n\n{reset_link}\n\nSi no solicitaste esto, ignora este mensaje.",
         html_content=_html_wrapper(body),
     ))
@@ -99,9 +99,9 @@ def send_admin_login_alert(email: str, name: str, ip: str) -> bool:
     </p>
     """
     return _send(Mail(
-        from_email=Email("noreply@xlink.es"),
+        from_email=Email("noreply@forj.es"),
         to_emails=To(email),
-        subject="[XLink] Inicio de sesión admin detectado",
+        subject="[Forj] Inicio de sesión admin detectado",
         plain_text_content=f"Hola {name},\n\nSe detectó un inicio de sesión admin.\n\nIP: {ip}\nFecha: {datetime.now()}\n\nSi no fuiste tú, cambia tu contraseña inmediatamente:\n{settings.SITE_URL}/login",
         html_content=_html_wrapper(body),
     ))
@@ -127,9 +127,9 @@ def send_verification_email(email: str, token: str, name: str) -> bool:
     <p style="margin:24px 0 0;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:20px">Si no creaste una cuenta, ignora este mensaje.</p>
     """
     return _send(Mail(
-        from_email=Email("noreply@xlink.es"),
+        from_email=Email("noreply@forj.es"),
         to_emails=To(email),
-        subject="Verifica tu email — XLink",
+        subject="Verifica tu email — Forj",
         plain_text_content=f"Hola {name},\n\nConfirma tu email:\n\n{verify_link}\n\nSi no creaste una cuenta, ignora este mensaje.",
         html_content=_html_wrapper(body),
     ))
@@ -151,12 +151,12 @@ def send_order_status_email(email: str, name: str, order_id: int, service: str, 
         </td>
       </tr>
     </table>
-    <p style="margin:24px 0 0;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:20px">Gracias por confiar en XLink.</p>
+    <p style="margin:24px 0 0;font-size:13px;color:#888;border-top:1px solid #eee;padding-top:20px">Gracias por confiar en Forj.</p>
     """
     return _send(Mail(
-        from_email=Email("noreply@xlink.es"),
+        from_email=Email("noreply@forj.es"),
         to_emails=To(email),
-        subject=f"[XLink] Pedido #{order_id} — {label}",
+        subject=f"[Forj] Pedido #{order_id} — {label}",
         plain_text_content=f"Hola {name},\n\nTu pedido #{order_id} ({service}) ha cambiado a: {label}\n\nVer en: {settings.SITE_URL}/dashboard#orders",
         html_content=_html_wrapper(body),
     ))

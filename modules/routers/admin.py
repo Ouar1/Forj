@@ -253,12 +253,12 @@ const posts = await Astro.glob('./posts/*.md')
 - **Elige Next.js** si necesitas una aplicación web con mucho estado, dashboard, panel de admin o funcionalidad en tiempo real.
 - **Elige Astro** si tu proyecto es principalmente contenido: blog, documentación, landing page o sitio corporativo.
 
-> En XLink usamos ambos según el proyecto. Para este mismo blog elegimos Astro por su velocidad. Para nuestras herramientas internas, Next.js.
+> En Forj usamos ambos según el proyecto. Para este mismo blog elegimos Astro por su velocidad. Para nuestras herramientas internas, Next.js.
 
 ## Conclusión
 
 No hay un ganador absoluto. Ambos frameworks son excelentes en lo suyo. Lo importante es conocer sus fortalezas y elegir el que mejor se adapte a tu proyecto.""",
-                author="XLink", read_time="8 min", published=True
+                author="Forj", read_time="8 min", published=True
             ),
             BlogPost(
                 title="Cómo integrar un chatbot con IA en tu web sin saber programar",
@@ -339,7 +339,7 @@ Nuestros clientes suelen ver:
 ## Conclusión
 
 Integrar un chatbot con IA hoy es cuestión de horas, no de meses. La tecnología low-code ha democratizado el acceso a la inteligencia artificial conversacional. Si tu web aún no tiene uno, estás perdiendo oportunidades.""",
-                author="XLink", read_time="7 min", published=True
+                author="Forj", read_time="7 min", published=True
             ),
             BlogPost(
                 title="Core Web Vitals: la guía definitiva para posicionar en Google en 2026",
@@ -435,7 +435,7 @@ Uno de nuestros clientes tenía un LCP de 4.8 segundos. Esto es lo que hicimos:
 ## Conclusión
 
 Los Core Web Vitals no son opcionales. Son un requisito para competir en Google. La buena noticia: con las estrategias adecuadas, cualquier web puede alcanzar puntuaciones sobresalientes.""",
-                author="XLink", read_time="10 min", published=True
+                author="Forj", read_time="10 min", published=True
             ),
             BlogPost(
                 title="Automatización con IA: cómo ahorrar 20 horas semanales en tu negocio",
@@ -527,8 +527,8 @@ Formamos a tu equipo y ajustamos los flujos según el feedback inicial.
 
 La automatización con IA no es el futuro, es el presente. Las empresas que la adoptan están ganando una ventaja competitiva significativa. Las que no, se están quedando atrás.
 
-> En XLink ayudamos a empresas como la tuya a implementar estas soluciones. El proceso es más sencillo de lo que imaginas.""",
-                author="XLink", read_time="8 min", published=True
+> En Forj ayudamos a empresas como la tuya a implementar estas soluciones. El proceso es más sencillo de lo que imaginas.""",
+                author="Forj", read_time="8 min", published=True
             ),
             BlogPost(
                 title="Guía completa de SEO técnico para desarrolladores web",
@@ -577,7 +577,7 @@ Usa las etiquetas HTML5 correctamente:
     <p>Contenido...</p>
   </section>
   <footer>
-    <address>Por XLink</address>
+    <address>Por Forj</address>
   </footer>
 </article>
 
@@ -592,7 +592,7 @@ Usa las etiquetas HTML5 correctamente:
 
 ```html
 <!-- Title único por página -->
-<title>Guía SEO Técnico | XLink Blog</title>
+<title>Guía SEO Técnico | Forj Blog</title>
 
 <!-- Meta description convincente -->
 <meta name="description" content="Aprende los fundamentos del SEO técnico...">
@@ -625,7 +625,7 @@ Ayudan a Google a entender el contenido y generar **rich snippets**:
   "headline": "Guía completa de SEO técnico",
   "author": {
     "@type": "Organization",
-    "name": "XLink"
+    "name": "Forj"
   },
   "datePublished": "2026-06-15",
   "description": "Guía técnica de SEO para desarrolladores"
@@ -668,7 +668,7 @@ Un sitemap bien configurado es el mapa del tesoro para Google:
 ## Conclusión
 
 El SEO técnico es responsabilidad del desarrollador. Ignorarlo es construir sobre arena. Implementa estas bases desde el día uno y tu proyecto tendrá una ventaja competitiva imposible de alcanzar con parches posteriores.""",
-                author="XLink", read_time="10 min", published=True
+                author="Forj", read_time="10 min", published=True
             ),
             BlogPost(
                 title="¿Necesitas una web progresiva (PWA)? Ventajas para tu negocio",
@@ -689,8 +689,8 @@ Tres requisitos técnicos:
 
 ```json
 {
-  "name": "XLink",
-  "short_name": "XLink",
+  "name": "Forj",
+  "short_name": "Forj",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -767,7 +767,7 @@ Twitter lanzó su versión PWA (Twitter Lite) y consiguió:
 ## Conclusión
 
 Si tu negocio necesita llegar a más usuarios con menor inversión, una PWA es probablemente la mejor decisión tecnológica que puedes tomar. Y lo mejor: puedes empezar con una web normal e ir añadiendo capacidades PWA progresivamente.""",
-                author="XLink", read_time="7 min", published=True
+                author="Forj", read_time="7 min", published=True
             ),
             BlogPost(
                 title="Midjourney, DALL-E y Stable Diffusion: cuál usa tu proyecto",
@@ -866,7 +866,7 @@ La próxima frontera ya está aquí:
 ## Conclusión
 
 No necesitas elegir uno. Los profesionales usan los tres según el momento: Midjourney para explorar, DALL-E para ejecutar, Stable Diffusion para escalar. La clave está en conocer sus fortalezas y aplicarlas donde brillan.""",
-                author="XLink", read_time="9 min", published=True
+                author="Forj", read_time="9 min", published=True
             ),
             BlogPost(
                 title="Tailwind CSS v4: lo que cambia y cómo migrar tu proyecto",
@@ -986,7 +986,7 @@ npx @tailwindcss/cli -i input.css -o output.css
 ## Conclusión
 
 Tailwind CSS v4 es un salto generacional. La desaparición del archivo de configuración, el compilador nativo en Rust y las nuevas variantes lo convierten en la mejor opción para desarrollo web en 2026. Si empiezas un proyecto hoy, no lo dudes.""",
-                author="XLink", read_time="8 min", published=True
+                author="Forj", read_time="8 min", published=True
             ),
         ]
         db.add_all(posts)
@@ -995,7 +995,7 @@ Tailwind CSS v4 es un salto generacional. La desaparición del archivo de config
     if db.query(Testimonial).count() == 0:
         testimonials = [
             Testimonial(name="Carlos Mendoza", role="CEO", company="TechFlow",
-                        content="XLink transformó nuestra red. Pasamos de tener caídas constantes a un 99.9% de uptime.", rating=5, featured=True),
+                        content="Forj transformó nuestra red. Pasamos de tener caídas constantes a un 99.9% de uptime.", rating=5, featured=True),
             Testimonial(name="Laura García", role="CTO", company="InnovaCorp",
                         content="En 3 semanas teníamos nuestra web lista con chatbot IA incluido. El equipo súper profesional.", rating=5, featured=True),
             Testimonial(name="Miguel Ángel Ruiz", role="Director Operaciones", company="DataSmart",

@@ -5,7 +5,7 @@ import io
 import base64
 from config import settings
 
-logger = logging.getLogger("xlink.totp")
+logger = logging.getLogger("forj.totp")
 
 
 def generate_totp_secret() -> str:
@@ -13,7 +13,7 @@ def generate_totp_secret() -> str:
 
 
 def get_totp_uri(secret: str, email: str) -> str:
-    return pyotp.totp.TOTP(secret).provisioning_uri(name=email, issuer_name="XLink")
+    return pyotp.totp.TOTP(secret).provisioning_uri(name=email, issuer_name="Forj")
 
 
 def generate_qr_b64(secret: str, email: str) -> str:
