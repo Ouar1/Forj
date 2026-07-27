@@ -8,7 +8,7 @@ from sqlalchemy import desc
 from database import get_db
 from models.user import User
 from models.activity_log import ActivityLog
-from modules.auth import require_admin, require_admin_totp, verify_password
+from modules.auth import require_admin, require_admin_totp, require_staff, verify_password
 from models.blog_post import BlogPost
 from models.testimonial import Testimonial
 from models.faq import FAQ
@@ -18,7 +18,7 @@ from modules.activity_logger import log_activity, get_client_ip
 from config import limiter
 
 router = APIRouter(prefix="/api/admin")
-logger = logging.getLogger("xlink.api.admin")
+logger = logging.getLogger("forj.api.admin")
 
 
 @router.get("/users", description="List all users (admin only)")
@@ -61,7 +61,7 @@ def admin_delete_user(request: Request, user_id: int, password: str | None = Que
 def admin_change_role(request: Request, user_id: int, role: str = Query(...), password: str | None = Query(None), admin: User = Depends(require_admin_totp), db: Session = Depends(get_db)):
     if not password or not verify_password(password, admin.password):
         raise HTTPException(status_code=403, detail="Contraseña incorrecta. Debes confirmar tu contraseña para esta acción.")
-    if role not in ("user", "admin"):
+    if role not in ("user", "admin", "worker"):
         raise HTTPException(status_code=400, detail="Rol inválido")
     u = db.query(User).filter(User.id == user_id).first()
     if not u:
@@ -75,7 +75,7 @@ def admin_change_role(request: Request, user_id: int, role: str = Query(...), pa
 
 @router.get("/stats", description="Global platform stats (admin only)")
 @limiter.limit("30/minute")
-def admin_stats(request: Request, admin: User = Depends(require_admin_totp), db: Session = Depends(get_db)):
+def admin_stats(request: Request, admin: User = Depends(require_staff), db: Session = Depends(get_db)):
     from models.message import Message
     from models.order import Order
     return {
@@ -88,7 +88,7 @@ def admin_stats(request: Request, admin: User = Depends(require_admin_totp), db:
 
 @router.get("/activity-actions", description="List unique activity action types (admin only)")
 @limiter.limit("30/minute")
-def admin_activity_actions(request: Request, admin: User = Depends(require_admin_totp), db: Session = Depends(get_db)):
+def admin_activity_actions(request: Request, admin: User = Depends(require_staff), db: Session = Depends(get_db)):
     rows = db.query(ActivityLog.action).distinct().order_by(ActivityLog.action).all()
     return [r[0] for r in rows]
 
@@ -99,7 +99,7 @@ def admin_activity_logs(
     request: Request,
     page: int = Query(1, ge=1), per_page: int = Query(50, ge=1, le=200),
     action: str | None = Query(None),
-    admin: User = Depends(require_admin_totp), db: Session = Depends(get_db),
+    admin: User = Depends(require_staff), db: Session = Depends(get_db),
 ):
     q = db.query(ActivityLog).order_by(ActivityLog.created_at.desc())
     if action:
@@ -119,12 +119,12 @@ def admin_activity_logs(
 
 @router.post("/verify-password", description="Verify admin password for sensitive actions")
 @limiter.limit("10/minute")
-def admin_verify_password(request: Request, admin: User = Depends(require_admin_totp)):
+def admin_verify_password(request: Request, admin: User = Depends(require_staff)):
     return {"ok": True}
 
 
 @router.get("/messages/export", description="Export messages as CSV (admin only)")
-def admin_export_messages(request: Request, admin: User = Depends(require_admin_totp), db: Session = Depends(get_db)):
+def admin_export_messages(request: Request, admin: User = Depends(require_staff), db: Session = Depends(get_db)):
     from models.message import Message
     items = db.query(Message).order_by(Message.created_at.desc()).all()
     output = io.StringIO()
@@ -137,7 +137,7 @@ def admin_export_messages(request: Request, admin: User = Depends(require_admin_
 
 
 @router.get("/orders/export", description="Export orders as CSV (admin only)")
-def admin_export_orders(request: Request, admin: User = Depends(require_admin_totp), db: Session = Depends(get_db)):
+def admin_export_orders(request: Request, admin: User = Depends(require_staff), db: Session = Depends(get_db)):
     from models.order import Order
     items = db.query(Order).order_by(Order.created_at.desc()).all()
     output = io.StringIO()
@@ -150,7 +150,7 @@ def admin_export_orders(request: Request, admin: User = Depends(require_admin_to
 
 
 @router.get("/maintenance", description="Get maintenance mode status (admin only)")
-def get_maintenance(admin: User = Depends(require_admin_totp)):
+def get_maintenance(admin: User = Depends(require_staff)):
     from config import settings
     return {"maintenance_mode": settings.MAINTENANCE_MODE}
 
