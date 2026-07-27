@@ -13,7 +13,7 @@ SITE_URL=https://xlink.es
 CORS_ORIGINS=["https://xlink.es","https://www.xlink.es"]
 ADMIN_SEED_SECRET={gen()}
 ADMIN_PASSWORD={gen(16)}
-ADMIN_EMAIL=admin@xlink.es
+ADMIN_EMAIL=admin@forj.es
 PLATFORM_COMMISSION_PERCENT=10.0
 # === BASE DE DATOS (cambiar por PostgreSQL en produccion) ===
 DATABASE_URL=sqlite:///./xlink.db

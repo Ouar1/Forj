@@ -92,9 +92,16 @@ async def lifespan(app: FastAPI):
             plan = Plan(name="default", description="Plan por defecto", price_monthly=0, price_yearly=0, max_assets=0, max_reports=0, max_programs=0, features=[], active=True)
             db.add(plan)
             db.commit()
-        if not db.query(User).filter(User.role == "admin").first():
-            admin_pw = os.getenv("ADMIN_PASSWORD", "admin123456")
-            admin = User(name="Admin XLink", email=os.getenv("ADMIN_EMAIL", "admin@xlink.es"), password=hash_password(admin_pw), role="admin", company="", is_verified=1)
+        admin_user = db.query(User).filter(User.role == "admin").first()
+        admin_pw = os.getenv("ADMIN_PASSWORD", "admin123456")
+        admin_email = os.getenv("ADMIN_EMAIL", "admin@forj.es")
+        if admin_user:
+            admin_user.email = admin_email
+            admin_user.password = hash_password(admin_pw)
+            db.commit()
+            logger.info("Admin user updated")
+        else:
+            admin = User(name="Admin XLink", email=admin_email, password=hash_password(admin_pw), role="admin", company="", is_verified=1)
             db.add(admin)
             db.commit()
             logger.info("Admin user created")
