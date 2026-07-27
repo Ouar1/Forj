@@ -98,6 +98,7 @@ async def lifespan(app: FastAPI):
         if admin_user:
             admin_user.email = admin_email
             admin_user.password = hash_password(admin_pw)
+            admin_user.totp_enabled = False
             db.commit()
             logger.info("Admin user updated")
         else:
