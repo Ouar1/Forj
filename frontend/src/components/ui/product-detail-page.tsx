@@ -76,7 +76,7 @@ export function ProductDetailPage() {
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-6">{product.name}</h1>
             <p className="text-sm text-zinc-400 leading-relaxed mb-8">{product.description}</p>
             <div className="flex flex-wrap gap-4 mb-8">
-              {product.price_one_time && (
+              {Number(product.price_one_time) > 0 && (
                 <button onClick={() => setInterval('one_time')}
                   className={`flex items-center gap-3 px-5 py-3 rounded-xl border text-sm font-medium transition-colors cursor-pointer ${
                     interval === 'one_time' ? 'border-white text-white bg-white/5' : 'border-white/[0.06] text-zinc-500 hover:text-white hover:border-white/20 bg-transparent'
@@ -85,7 +85,7 @@ export function ProductDetailPage() {
                   <span>{product.price_one_time}€ {t('products.one_time')}</span>
                 </button>
               )}
-              {product.price_monthly && (
+              {Number(product.price_monthly) > 0 && (
                 <button onClick={() => setInterval('monthly')}
                   className={`flex items-center gap-3 px-5 py-3 rounded-xl border text-sm font-medium transition-colors cursor-pointer ${
                     interval === 'monthly' ? 'border-white text-white bg-white/5' : 'border-white/[0.06] text-zinc-500 hover:text-white hover:border-white/20 bg-transparent'

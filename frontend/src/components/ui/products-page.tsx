@@ -51,14 +51,14 @@ export function ProductsPage() {
               </div>
               <p className="text-sm text-zinc-500 leading-relaxed mb-6 flex-1">{p.description}</p>
               <div className="flex items-center gap-4 mb-6">
-                {p.price_one_time && (
+                {Number(p.price_one_time) > 0 && (
                   <div className="flex items-center gap-2 text-sm">
                     <Euro className="size-4 text-zinc-500" />
                     <span className="text-white font-medium">{p.price_one_time}€</span>
                     <span className="text-zinc-500">{t('products.one_time')}</span>
                   </div>
                 )}
-                {p.price_monthly && (
+                {Number(p.price_monthly) > 0 && (
                   <div className="flex items-center gap-2 text-sm">
                     <Calendar className="size-4 text-zinc-500" />
                     <span className="text-white font-medium">{p.price_monthly}€</span>
