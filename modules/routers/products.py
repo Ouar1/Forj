@@ -1,9 +1,10 @@
 import logging
+import os
 import re
 import secrets
 from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, Depends, HTTPException, Request, Body
-from fastapi.responses import RedirectResponse
+from fastapi.responses import RedirectResponse, FileResponse
 from sqlalchemy.orm import Session
 from database import get_db
 from models.product import Product
@@ -104,7 +105,12 @@ def access_product(token: str, db: Session = Depends(get_db)):
     if not product:
         raise HTTPException(status_code=404, detail="Producto no encontrado")
     if product.file_url:
-        return RedirectResponse(url=product.file_url)
+        if product.file_url.startswith(("http://", "https://")):
+            return RedirectResponse(url=product.file_url)
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), product.file_url)
+        if os.path.isfile(path):
+            return FileResponse(path, media_type="application/pdf", filename=os.path.basename(path))
+        raise HTTPException(status_code=404, detail="Contenido no disponible")
     return {"product_name": product.name, "token": token, "purchased_at": str(purchase.created_at)}
 
 
