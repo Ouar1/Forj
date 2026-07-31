@@ -62,10 +62,3 @@ def subscribe(
 @router.get("/subscription", description="Get current subscription status")
 def get_subscription(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     return {"subscribed": False}
-
-
-@router.post("/stripe/webhook", description="Stripe webhook endpoint")
-async def stripe_webhook(request: Request, db: Session = Depends(get_db)):
-    if not settings.STRIPE_WEBHOOK_SECRET:
-        return {"ok": True}
-    return {"ok": True}
