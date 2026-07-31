@@ -83,7 +83,9 @@ async def lifespan(app: FastAPI):
     try:
         logger.info("Creating tables...")
         Base.metadata.create_all(bind=engine)
-        engine.execute(text("ALTER TABLE products ADD COLUMN IF NOT EXISTS category VARCHAR(100) DEFAULT ''"))
+        with engine.connect() as conn:
+            conn.execute(text("ALTER TABLE products ADD COLUMN IF NOT EXISTS category VARCHAR(100) DEFAULT ''"))
+            conn.commit()
         logger.info("Tables created")
     except Exception as e:
         logger.warning("Could not create tables: %s", str(e)[:200])
