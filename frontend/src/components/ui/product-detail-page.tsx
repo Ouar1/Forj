@@ -112,7 +112,13 @@ export function ProductDetailPage() {
               <div className="flex items-center justify-between py-3 border-t border-white/[0.06]">
                 <span className="text-sm text-zinc-400">{t('products.total')}</span>
                 <span className="text-xl font-bold text-white">
-                  {interval === 'one_time' ? product.price_one_time : product.price_monthly}€
+                  {interval === 'one_time' && product.price_one_time
+                    ? product.price_one_time
+                    : interval === 'one_time' && !product.price_one_time
+                      ? product.price_monthly
+                      : interval === 'monthly' && product.price_monthly
+                        ? product.price_monthly
+                        : product.price_one_time}€
                   {interval === 'monthly' && <span className="text-sm text-zinc-500 font-normal">/mo</span>}
                 </span>
               </div>
