@@ -859,53 +859,7 @@ export const Component = () => {
           <FadeIn delay={0.15}>
             <div className="rounded-2xl bg-white/[0.02] border border-white/[0.06] p-8 relative overflow-hidden">
               <BorderBeam duration={10} lightColor="#FAFAFA" borderWidth={1} />
-              <form className="space-y-5" action="https://formspree.io/f/xpznqjqr" method="POST">
-                <div>
-                  <label className="text-xs text-zinc-600 mb-2 block">Nombre completo *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Tu nombre"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors"
-                      required
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-xs text-zinc-600 mb-2 block">Email *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="tu@email.com"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs text-zinc-600 mb-2 block">Teléfono</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="+34 600 000 000"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-xs text-zinc-600 mb-2 block">Mensaje *</label>
-                    <textarea
-                      rows={4}
-                      name="message"
-                      placeholder="Cuéntanos en qué podemos ayudarte..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors resize-none"
-                      required
-                    />
-                </div>
-                <HoverBorderGradient as="button" type="submit" className="w-full flex items-center justify-center gap-2 py-3.5 text-sm font-medium">
-                  Enviar mensaje <ArrowUpRight className="size-4" />
-                </HoverBorderGradient>
-                <p className="text-xs text-zinc-700 text-center">Te respondemos en menos de 24h.</p>
-              </form>
+              <ContactFormInline />
             </div>
           </FadeIn>
         </div>
@@ -987,3 +941,62 @@ export const Component = () => {
     </div>
   );
 };
+
+function ContactFormInline() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
+  const [status, setStatus] = useState<'idle' | 'saving' | 'saved'>('idle')
+  const [error, setError] = useState('')
+  const BASE = import.meta.env.VITE_API_URL || ''
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus('saving')
+    setError('')
+    try {
+      const res = await fetch(`${BASE}/api/contact`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) setStatus('saved')
+      else setError('Error al enviar')
+    } catch {
+      setError('Error al enviar')
+    }
+  }
+  if (status === 'saved') return (
+    <div className="text-center py-12">
+      <p className="text-zinc-300 text-lg font-medium mb-1">¡Mensaje enviado!</p>
+      <p className="text-sm text-zinc-500">Te respondemos en menos de 24h.</p>
+    </div>
+  )
+  return (
+    <form className="space-y-5" onSubmit={handleSubmit}>
+      <div>
+        <label className="text-xs text-zinc-600 mb-2 block">Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre" value={form.name} onChange={e => setForm({...form, name: e.target.value})}
+          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors" required />
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="text-xs text-zinc-600 mb-2 block">Email *</label>
+          <input type="email" placeholder="tu@email.com" value={form.email} onChange={e => setForm({...form, email: e.target.value})}
+            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors" required />
+        </div>
+        <div>
+          <label className="text-xs text-zinc-600 mb-2 block">Teléfono</label>
+          <input type="tel" placeholder="+34 600 000 000" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})}
+            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors" />
+        </div>
+      </div>
+      <div>
+        <label className="text-xs text-zinc-600 mb-2 block">Mensaje *</label>
+        <textarea rows={4} placeholder="Cuéntanos en qué podemos ayudarte..." value={form.message} onChange={e => setForm({...form, message: e.target.value})}
+          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-white placeholder-zinc-700 outline-none focus:border-white/20 transition-colors resize-none" required />
+      </div>
+      {error && <p className="text-xs text-red-400">{error}</p>}
+      <HoverBorderGradient as="button" type="submit" className="w-full flex items-center justify-center gap-2 py-3.5 text-sm font-medium">
+        {status === 'saving' ? 'Enviando...' : 'Enviar mensaje'} <ArrowUpRight className="size-4" />
+      </HoverBorderGradient>
+      <p className="text-xs text-zinc-700 text-center">Te respondemos en menos de 24h.</p>
+    </form>
+  )
+}
