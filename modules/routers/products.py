@@ -25,6 +25,7 @@ def list_products(db: Session = Depends(get_db)):
     products = db.query(Product).filter(Product.active == True).order_by(Product.id).all()
     return [{
         "id": p.id, "name": p.name, "slug": p.slug,
+        "category": p.category or "",
         "description": p.description,
         "price_one_time": p.price_one_time,
         "price_monthly": p.price_monthly,
@@ -39,6 +40,7 @@ def get_product(slug: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Producto no encontrado")
     return {
         "id": p.id, "name": p.name, "slug": p.slug,
+        "category": p.category or "",
         "description": p.description,
         "price_one_time": p.price_one_time,
         "price_monthly": p.price_monthly,
@@ -186,6 +188,7 @@ def admin_list_products(admin: User = Depends(require_admin), db: Session = Depe
     products = db.query(Product).order_by(Product.id).all()
     return [{
         "id": p.id, "name": p.name, "slug": p.slug,
+        "category": p.category or "",
         "description": p.description,
         "price_one_time": p.price_one_time,
         "price_monthly": p.price_monthly,
@@ -202,6 +205,7 @@ def admin_create_product(data: dict, admin: User = Depends(require_admin), db: S
     product = Product(
         name=data["name"],
         slug=data.get("slug", ""),
+        category=data.get("category", ""),
         description=data.get("description", ""),
         price_one_time=data.get("price_one_time"),
         price_monthly=data.get("price_monthly"),
@@ -223,7 +227,7 @@ def admin_update_product(product_id: int, data: dict, admin: User = Depends(requ
     product = db.query(Product).filter(Product.id == product_id).first()
     if not product:
         raise HTTPException(status_code=404, detail="Producto no encontrado")
-    for field in ("name", "slug", "description", "price_one_time", "price_monthly",
+    for field in ("name", "slug", "category", "description", "price_one_time", "price_monthly",
                   "stripe_price_id_one_time", "stripe_price_id_monthly", "file_url", "active"):
         if field in data:
             setattr(product, field, data[field])

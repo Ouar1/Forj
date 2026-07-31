@@ -8,6 +8,7 @@ class Product(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
     slug = Column(String, unique=True, index=True, nullable=False)
+    category = Column(String, default="", index=True)
     description = Column(Text, default="")
     price_one_time = Column(Float, default=0)
     price_monthly = Column(Float, default=0)

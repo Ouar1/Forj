@@ -612,7 +612,7 @@ export async function adminReorderFAQs(token: string, order: Record<number, numb
 
 // Products
 export interface ProductData {
-  id: number; name: string; slug: string; description: string
+  id: number; name: string; slug: string; category?: string; description: string
   price_one_time: number | null; price_monthly: number | null
   stripe_price_id_one_time?: string; stripe_price_id_monthly?: string
   file_url?: string; active?: boolean; created_at?: string

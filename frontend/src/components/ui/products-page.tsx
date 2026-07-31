@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import { Tags, ArrowUpRight, Euro, Calendar, KeyRound } from 'lucide-react'
 import { getProducts, type ProductData } from '@/lib/api'
+
+const CATEGORIES = ['guia', 'plantilla', 'kit', 'servicio', 'suscripcion']
 
 export function ProductsPage() {
   const { t } = useTranslation()
@@ -10,10 +12,16 @@ export function ProductsPage() {
   const [products, setProducts] = useState<ProductData[]>([])
   const [error, setError] = useState('')
   const [code, setCode] = useState('')
+  const [category, setCategory] = useState('')
 
   useEffect(() => {
     getProducts().then(setProducts).catch((e) => setError(e.message))
   }, [])
+
+  const filtered = useMemo(
+    () => (category ? products.filter((p) => p.category === category) : products),
+    [products, category]
+  )
 
   const redeemCode = (e: React.FormEvent) => {
     e.preventDefault()
@@ -42,8 +50,22 @@ export function ProductsPage() {
           </button>
         </form>
         {error && <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-400 mb-6">{error}</div>}
+        <div className="flex flex-wrap gap-2 mb-10">
+          <button onClick={() => setCategory('')}
+            className={`px-4 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
+              !category ? 'bg-white text-black border-white' : 'bg-transparent text-zinc-400 border-white/10 hover:text-white hover:border-white/30'}`}>
+            {t('products.all')}
+          </button>
+          {CATEGORIES.map((c) => (
+            <button key={c} onClick={() => setCategory(c)}
+              className={`px-4 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
+                category === c ? 'bg-white text-black border-white' : 'bg-transparent text-zinc-400 border-white/10 hover:text-white hover:border-white/30'}`}>
+              {t(`products.cat_${c}`)}
+            </button>
+          ))}
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((p) => (
+          {filtered.map((p) => (
             <div key={p.id} className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-6 hover:border-white/20 transition-all duration-500 flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <Tags className="size-5 text-zinc-500" />
@@ -73,7 +95,7 @@ export function ProductsPage() {
             </div>
           ))}
         </div>
-        {products.length === 0 && !error && (
+        {filtered.length === 0 && !error && (
           <p className="text-sm text-zinc-500 text-center py-12">{t('products.empty')}</p>
         )}
       </div>
