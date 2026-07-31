@@ -576,6 +576,8 @@
     "badge": "Productos",
     "heading": "Productos y servicios.",
     "subtitle": "Soluciones TI listas para contratar. Pago único o suscripción mensual.",
+    "redeem_placeholder": "¿Ya tienes un código? Pégalo aquí",
+    "redeem": "Acceder",
     "view": "Ver producto",
     "one_time": "único",
     "back": "← Volver a productos",

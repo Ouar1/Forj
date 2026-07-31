@@ -1,24 +1,46 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-import { Tags, ArrowUpRight, Euro, Calendar } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Tags, ArrowUpRight, Euro, Calendar, KeyRound } from 'lucide-react'
 import { getProducts, type ProductData } from '@/lib/api'
 
 export function ProductsPage() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [products, setProducts] = useState<ProductData[]>([])
   const [error, setError] = useState('')
+  const [code, setCode] = useState('')
 
   useEffect(() => {
     getProducts().then(setProducts).catch((e) => setError(e.message))
   }, [])
+
+  const redeemCode = (e: React.FormEvent) => {
+    e.preventDefault()
+    const token = code.trim()
+    if (token) navigate(`/acceso/${encodeURIComponent(token)}`)
+  }
 
   return (
     <div className="min-h-screen pt-28 md:pt-36">
       <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-20 py-16 md:py-24">
         <span className="inline-block text-[11px] tracking-[0.25em] uppercase text-zinc-600 mb-4 font-mono">{t('products.badge')}</span>
         <h1 className="text-3xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-4">{t('products.heading')}</h1>
-        <p className="text-sm text-zinc-400 leading-relaxed mb-12 max-w-2xl">{t('products.subtitle')}</p>
+        <p className="text-sm text-zinc-400 leading-relaxed mb-8 max-w-2xl">{t('products.subtitle')}</p>
+        <form onSubmit={redeemCode} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-12 max-w-xl">
+          <div className="flex items-center gap-3 rounded-xl bg-white/[0.03] border border-white/[0.08] px-4 flex-1 focus-within:border-white/30 transition-colors">
+            <KeyRound className="size-4 text-zinc-500 shrink-0" />
+            <input
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              placeholder={t('products.redeem_placeholder')}
+              className="bg-transparent text-sm text-white placeholder:text-zinc-600 outline-none py-3 w-full"
+            />
+          </div>
+          <button type="submit" className="px-5 py-3 rounded-xl bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors whitespace-nowrap">
+            {t('products.redeem')}
+          </button>
+        </form>
         {error && <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-400 mb-6">{error}</div>}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (

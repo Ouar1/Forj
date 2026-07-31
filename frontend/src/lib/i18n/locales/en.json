@@ -576,6 +576,8 @@
     "badge": "Products",
     "heading": "Products and services.",
     "subtitle": "IT solutions ready to order. One-time payment or monthly subscription.",
+    "redeem_placeholder": "Already have a code? Paste it here",
+    "redeem": "Access",
     "view": "View product",
     "one_time": "one-time",
     "back": "← Back to products",

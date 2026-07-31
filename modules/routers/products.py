@@ -10,6 +10,7 @@ from models.product import Product
 from models.purchase import Purchase
 from models.user import User
 from modules.auth import get_current_user, require_admin
+from modules.email import send_purchase_access
 from config import settings
 
 router = APIRouter()
@@ -152,6 +153,7 @@ async def stripe_webhook(request: Request, db: Session = Depends(get_db)):
                     purchase.expires_at = datetime.now(timezone.utc) + timedelta(days=30)
                 db.add(purchase)
                 db.commit()
+                send_purchase_access(buyer_email, buyer_name, product.name, token)
 
     return {"ok": True}
 
@@ -309,4 +311,5 @@ def create_purchase_token(product: Product, email: str, name: str, amount: float
         purchase.expires_at = datetime.now(timezone.utc) + timedelta(days=30)
     db.add(purchase)
     db.commit()
+    send_purchase_access(email, name, product.name, token)
     return token

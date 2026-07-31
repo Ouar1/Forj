@@ -160,3 +160,29 @@ def send_order_status_email(email: str, name: str, order_id: int, service: str, 
         plain_text_content=f"Hola {name},\n\nTu pedido #{order_id} ({service}) ha cambiado a: {label}\n\nVer en: {settings.SITE_URL}/dashboard#orders",
         html_content=_html_wrapper(body),
     ))
+
+
+def send_purchase_access(email: str, name: str, product_name: str, token: str) -> bool:
+    if not SG:
+        logger.warning("SendGrid no configurado, token: %s", token)
+        return False
+    access_url = f"{settings.SITE_URL}/acceso/{token}"
+    body = f"""
+    <p>Hola {name or 'cliente'},</p>
+    <p>Gracias por tu compra de <strong>{product_name}</strong>.</p>
+    <p>Aquí tienes tu enlace de acceso para ver y descargar el contenido:</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0">
+      <tr><td align="center">
+        <a href="{access_url}" style="display:inline-block;padding:14px 28px;background:#111;color:#fff;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600">Acceder a mi compra</a>
+      </td></tr>
+    </table>
+    <p style="font-size:13px;color:#777">Si el botón no funciona, copia este enlace en tu navegador:<br><a href="{access_url}" style="color:#666;word-break:break-all">{access_url}</a></p>
+    <p style="font-size:13px;color:#888">Este enlace es personal e intransferible.</p>
+    """
+    return _send(Mail(
+        from_email=Email("noreply@forj.es"),
+        to_emails=To(email),
+        subject=f"[Forj] Tu acceso a {product_name}",
+        plain_text_content=f"Hola {name or 'cliente'},\n\nGracias por tu compra de {product_name}.\n\nAccede a tu contenido aquí: {access_url}\n\nEste enlace es personal e intransferible.",
+        html_content=_html_wrapper(body),
+    ))
