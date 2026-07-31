@@ -133,7 +133,7 @@ async def stripe_webhook(request: Request, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail=str(e))
 
     if event["type"] == "checkout.session.completed":
-        session = event["data"]["object"]
+        session = event["data"]["object"].to_dict()
         metadata = session.get("metadata", {})
         product_id = metadata.get("product_id")
         interval = metadata.get("interval", "one_time")
