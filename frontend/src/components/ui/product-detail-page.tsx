@@ -17,7 +17,11 @@ export function ProductDetailPage() {
 
   useEffect(() => {
     if (!slug) return
-    getProduct(slug).then((p) => { setProduct(p); setLoading(false) }).catch((e) => { setError(e.message); setLoading(false) })
+    getProduct(slug).then((p) => {
+      setProduct(p)
+      if (!p.price_one_time && p.price_monthly) setInterval('monthly')
+      setLoading(false)
+    }).catch((e) => { setError(e.message); setLoading(false) })
   }, [slug])
 
   const handleBuy = async () => {
