@@ -302,6 +302,16 @@ def admin_regenerate_token(purchase_id: int, admin: User = Depends(require_admin
     return {"ok": True, "token": purchase.token}
 
 
+@router.delete("/api/admin/purchases/{purchase_id}")
+def admin_delete_purchase(purchase_id: int, admin: User = Depends(require_admin), db: Session = Depends(get_db)):
+    purchase = db.query(Purchase).filter(Purchase.id == purchase_id).first()
+    if not purchase:
+        raise HTTPException(status_code=404, detail="Compra no encontrada")
+    db.delete(purchase)
+    db.commit()
+    return {"ok": True}
+
+
 def create_purchase_token(product: Product, email: str, name: str, amount: float, interval: str, db: Session) -> str:
     token = secrets.token_urlsafe(32)
     purchase = Purchase(
