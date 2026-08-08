@@ -229,19 +229,72 @@
     "badge_included": "TODO INCLUIDO",
     "badge_no_surprises": "Sin sorpresas",
     "heading": "Presupuesto a medida",
-    "description": "Cada proyecto es único. Te enviamos un presupuesto transparente y detallado sin compromiso.",
+    "description": "Soporte mensual para tu oficina. Precios cerrados, sin sorpresas. ¿Y si necesitas algo puntual? Se cobra por hora.",
     "cta": "Solicitar presupuesto",
     "features": [
-      "Auditoría de infraestructura TI sin coste",
-      "Diseño de red y cableado profesional",
-      "Instalación y configuración de servidores",
-      "Backups automatizados y recuperación",
-      "Soporte técnico remoto y presencial",
-      "Monitorización continua 24/7",
-      "Mantenimiento preventivo y correctivo"
+      "Helpdesk remoto y presencial",
+      "Microsoft 365 / Google Workspace gestionado",
+      "Backups automáticos y recuperación",
+      "Actualizaciones y parcheo programado",
+      "Antivirus / EDR gestionado",
+      "VPN, movilidad e impresoras",
+      "Automatización de lo repetitivo"
     ],
     "question": "¿Hablamos?",
-    "response_time": "Respuesta en menos de 24h"
+    "response_time": "Respuesta en menos de 24h",
+    "label": "Planes de soporte",
+    "popular": "Más elegido",
+    "hourly": "¿Solo un ticket puntual? Tarifa por hora: 60€/h. Sin permanencia.",
+    "plans": [
+      {
+        "name": "Esencial",
+        "price": "120€",
+        "price_period": "/mes",
+        "seats": "Hasta 5 puestos",
+        "features": [
+          "Helpdesk remoto",
+          "Antivirus / EDR",
+          "Backups automáticos",
+          "Monitorización básica",
+          "Respuesta en 24h"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "250€",
+        "price_period": "/mes",
+        "seats": "Hasta 15 puestos",
+        "popular": true,
+        "features": [
+          "Todo en Esencial",
+          "Microsoft 365 / Google",
+          "Impresoras",
+          "Actualizaciones y parcheo",
+          "Respuesta en 8h",
+          "Informe mensual"
+        ]
+      },
+      {
+        "name": "Empresa",
+        "price": "450€",
+        "price_period": "/mes",
+        "seats": "Hasta 30 puestos",
+        "features": [
+          "Todo en Pro",
+          "Móviles corporativos",
+          "Licencias de software",
+          "WiFi oficina",
+          "Soporte presencial",
+          "Respuesta en 4h"
+        ]
+      }
+    ],
+    "automation": {
+      "title": "Automatización a medida",
+      "desc": "Workflows, scripts, CI/CD, despliegues e IA para tu negocio. Presupuesto cerrado y sin compromiso.",
+      "price": "Desde 900€",
+      "price_period": "por proyecto"
+    }
   },
   "pricing_alt": {
     "label": "Precios",

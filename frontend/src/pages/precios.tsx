@@ -1,5 +1,5 @@
+import { PricingPlans } from '@/components/ui/pricing-plans'
 import { BentoPricing } from '@/components/ui/bento-pricing'
-import { PricesSection } from '@/components/ui/prices-section'
 
 export function PreciosPage() {
   return (
@@ -9,9 +9,7 @@ export function PreciosPage() {
           <BentoPricing />
         </div>
       </div>
-      <div className="w-full">
-        <PricesSection />
-      </div>
+      <PricingPlans />
     </>
   )
 }

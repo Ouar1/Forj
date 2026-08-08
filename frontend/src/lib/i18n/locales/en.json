@@ -229,19 +229,72 @@
     "badge_included": "ALL INCLUDED",
     "badge_no_surprises": "No surprises",
     "heading": "Tailored pricing",
-    "description": "Every project is unique. We'll send you a transparent, detailed quote with no obligation.",
+    "description": "Monthly managed IT support. Transparent pricing, no surprises. Punctual work is billed per hour.",
     "cta": "Request a quote",
     "features": [
-      "Free IT infrastructure audit",
-      "Professional network and cabling design",
-      "Server installation and configuration",
-      "Automated backups and recovery",
-      "Remote and on-site technical support",
-      "24/7 continuous monitoring",
-      "Preventive and corrective maintenance"
+      "Remote and on-site helpdesk",
+      "Managed Microsoft 365 / Google Workspace",
+      "Automatic backups & recovery",
+      "Scheduled updates & patching",
+      "Managed Antivirus / EDR",
+      "VPN, mobility & printers",
+      "Automation of the repetitive"
     ],
     "question": "Shall we talk?",
-    "response_time": "Response within 24h"
+    "response_time": "Response within 24h",
+    "label": "Support plans",
+    "popular": "Most popular",
+    "hourly": "Just a one-off ticket? Hourly rate: €60/h. No commitment.",
+    "plans": [
+      {
+        "name": "Essential",
+        "price": "€120",
+        "price_period": "/mo",
+        "seats": "Up to 5 seats",
+        "features": [
+          "Remote helpdesk",
+          "Antivirus / EDR",
+          "Automatic backups",
+          "Basic monitoring",
+          "24h response"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "€250",
+        "price_period": "/mo",
+        "seats": "Up to 15 seats",
+        "popular": true,
+        "features": [
+          "Everything in Essential",
+          "Microsoft 365 / Google",
+          "Printers",
+          "Updates & patching",
+          "8h response",
+          "Monthly report"
+        ]
+      },
+      {
+        "name": "Business",
+        "price": "€450",
+        "price_period": "/mo",
+        "seats": "Up to 30 seats",
+        "features": [
+          "Everything in Pro",
+          "Corporate mobility",
+          "Software licenses",
+          "Office WiFi",
+          "On-site support",
+          "4h response"
+        ]
+      }
+    ],
+    "automation": {
+      "title": "Custom automation",
+      "desc": "Workflows, scripts, CI/CD, deployments and AI for your business. Fixed quote, no commitment.",
+      "price": "From €900",
+      "price_period": "per project"
+    }
   },
   "pricing_alt": {
     "label": "Pricing",
