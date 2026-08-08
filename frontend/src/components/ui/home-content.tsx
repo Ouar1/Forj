@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight, Globe, Bot, Code, Cpu, Zap, Wifi, Server, HardDrive, HeadphonesIcon, Cloud, Shield, Camera, ChevronRight, Plus, MessageCircle } from 'lucide-react'
+import { ArrowUpRight, Globe, Bot, Code, Cpu, Zap, Wifi, Server, HardDrive, HeadphonesIcon, Cloud, Shield, Camera, Printer, Smartphone, Sparkles, Bell, Brain, ChevronRight, Plus, MessageCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { ArtificialHero } from '@/components/ui/artificial-hero'
 import { BorderBeam } from '@/components/ui/border-beam'
@@ -124,8 +124,10 @@ export function HomeContent() {
     { number: '24h', label: t('stats.response') },
   ]
 
-  const serviceIcons = [Globe, Bot, Code, Cpu, Zap, Wifi, Server, HardDrive, HeadphonesIcon, Cloud, Shield, Camera]
+  const serviceIcons = [HeadphonesIcon, Cloud, Shield, Server, Globe, Wifi, Zap, Printer, Smartphone, Sparkles, Cpu, Wifi]
   const services = t('services.items', { returnObjects: true }) as { name: string; desc: string }[]
+  const automationItems = t('services.automation_items', { returnObjects: true }) as { name: string; desc: string }[]
+  const automationIcons = [Bot, Zap, Code, ArrowUpRight, Bell, Brain]
 
   const steps = t('process.steps', { returnObjects: true }) as { title: string; desc: string }[]
 
@@ -231,24 +233,63 @@ export function HomeContent() {
             <h2 className="text-3xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight max-w-2xl mt-5">
               {t('services.heading')}
             </h2>
+            <p className="mt-4 text-zinc-500 max-w-2xl leading-relaxed">
+              {t('services.subheading')}
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {services.map((s, i) => {
-              const IconComponent = serviceIcons[i]
-              return (
-                <div key={s.name} className="group p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/15 transition-all duration-500 relative overflow-hidden">
-                  <BorderBeam duration={10} lightColor="#FAFAFA" borderWidth={1} />
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="text-3xl font-bold text-zinc-700 group-hover:text-zinc-500 transition-colors">{String(i + 1).padStart(2, '0')}</span>
-                    <div className="size-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-zinc-500/10 transition-colors">
-                      <IconComponent className="size-4 text-zinc-400 group-hover:text-zinc-400 transition-colors" />
+
+          {/* Management services */}
+          <div className="mb-16">
+            <div className="flex items-baseline justify-between mb-8">
+              <h3 className="text-lg md:text-xl font-semibold text-white">{t('services.management_title')}</h3>
+              <span className="text-xs text-zinc-600">{t('services.management_desc')}</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {services.map((s, i) => {
+                const IconComponent = serviceIcons[i]
+                return (
+                  <div key={s.name} className="group p-6 md:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/15 transition-all duration-500 relative overflow-hidden">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-bold text-zinc-600 group-hover:text-zinc-400 transition-colors">{String(i + 1).padStart(2, '0')}</span>
+                      {IconComponent && (
+                        <div className="size-8 rounded-lg bg-white/5 flex items-center justify-center">
+                          <IconComponent className="size-3.5 text-zinc-400" />
+                        </div>
+                      )}
                     </div>
+                    <h4 className="text-base font-semibold text-white mb-2">{s.name}</h4>
+                    <p className="text-sm text-zinc-500 leading-relaxed">{s.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{s.name}</h3>
-                  <p className="text-sm text-zinc-500 leading-relaxed">{s.desc}</p>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Automation services */}
+          <div>
+            <div className="flex items-baseline justify-between mb-8">
+              <h3 className="text-lg md:text-xl font-semibold text-white">{t('services.automation_title')}</h3>
+              <span className="text-xs text-zinc-600">{t('services.automation_desc')}</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {automationItems.map((s, i) => {
+                const IconComponent = automationIcons[i]
+                return (
+                  <div key={s.name} className="group p-6 md:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/15 transition-all duration-500 relative overflow-hidden">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-bold text-zinc-600 group-hover:text-zinc-400 transition-colors">{String(i + 1).padStart(2, '0')}</span>
+                      {IconComponent && (
+                        <div className="size-8 rounded-lg bg-white/5 flex items-center justify-center">
+                          <IconComponent className="size-3.5 text-zinc-400" />
+                        </div>
+                      )}
+                    </div>
+                    <h4 className="text-base font-semibold text-white mb-2">{s.name}</h4>
+                    <p className="text-sm text-zinc-500 leading-relaxed">{s.desc}</p>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>

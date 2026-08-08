@@ -116,43 +116,86 @@
   },
   "services": {
     "label": "Services",
-    "heading": "Everything you need in IT infrastructure.",
+    "heading": "IT that runs itself.",
+    "subheading": "We take care of your day-to-day: support, Microsoft 365, backups, patching, VPN, printing, mobile devices and WiFi. And anything repetitive, we automate.",
+    "management_title": "Daily management",
+    "management_desc": "The support your office needs every week.",
+    "automation_title": "Automation",
+    "automation_desc": "Our specialty: repetitive tasks that take care of themselves.",
     "items": [
       {
-        "name": "Professional WiFi Networks",
-        "desc": "Design and installation of corporate WiFi networks with full coverage, access control and QoS for businesses."
+        "name": "Helpdesk & Support",
+        "desc": "Remote and on-site assistance: slow PCs, printers, passwords, email, Windows that won't boot."
       },
       {
-        "name": "Structured Cabling & Racks",
-        "desc": "Cat6/Cat6A structured cabling, communication racks, patch panels and professional IT room organization."
+        "name": "Microsoft 365 / Google Workspace",
+        "desc": "Users, licenses, mailboxes, MFA, anti-spam and email, Teams and SharePoint setup."
       },
       {
-        "name": "Switches, VLANs & VPN",
-        "desc": "Managed switch configuration, network segmentation with VLANs, and secure VPN tunnels for remote work."
+        "name": "Antivirus / EDR",
+        "desc": "Managed protection, renewals, resolved quarantines and monthly security reports."
       },
       {
-        "name": "Servers & NAS",
-        "desc": "Physical and virtual server installation, RAID NAS storage, and automated backup systems."
+        "name": "Backup & Recovery",
+        "desc": "Automatic copies of your data, deleted file recovery and retention policy."
       },
       {
-        "name": "Backups & Recovery",
-        "desc": "Automated backups, retention policies, disaster recovery and offsite data replication."
+        "name": "Domains, Web & SSL",
+        "desc": "Renewals, DNS changes, corporate email, hosting and certificates that never expire silently."
       },
       {
-        "name": "24/7 Technical Support",
-        "desc": "Remote and on-site technical assistance. Issue resolution in under 4 hours, continuous monitoring and preventive maintenance."
+        "name": "VPN & Remote Access",
+        "desc": "Safe and fast remote work, access onboarding/offboarding, MFA and connection troubleshooting."
       },
       {
-        "name": "IT & Cloud Consulting",
-        "desc": "IT infrastructure consulting, cloud migration, server virtualization and technology cost optimization."
+        "name": "Updates & Patching",
+        "desc": "Windows and software up to date, scheduled reboots and no broken machines after updates."
       },
       {
-        "name": "Perimeter Security",
-        "desc": "Firewalls, intrusion detection systems, data encryption, security policies and vulnerability audits."
+        "name": "Printers & Peripherals",
+        "desc": "Printers that won't work, drivers, scan-to-email and equipment maintenance."
       },
       {
-        "name": "CCTV & Access Control",
-        "desc": "IP video surveillance systems, card/fingerprint access control, technical alarms and monitoring station integration."
+        "name": "Corporate Mobility",
+        "desc": "Profiles, managed apps, remote wipe and company security policies on phones."
+      },
+      {
+        "name": "Cleaning & Optimization",
+        "desc": "Slow PCs, full disks, malware. We optimize and make them fly again."
+      },
+      {
+        "name": "Software Licenses",
+        "desc": "We manage your licenses (Adobe, ERP, etc.), renewals on time and without interruptions."
+      },
+      {
+        "name": "Office WiFi",
+        "desc": "Full coverage, guest network, no dropouts and controlled access."
+      }
+    ],
+    "automation_items": [
+      {
+        "name": "Automated Workflows",
+        "desc": "We connect your apps: forms, approvals, emails and repetitive tasks happen by themselves."
+      },
+      {
+        "name": "Scripts & Bots",
+        "desc": "Small programs that copy, sync, clean and notify on your behalf."
+      },
+      {
+        "name": "Infrastructure as Code",
+        "desc": "Servers and environments defined by code: reproducible, secure and no manual config."
+      },
+      {
+        "name": "CI/CD & Deployments",
+        "desc": "Automatic deployments for your website or app: every change is tested before going live."
+      },
+      {
+        "name": "Alerts & Monitoring",
+        "desc": "We get notified when something fails before you notice: websites, servers and cloud processes."
+      },
+      {
+        "name": "AI in Your Business",
+        "desc": "Ticket classification, data extraction from PDFs/invoices, smart chats based on your documents."
       }
     ]
   },

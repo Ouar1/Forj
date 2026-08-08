@@ -116,43 +116,86 @@
   },
   "services": {
     "label": "Servicios",
-    "heading": "Todo lo que necesitas en infraestructura TI.",
+    "heading": "TI que se gestiona sola.",
+    "subheading": "Cuidamos tu día a día: soporte, Microsoft 365, backups, parcheo, VPN, impresión, móviles y WiFi. Y lo que se repite, lo automatizamos.",
+    "management_title": "Gestión diaria",
+    "management_desc": "El soporte que tu oficina necesita cada semana.",
+    "automation_title": "Automatización",
+    "automation_desc": "Nuestra especialidad: lo repetitivo, que se haga solo.",
     "items": [
       {
-        "name": "Redes WiFi Profesionales",
-        "desc": "Diseño e instalación de redes WiFi corporativas con cobertura total, control de acceso y calidad de servicio para empresas."
+        "name": "Helpdesk & Soporte",
+        "desc": "Asistencia remota y presencial: PC lento, impresoras, contraseñas, correo, Windows que no arranca."
       },
       {
-        "name": "Cableado Estructurado & Racks",
-        "desc": "Cableado estructurado Cat6/Cat6A, racks de comunicaciones, paneles de parcheo y organización profesional del cuarto de TI."
+        "name": "Microsoft 365 / Google Workspace",
+        "desc": "Usuarios, licencias, buzones, MFA, anti-spam y configuración de correo, Teams y SharePoint."
       },
       {
-        "name": "Switches, VLANs & VPN",
-        "desc": "Configuración de switches gestionados, segmentación de red con VLANs, y túneles VPN seguros para teletrabajo."
+        "name": "Antivirus / EDR",
+        "desc": "Protección gestionada, renovaciones, cuarentenas resueltas y reporte mensual de seguridad."
       },
       {
-        "name": "Servidores & NAS",
-        "desc": "Instalación y configuración de servidores físicos y virtuales, almacenamiento NAS en RAID, y copias de seguridad automatizadas."
+        "name": "Backup & Recuperación",
+        "desc": "Copias automáticas de tus datos, archivos borrados recuperados y política de retención."
       },
       {
-        "name": "Backups & Recuperación",
-        "desc": "Backups automatizados, políticas de retención, recuperación ante desastres y replicación de datos offsite."
+        "name": "Dominios, Web & SSL",
+        "desc": "Renovaciones, cambios de DNS, correo corporativo, hosting y certificados sin caducar."
       },
       {
-        "name": "Soporte Técnico 24/7",
-        "desc": "Asistencia técnica remota y presencial. Resolución de incidencias en menos de 4h, monitorización continua y mantenimiento preventivo."
+        "name": "VPN & Acceso Remoto",
+        "desc": "Teletrabajo seguro y rápido, altas y bajas de accesos, MFA y troubleshooting de conexión."
       },
       {
-        "name": "Consultoría TI & Cloud",
-        "desc": "Asesoramiento en infraestructura TI, migración a la nube, virtualización de servidores y optimización de costes tecnológicos."
+        "name": "Actualizaciones y Parcheo",
+        "desc": "Windows y software al día, reinicios programados y sin sorpresas ni equipos rotos por updates."
       },
       {
-        "name": "Seguridad Perimetral",
-        "desc": "Firewalls, sistemas de detección de intrusiones, cifrado de datos, políticas de seguridad y auditorías de vulnerabilidades."
+        "name": "Impresoras y Periféricos",
+        "desc": "Impresiones que no funcionan, drivers, escaneo a email y mantenimiento de equipos."
       },
       {
-        "name": "Cámaras & Control de Acceso",
-        "desc": "Sistemas de videovigilancia IP, control de acceso con tarjeta/huella, alarmas técnicas e integración con central receptora."
+        "name": "Móviles Corporativos",
+        "desc": "Perfiles, aplicaciones gestionadas, borrado remoto en perdidas y política de empresa de seguridad."
+      },
+      {
+        "name": "Limpieza y Optimización",
+        "desc": "PC lento, disco lleno, mal-ware y otros. Optimizamos y hacemos que vuelva a volar."
+      },
+      {
+        "name": "Licencias de Software",
+        "desc": "Gestionamos tus licencias (Adobe, ERP, etc.), renovaciones en tiempo y sin cortes."
+      },
+      {
+        "name": "WiFi para Oficinas",
+        "desc": "Cobertura total, red de invitados, sin cortes y con acceso controlado."
+      }
+    ],
+    "automation_items": [
+      {
+        "name": "Workflows Automatizados",
+        "desc": "Conectamos tus apps: formularios, aprobaciones, correos y tareas repetitivas se hacen solas."
+      },
+      {
+        "name": "Scripts y Bots",
+        "desc": "Pequeños programas que copian, sincronizan, limpian y avisan por ti."
+      },
+      {
+        "name": "Infraestructura como Código",
+        "desc": "Servidores y entornos definidos por código: reproducibles, seguros y sin config manual."
+      },
+      {
+        "name": "CI/CD y Despliegues",
+        "desc": "Deletes automáticos de tu web o app: cada cambio pasa por pruebas antes de publicar."
+      },
+      {
+        "name": "Alertas y Monitorización",
+        "desc": "Nos avisan cuando algo falla antes de que lo notes: webs, servidores y procesos en la nube."
+      },
+      {
+        "name": "IA en tu Negocio",
+        "desc": "Clasificación de tickets, extraer datos de PDFs/facturas, chats inteligentes basados en tus documentos."
       }
     ]
   },
